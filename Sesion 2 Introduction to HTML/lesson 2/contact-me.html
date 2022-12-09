@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Contact To Rychy</title>
+
+</head>
+<body>
+    <center>
+        <h2>
+            <a href="./personal site.html">Return</a><br />
+        </h2>
+        
+        <hr size="4" noshade="">
+        <h1>Contact me :)</h1>
+        <hr size="4" noshade="">
+    </center>
+    <ol type="I">
+        <li><a href="https://www.facebook.com/Lord.RYKCS" target="_blank">Facebook</a></li>
+        <li><a href="https://github.com/Rychy248" target="_blank">GitHub</a></li>
+        <li><a href="https://github.com/Rychy248" target="_blank">GitLab</a></li>
+    </ol>
+
+    <hr>
+    <h1>Some datas about academy progress</h1>
+    <style >
+        table{
+            align-self: center;
+        }
+        table, td, tr, th{
+            border: 2px solid /* dashed solid double groove ridge inset outset. */;
+            /* border-collapse: collapse; */
+            border-radius: 10px;
+            padding: 10px;
+        }
+        table tfoot td, th{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+    </style>    
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Event</th>
+                <th>Institute</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2005</td>
+                <td>Studied in garden school</td>
+                <td>EODP index to EOUM</td>
+            </tr>
+            <tr> 
+                <td>2014</td>
+                <td>Studied the Scholar grade</td>
+                <td>EOURM of San Andrés Sajcabajá</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Rych's studied</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+    <hr>
+    <h1>FORMS</h1>
+
+    <form action="./index.html" method="post">
+        <label for="name">Your name</label>
+        <input type="text" name="name" id="">
+        <label for="color">Your favorite color</label>
+        <input type="color" name="color" id="">
+        <br>
+        <label for="email-list">Do you want to to sign up to the email list?</label>
+        <input type="checkbox" name="email-list" id="">
+        <br>
+        <input type="radio" name="sex" id="male" value="male">
+        <label for="male">Man</label>
+        <input type="radio" name="sex" id="female" value="female">
+        <label for="female">Female</label>
+        <br>
+        <label for="born">Select your dated born</label>
+        <input type="date" name="born" id="">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+    <hr>
+    <h1>A table insede another other table</h1>
+
+    <style>
+        #table2, #table2 td, #table2 tr, #table2 th{
+            border: 4px groove  /* dashed solid double groove ridge inset outset. */;
+            /* border-collapse: collapse; */
+            border-radius: 10px;
+            padding: 10px;
+            border-color: rgb(236, 12, 12);
+        }
+        #table2 tfoot td, #table2 th{
+            background-color: rgb(7, 182, 213);
+            color: black;
+            text-align: center;
+        }
+        #table1, #table1 td, #table1 tr, #table1 th{
+            border: 4px ridge  /* dashed solid double groove ridge inset outset. */;
+            /* border-collapse: collapse; */
+            border-radius: 5px;
+            padding: 5px;
+            border-color: rgb(236, 184, 12);
+        }
+        #table1 tfoot td, #table1 th{
+            background-color: rgb(37, 210, 18);
+            color: black;
+            text-align: center;
+        }
+
+    </style>
+    <table>
+        <thead>
+            <tr>
+                <th> table 1</th>
+                <th> table 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <table id="table1">
+                        <thead>
+                            <tr>
+                                <th>Sub head t1h1</th>
+                                <th>Sub head t1h2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sub data t1d1</td>
+                                <td>Sub data t1d2</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <td colspan="2">table 1 foot</td>
+                        </tfoot>
+                    </table>
+                </td>
+                <td>
+                    <table id="table2">
+                        <thead>
+                            <tr>
+                                <th>Sub head t1h1</th>
+                                <th>Sub head t1h2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sub data t1d1</td>
+                                <td>Sub data t1d2</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <td colspan="2">table 2 foot</td>
+                        </tfoot>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Table father foot</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

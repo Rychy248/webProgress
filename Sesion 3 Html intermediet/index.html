@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesion 3</title>
+</head>
+<body>
+    <a href="../../index.html">Back to home </a><br>
+    <h1>HTML FORMS</h1>
+    <p>Forms collects buch of data, by many ways, buttons, checkbox, colors, datetime, etc...</p>
+    <hr>
+
+    <h1>Tell us something about you</h1>
+
+    <style>
+        form {
+            border: 2px solid;
+            background-color: rgba(19, 228, 228, 0.409);
+            padding: 5px;
+            border-radius: 15px;
+            font-size: 25px;
+        }
+        form fieldset, form fieldset input{
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        form fieldset input{
+            border: 2px solid;
+            border-color: white;
+            background-color: white;
+            color: black;
+        }
+        form fieldset:hover{
+            background-color: black;
+        }
+        form fieldset input:hover{
+            border-color: white;
+            color: black;
+        }
+        .submit{
+            border-radius: 15px;
+            font-size: 30px;
+            align-self: center;
+            margin-left: 50px;
+            color: white;
+            background-color: black;
+        }
+        .submit:hover{
+            background-color: aqua;
+            color: black;
+            /* margin-left: 250px; */
+        }
+        
+    </style>
+    <form action="mailto:jorgeajrha@gmail.com" enctype="text/plain">
+        <fieldset>
+            <label for="name">Your name</label>
+            <input type="text" name="name" id="" placeholder="type your name">
+            <label for="last-name">Your last name</label>
+            <input type="text" name="last-name" id="" placeholder="type your last name">
+            <br>
+            <label for="messegue">Tell something</label><br>
+            <textarea name="messegue" id="" cols="30" rows="10" placeholder="Tell something about you..."></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="email">Email</label>
+            <input type="email" placeholder="example@gmail.com">
+            <label for="">Birthday</label>
+            <input type="date">
+            <label for="color-favorite"></label>
+            <input type="color">
+            <br>
+            <label for="sex-male">Male</label>
+            <input type="radio" name="sex" id="sex-male">
+            <label for="sex-female">Female</label>
+            <input type="radio" name="sex" id="sex-female">
+        </fieldset>
+        <input type="submit" value="Submit" class="submit">
+    </form>
+
+</body>
+</html>

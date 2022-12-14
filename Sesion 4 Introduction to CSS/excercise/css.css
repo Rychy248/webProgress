@@ -1,0 +1,61 @@
+
+:root{
+    --background: #00FFF6;
+    --title: #0014FF;
+    --text: #009EFF;
+    --forms: #00E7FF;
+}
+
+
+body{
+    background-color: var(--background);
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+h1{
+    color: var(--title);
+    font-size: 40px;
+}
+h2, h3, h4, h5, h6{
+    color: var(--title);
+    font-size: 30px;
+}
+h2, h4, h6{
+    font-style: italic;
+}
+h2, h3, h4, h5, h6{
+    color: var(--title);
+    font-size: 30px;
+}
+h3, h4{
+    color: var(--title);
+    font-size: 20px;
+}
+h5, h6{
+    color: var(--title);
+    font-size: 10px;
+}
+
+p{
+    color: var(--text);
+}
+
+img {
+    height: 100px;
+}
+/* ############### CLASS SELECTORS */
+.bacon-circular{
+    background-color: red;
+}
+.brocoly{
+    background-color: white;
+}
+/* ############### ID SELECTORS */
+#top{
+    font-style:inherit;
+    font-stretch: expanded;
+}

@@ -1,0 +1,88 @@
+:root{
+    --white:#fff;
+    --texto:#ede0e0;
+    --titulo: #e03737;
+    --subitutlo: #f1dede;
+    --subitutloHover: #ec7878;
+    --backgroundColor: #1e293c;
+}
+
+html{
+    background: linear-gradient(to top, var(--white), var(--backgroundColor)) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+h1{
+    text-shadow: -1px 0px 0px var(--white); /* LEFT*/
+    text-shadow: 1px 0px 0px var(--white); /* RIGHT*/
+    text-shadow: 0px -1px 0px var(--white);/* TOP*/
+    text-shadow: 0px 1px 0px var(--white);/* BOTTOM*/
+}
+h1, h2{
+    color: var(--titulo);
+    text-align: center;
+    font-size: 40px;
+}
+h2, h4, h6{
+    font-style: italic;
+}
+h3, h4, h5, h6{
+    color: var(--subitutlo);
+    font-size: 25px;
+}
+p{
+    color: var(--texto)
+}
+p, a{
+    font-size: 25px;
+}
+hr, .large-line{
+    border-width: 5px;
+    border-style: dotted none none;
+    border-top-style: dotted; /*una forma mas especifica */
+    width: 10%;
+    height: 0px;
+    border-color: var(--texto);
+    display: block;
+}
+
+/* ############ CLASS */
+nav{
+    margin: 10px;
+    border: 0;
+    display: block;
+}
+.nav-item {
+    border-radius: 15px;
+    background-color: var(--subitutlo);
+    color: var(--backgroundColor);
+    display: block;
+    margin: 3px;
+    overflow: hidden;
+    padding: 10px;
+    text-decoration: none;
+}
+.nav-item:hover{
+    border-radius: 50px;
+    background-color: var(--subitutloHover);
+    color: var(--texto);
+}
+.nav-item:visited{
+    font-style: var(--backgroundColor);
+}
+
+.profile{
+    width: 250px;
+    border-radius: 50%;
+}
+
+.large-line{
+    width: 80%;
+    border-color: var(--subitutlo);
+}
+
+/* ###########IDS */
+

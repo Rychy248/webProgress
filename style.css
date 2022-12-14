@@ -84,5 +84,9 @@ nav{
     border-color: var(--subitutlo);
 }
 
+.hi{
+    text-align: center;
+    font-size: 25px;
+}
 /* ###########IDS */
 

@@ -1,17 +1,18 @@
 :root{
     --texto:#497174;
-    --titulo: #EB6440;
+    --titulo: #eb4011;
     --higlithSubtitulo:#f7c900;
     --subtitulo: #565e5e;
-    --subitutloHover: #b0edf1;
+    --subitutloHover: #66eaf3;
     --backgroundColor: #EFF5F5;
     --backgroundColorHover: #b7c2c27a;
     --border_radius: 15px;
     --black:#000;
 }
 
-body{
+body {
     background-color: var(--backgroundColor);
+    margin: 0;
 }
 h1, h2{
     color: var(--titulo);
@@ -67,7 +68,7 @@ hr, .large-line{
 .profile{
     width: 250px;
     border-radius: 50%;
-}
+} 
 
 
 .large-line{
@@ -80,6 +81,39 @@ hr, .large-line{
     background-color: var(--black);
     border-radius: var(--border_radius);
 }
+.contanier{
+    display: grid;
+    place-content: center;
+    padding: 0;
+    margin: 10px;
+    background-color: var(--titulo);
+    width: 200px;
+    height: 200px;
+}
+.sqr1, .sqr2, .sqr3{
+    display: inline-flex;
+    padding: 10px;
+    border-width: 10px;
+    border-style:solid;
+    border-color: var(--black);
+    margin: 0px;
+    width: 200px;
+    height: 200px;
+}
+.sqr1{
+    background-color: var(--titulo);
+}
+.sqr2{
+    border-style: dashed;
+    border-width: 15px;
+    background-color: var(--higlithSubtitulo);
+}
+.sqr3{
+    border-style: dashed;
+    border-width: 20px;
+    background-color: var(--texto);
+}
+
 /* ###########IDS */
 
 #profession{

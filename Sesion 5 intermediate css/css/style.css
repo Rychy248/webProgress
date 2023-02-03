@@ -1,9 +1,13 @@
 :root{
     --texto:#497174;
     --titulo: #EB6440;
-    --subitutlo: #565e5e;
+    --higlithSubtitulo:#f7c900;
+    --subtitulo: #565e5e;
     --subitutloHover: #b0edf1;
     --backgroundColor: #EFF5F5;
+    --backgroundColorHover: #b7c2c27a;
+    --border_radius: 15px;
+    --black:#000;
 }
 
 body{
@@ -17,7 +21,7 @@ h2, h4, h6{
     font-style: italic;
 }
 h3, h4, h5, h6{
-    color: var(--subitutlo);
+    color: var(--subtitulo);
 }
 p{
     color: var(--texto)
@@ -42,7 +46,7 @@ hr, .large-line{
 }
 .nav-item {
     border-radius: 15px;
-    background-color: var(--subitutlo);
+    background-color: var(--subtitulo);
     text-decoration: none;
     overflow: hidden;
     margin: 3px;
@@ -68,8 +72,18 @@ hr, .large-line{
 
 .large-line{
     width: 80%;
-    border-color: var(--subitutlo);
+    border-color: var(--subtitulo);
 }
 
+.rychy{
+    /* background-color: var(--backgroundColorHover); */
+    background-color: var(--black);
+    border-radius: var(--border_radius);
+}
 /* ###########IDS */
 
+#profession{
+    color: var(--higlithSubtitulo);
+    font-size: larger;
+    text-align: center;
+}

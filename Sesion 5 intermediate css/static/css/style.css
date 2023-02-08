@@ -114,8 +114,10 @@ hr, .large-line{
     background-color: var(--texto);
 }
 
+.pro{
+    text-decoration: underline;
+}
 /* ###########IDS */
-
 #profession{
     color: var(--higlithSubtitulo);
     font-size: larger;

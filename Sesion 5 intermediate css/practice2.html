@@ -27,25 +27,32 @@
 </head>
 <body>
     <div class="cont-nav">
-        <a class="nav-item" href="../index.html">Back to home</a>
-        <a class="nav-item" href="./index.html">Return</a>
+        <div class="cont-fixed">
+            <a class="nav-item" href="../index.html">Back to home</a>
+            <a class="nav-item" href="./index.html">Return</a>
+        </div>
     </div>
     <br><br>
     <h1>SESION V <br> INTERMEDIATE CSS</h1>
+    <a href="#top">Go up</a>
+    <a href="#profile">Profile</a>
+    <a href="#position">Position Property</a>
+    <a href="#center">Center elements</a>
     <hr class="large-line"/>
+    
+    <img class="top-cloud1" src="./static/img/cloud.png" alt="cloud">
     <h1 id="top">Hi there!</h1>
+    <img class="top-cloud2" src="./static/img/cloud.png" alt="cloud">
+    <img class="top-cloud3" src="./static/img/cloud.png" alt="cloud">
 
     <!-- _______________________________PROFILE start__________________ -->
-    <div class="rychy">
+    <div class="rychy" id="profile">
         <h1>Ricardo Hernández</h1>
         <p id="profession"><span class="pro">Pro</span>gramer & Teacher</p>
     </div>
-    <div class="container">
-        <img class="img1" src="./static/img/cloud.png" alt="cloud">
-        <img class="img2" src="./static/img/cloud.png" alt="cloud">
-    </div>
-    <div class="container">
+    <div class="container" id="position">
         <h2>position property</h2>
+        <p>The position property get out an element of the flow HTML</p>
         <ol>
             <li><span class="pro">static</span>: Default value. Elements render in order, as they appear in the document flow 	</li>
             <li><span class="pro">absolute</span>: The element is positioned relative to its first positioned (not static) ancestor element 	</li>
@@ -58,12 +65,10 @@
             <li><span class="pro">initial</span>: Sets this property to its default value. Read about initial 	</li>
             <li><span class="pro">inherit</span>: Inherits this property from its parent element. Read about inherit</li>
         </ol>
-
     </div>
-    <div class="container">
-        <img src="./static/img/cloud.png" alt="cloud">
-        <img src="./static/img/mountain.png" alt="mountain">
-    </div>
+    
+    <img class="cloud-rigth" src="./static/img/cloud.png" alt="cloud">
+    <img class="" src="./static/img/mountain.png" alt="mountain">
     
     <h1>Relative position</h1>
     <div class="container2">
@@ -79,9 +84,28 @@
         <div class="circle3"></div>
     </div>
     
+    <br><br><br><br><br><br><br><br><br><br>
     <hr>
     <h2>I hope you're so fine</h2>
     <hr>
+    <!-- _______________________________ CENTER ELEMENTS __________________ -->
+    <div class="cont-center" id="center">
+        <h1>CETERING WITH</h1>
+        <h2>Text-ALING, to the principal elemnt</h2>
+        <p>Center all elemnts into this</p>
+        <img class="cloud-left" src="./static/img/cloud.png" alt="cloud"><br>
+        <div class="sqr3"></div>
+
+        <h1 class="center-with-margin">CENTERING WITH MARGIN</h1>
+        <h2 class="center-with-margin">margin: 0 auto 0 auto</h2>
+        <h2 class="center-with-margin">margin: TOP RIGTH BOTTOM LEFT</h2>
+    </div>
+
+
+    <a href="#top">Go up</a>
+    <a href="#profile">Profile</a>
+    <a href="#position">Position Property</a>
+    <a href="#center">Center elements</a>
 
 </body>
 </html>

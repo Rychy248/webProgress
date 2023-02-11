@@ -2,17 +2,17 @@
 
 
 <!-- 
-    Site to create a free favicoc
-    https://www.favicon.cc/ 
+    Fonts family
+    https://www.w3schools.com/css/css_font.asp
 
-    Do you have problems with colors?
-    https://colorhunt.co/palette/14832 Choose an amazing color palet here
+    Font Web Safe
+    https://www.w3schools.com/css/css_font_websafe.asp
 
-    Pesticide, to see the css deatils rederend in the browser
-    https://addons.mozilla.org/en-US/firefox/addon/pesticide-for-firefox/
+    CSSFONTS STACK, safer fonts of diferents operatin system
+    https://www.cssfontstack.com/
 
-    Sean Halpin Profile
-    https://web.archive.org/web/20180819202235js_/http://seanhalpin.io/
+    GOOGLE FONTS
+    https://fonts.google.com/
 -->
 
 
@@ -24,6 +24,13 @@
     <title>Sesion 5</title>
     <link rel="stylesheet" href="./static/css/style3.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="cont-nav">
@@ -33,32 +40,29 @@
         </div>
     </div>
     <br><br>
-    <h1>SESION V <br> INTERMEDIATE CSS</h1>
+    <h1 class="header-font">SESION V <br> INTERMEDIATE CSS</h1>
 
+    <!-- _______________________________ PROFILE HEAD __________________ -->
     <hr class="large-line"/>
-    <div class="container-top">
+    <div class="container-top" id="profile">
         <img class="top-cloud1" src="./static/img/cloud.png" alt="cloud">
         <img class="top-cloud2" src="./static/img/cloud.png" alt="cloud">
         <img class="top-cloud3" src="./static/img/cloud.png" alt="cloud">
+        <img class="top-cloud4" src="./static/img/cloud.png" alt="cloud">
         <h1>Ricardo Hernández</h1>
         <p id="profession"><span class="pro">Pro</span>gramer & Teacher</p>
     </div>
 
-    <!-- _______________________________PROFILE start__________________ -->
+    <!-- _______________________________ PROFILE CONTENT __________________ -->
     <div class="container-middle">
-
+        <img src="./static/img/mountain.png" alt="">
+    
+        <h2>I hope you're so fine</h2>
+        <hr>
     </div>
-    <img src="./static/img/mountain.png" alt="">
 
-    <hr>
-    <h2>I hope you're so fine</h2>
-    <hr>
-
-
-    <a href="#top">Go up</a>
-    <a href="#profile">Profile</a>
-    <a href="#position">Position Property</a>
-    <a href="#center">Center elements</a>
-
+    <div class="container-bottom">
+        <a href="#profile">Profile</a>
+    </div>
 </body>
 </html>

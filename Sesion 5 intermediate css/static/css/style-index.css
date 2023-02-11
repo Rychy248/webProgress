@@ -21,7 +21,9 @@ body {
     /* pero si lo que se desea, es específicamente una fuente que no cambie, esta la opcion
     de usar FUENTES INCRISTADAS, desde GOOGLE FONTS */
     font-family: Merriweather, serif;
-
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 h1{
     font-family: "Sacramento", cursive;
@@ -63,25 +65,28 @@ hr, .large-line{
 /* ############ CLASS */
 /* ### a floting nav */
 .cont-nav{
-    margin: 0px;
-    border: 0px;
+    margin: 10px 0 0 0;
+    width: 100%;
+    height: 70px;
     display: block;
     position: absolute;
+    top: -10px;
+    background-color: var(--backgroundColorHover);
 }
 .cont-fixed{
-    margin: 0px;
-    border: 0px;
-    display: inline-block;
+    display: block;
     position: fixed;
+    top: 20px;
+    left: 10px;
 }
 .nav-item{
     border-radius: 15px;
+    margin: 0 0 0 5px;
+    padding: 10px;
     background-color: var(--subtitulo);
     text-decoration: none;
-    margin: 10px;
-    padding: 10px;
-    display: inline-block;
-    position: relative;
+    display: inline;
+    position:relative;
     color: var(--backgroundColor);
 }
 .nav-item:hover{
@@ -135,6 +140,13 @@ hr, .large-line{
     top: 76px;
 }
 
+.container-sesion-title{
+    background-color: var(--backgroundColorHover);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    top: 0;
+}
 
 /* ###########IDS */
 #profession{

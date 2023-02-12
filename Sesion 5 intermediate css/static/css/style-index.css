@@ -17,7 +17,7 @@ body {
     font-family: opcion1, opcion2, ...opcionN, font-family;
      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
 
-    
+
     /* pero si lo que se desea, es específicamente una fuente que no cambie, esta la opcion
     de usar FUENTES INCRISTADAS, desde GOOGLE FONTS */
     font-family: Merriweather, serif;
@@ -26,7 +26,7 @@ body {
     padding: 0;
 }
 h1{
-    font-family: "Sacramento", cursive;
+    font-family: "Sacramento";
 }
 h2, h3{
     font-family: "Montserrat", sans-serif;
@@ -40,7 +40,8 @@ h1, h2{
     font-family: "Montserrat", sans-serif;
 }
 h2, h4, h6{
-    font-style: italic;
+    font-style:normal;
+    font-stretch: ultra-expanded;
 }
 h3, h4, h5, h6{
     color: var(--subtitulo);
@@ -100,25 +101,18 @@ hr, .large-line{
 
 
 
-.pro{
+/* .pro{
     text-decoration: underline;
     text-transform: capitalize;
     font-weight: bold;
-}
+} */
 
 .container-top{
-    margin: 0;
-    margin-top: 40px;
-    padding: 0;
-    text-align: center;
-    display: block;
-    position: relative;
+
 
 }
 .container-middle{
-    margin: 0;
-    padding: 0;
-    text-align: center;
+
 }
 
 .top-cloud1, .top-cloud2, .top-cloud3, .top-cloud4{
@@ -126,18 +120,19 @@ hr, .large-line{
 }
 .top-cloud1{
     left: 62%;
-    top: 42px;
+    top: 242px;
 }
 .top-cloud2{
     left: 80%;
-    top: -25px;
+    top: 300px;
 }
 .top-cloud3{
     left: 26%;
+    top: 320px
 }
 .top-cloud4{
     left: 8%;
-    top: 76px;
+    top: 276px;
 }
 
 .container-sesion-title{
@@ -148,9 +143,70 @@ hr, .large-line{
     top: 0;
 }
 
+.profile-img{
+    object-fit: none;
+    object-position: 47% 37%;
+    /* object-position: X% y%; */
+
+    /* object-position: <position>where <position> = [
+    [ left | center | right ] ||
+    [ top | center | bottom ] |
+    [ left | center | right | <length-percentage> ]
+    [ top | center | bottom | <length-percentage> ]? |
+    [ [ left | right ] <length-percentage> ] && [ [ top | bottom ] <length-percentage> ] ]
+    where <length-percentage> = <length> | <percentage>
+    */
+    width: 400px;
+    height: 400px;
+    border-radius: 50% 50% 20% 20%;
+    /* border-radius: left-top% right-top% right-bottom%, left-bottom%; */
+
+}
+
+.icon-normal, .icon-small, .contact-me-icon{
+    object-fit:scale-down;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.icon-normal{
+    width: 150px;
+    height: 150px;
+}
+.icon-small{
+    width: 100px;
+    height: 100px;
+}
+.contact-me-icon, .contact-me-content{
+    display: inline-block;
+    padding: 0;
+    margin: 5px 0;
+}
+.contact-me-icon{
+    width: 50px;
+    height: 50px;
+}
+.contact-me-content{
+    position: relative;
+    bottom: 25px;
+}
+.skill-sofware-item{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 0px;
+}
+.skill-software-title{
+    text-shadow: #FC0 4px 0 10px;
+    padding: 0px;
+    margin: 0px;
+}
 /* ###########IDS */
 #profession{
     color: var(--texto);
     font-size: larger;
     text-align: center;
+}
+#welcome{
+    font-stretch: extra-expanded;
+    letter-spacing: 55px;
 }

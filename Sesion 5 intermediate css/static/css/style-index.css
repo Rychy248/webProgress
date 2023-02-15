@@ -1,5 +1,5 @@
 :root{
-    --texto:#497174;
+    --texto:#39595c;
     --titulo: #eb4011;
     --higlithSubtitulo:#f7c900;
     --subtitulo: #565e5e;
@@ -27,17 +27,37 @@ body {
 }
 h1{
     font-family: "Sacramento";
+    /* Formas en las que se pueden medir los pixeles*/
+
+    /* CON PORCENTAJES  100% = 16 PIXELES*/
+    /* 562.5% = 90px */
+    /* font-size: 562.5%;  */
+    /* cuando se especifícan los pixeles, estos no cambian cuando el navegador lo hace, se vuelven estaticos
+    for that, we can use percents, 
+    100% = 16px, so 90/16=562.5% */
+
+    /* CON EMS   1 EM = 16 PIXELES*/
+    /* font-size: 5.625em; */
+    
+    /* CON REM, es igual que un EM, solo que se especifíca que sea root, es decir que no cambie
+    ROOT EM = EM DINAMIC WITHOUT CHANGES FROM PARENTES */
+    font-size: 5.625rem;
+    margin: 50px auto 2px auto; 
 }
-h2, h3{
-    font-family: "Montserrat", sans-serif;
+h2 {
+    font-size: 50px;
+    margin: 0; 
 }
 h1, h2{
     color: var(--titulo);
     text-align: center;
-    font-size: 50px;
+}
+h2, h3{
+    font-family: "Montserrat", sans-serif;
 }
 .header-font{
     font-family: "Montserrat", sans-serif;
+    font-size: 50px;
 }
 h2, h4, h6{
     font-style:normal;
@@ -45,6 +65,7 @@ h2, h4, h6{
 }
 h3, h4, h5, h6{
     color: var(--subtitulo);
+    margin: 0; 
 }
 p{
     color: var(--texto)
@@ -128,7 +149,7 @@ hr, .large-line{
 }
 .top-cloud3{
     left: 26%;
-    top: 320px
+    top: 420px
 }
 .top-cloud4{
     left: 8%;
@@ -201,9 +222,9 @@ hr, .large-line{
     margin: 0px;
 }
 /* ###########IDS */
-#profession{
+.profession{
     color: var(--texto);
-    font-size: larger;
+    font-size: 2.5rem;
     text-align: center;
 }
 #welcome{

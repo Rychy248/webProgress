@@ -9,9 +9,12 @@
     --border_radius: 15px;
     --black:#000;
 }
-
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 body {
-    background-color: var(--backgroundColor);
     text-align: center;
     /* ESTO ELIGE DE ENTRE LAS FUENTE QUE EL USUARIO TENGA INSTALADO EN SU SISTEMA OPERATIVO
     font-family: opcion1, opcion2, ...opcionN, font-family;
@@ -58,6 +61,7 @@ h2, h3{
 .header-font{
     font-family: "Montserrat", sans-serif;
     font-size: 50px;
+    margin: 0;
 }
 h2, h4, h6{
     font-style:normal;
@@ -75,25 +79,28 @@ hr, .large-line{
     border-width: 5px;
     border-style: dotted none none;
     border-top-style: dotted; /*una forma mas especifica */
-    width: 10%;
+    width: 30%;
     height: 0px;
     border-color: var(--texto);
     display: block;
+    margin: 10px auto;
 }
 .large-line{
     width: 80%;
     border-color: var(--subtitulo);
+    margin: 0px auto;
 }
 /* ############ CLASS */
 /* ### a floting nav */
 .cont-nav{
-    margin: 10px 0 0 0;
+    margin: 0;
+    padding: 10px 0 0 0;
     width: 100%;
     height: 70px;
     display: block;
-    position: absolute;
-    top: -10px;
     background-color: var(--backgroundColorHover);
+    border-width: 10px 0 0 0;
+    border-color: var(--backgroundColorHover);
 }
 .cont-fixed{
     display: block;
@@ -129,8 +136,7 @@ hr, .large-line{
 } */
 
 .container-top{
-
-
+    background-color: var(--backgroundColor);
 }
 .container-middle{
 
@@ -221,12 +227,21 @@ hr, .large-line{
     padding: 0px;
     margin: 0px;
 }
-/* ###########IDS */
 .profession{
     color: var(--texto);
     font-size: 2.5rem;
     text-align: center;
 }
+
+a, .contact-me-content, .contact-me-content:hover{
+    color: var(--texto);
+}
+a:hover, .contact-me-content:hover{
+    color: var(--titulo);
+}
+
+/* ###########IDS */
+
 #welcome{
     font-stretch: extra-expanded;
     letter-spacing: 55px;

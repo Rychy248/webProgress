@@ -55,6 +55,7 @@
 .container-top{
     background-color: var(--sky);
     width: 100%;
+    padding-top: 75px;
 }
 .container-middle{
 

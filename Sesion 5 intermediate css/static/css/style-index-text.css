@@ -73,7 +73,8 @@ h3, h4, h5, h6{
     margin: 0; 
 }
 p{
-    color: var(--texto)
+    color: var(--texto);
+    font-family: Merriweather, serif;
 }
 
 hr, .large-line{
@@ -106,7 +107,10 @@ hr, .large-line{
     padding: 0;
     margin: 5px 0;
     position: relative;
-    bottom: 25px;
+    bottom: 22px;
+}
+.mail{
+    bottom: 15px;
 }
 .skill-sofware-item{
     display: inline-block;
@@ -126,6 +130,7 @@ hr, .large-line{
 
 a, .contact-me-content, .contact-me-content:hover{
     color: var(--texto);
+    font-family: Merriweather, serif;
 }
 a:hover, .contact-me-content:hover{
     color: var(--titulo);
@@ -148,10 +153,11 @@ a:hover, .contact-me-content:hover{
 #welcome{
     font-stretch: extra-expanded;
     letter-spacing: 55px;
+    margin: 0;
 }
 
 #copyright{
-    font-family: "Montserrat", sans-serif;
+    font-family: Merriweather, serif;
     font-weight: bold;
     letter-spacing: 1rem; /* 0.5rem = 8px*/
     text-align: center;
@@ -159,5 +165,6 @@ a:hover, .contact-me-content:hover{
 }
 
 #sentence{
+    font-family: Merriweather, serif;
     font-style: italic;
 }

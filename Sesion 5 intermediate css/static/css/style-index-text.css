@@ -1,0 +1,163 @@
+:root{
+    --texto:#39595c;
+    --titulo: #eb4011;
+    --higlithSubtitulo:#f7c900;
+    --subtitulo: #565e5e;
+    --subitutloHover: #66eaf3;
+    --backgroundColor: #EFF5F5;
+    --backgroundColorHover: #b7c2c27a;
+    --border_radius: 15px;
+    --black:#000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    text-align: center;
+    /* ESTO ELIGE DE ENTRE LAS FUENTE QUE EL USUARIO TENGA INSTALADO EN SU SISTEMA OPERATIVO
+    font-family: opcion1, opcion2, ...opcionN, font-family;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+
+
+    /* pero si lo que se desea, es específicamente una fuente que no cambie, esta la opcion
+    de usar FUENTES INCRISTADAS, desde GOOGLE FONTS */
+    font-family: Merriweather, serif;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: "Sacramento";
+    /* Formas en las que se pueden medir los pixeles*/
+
+    /* CON PORCENTAJES  100% = 16 PIXELES*/
+    /* 562.5% = 90px */
+    /* font-size: 562.5%;  */
+    /* cuando se especifícan los pixeles, estos no cambian cuando el navegador lo hace, se vuelven estaticos
+    for that, we can use percents, 
+    100% = 16px, so 90/16=562.5% */
+
+    /* CON EMS   1 EM = 16 PIXELES*/
+    /* font-size: 5.625em; */
+    
+    /* CON REM, es igual que un EM, solo que se especifíca que sea root, es decir que no cambie
+    ROOT EM = EM DINAMIC WITHOUT CHANGES FROM PARENTES */
+    font-size: 5.625rem;
+    margin: 50px auto 2px auto; 
+}
+h2 {
+    font-size: 50px;
+    margin: 0; 
+}
+h1, h2{
+    color: var(--titulo);
+    text-align: center;
+}
+.header-font{
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    margin: 0;
+}
+h2, h4, h6{
+    font-family: "Montserrat", sans-serif;
+    font-style:normal;
+    font-stretch: ultra-expanded;
+    line-height: 2;
+}
+h3, h4, h5, h6{
+    font-family: "Montserrat", sans-serif;
+    line-height: 2;
+    color: var(--subtitulo);
+    margin: 0; 
+}
+p{
+    color: var(--texto)
+}
+
+hr, .large-line{
+    border-width: 5px;
+    border-style: dotted none none;
+    border-color: var(--texto);
+    border-top-style: dotted; /*una forma mas especifica */
+    width: 30%;
+    height: 0px;
+    display: block;
+    margin: 10px auto;
+}
+.large-line{
+    width: 80%;
+    border-color: var(--subtitulo);
+    margin: 0px auto;
+}
+/* ############ CLASS */
+/* ### a floting nav */
+
+.container-sesion-title{
+    background-color: var(--backgroundColorHover);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    top: 0;
+}
+.contact-me-content{
+    display: inline-block;
+    padding: 0;
+    margin: 5px 0;
+    position: relative;
+    bottom: 25px;
+}
+.skill-sofware-item{
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 0px;
+}
+.skill-software-title{
+    text-shadow: #FC0 4px 0 10px;
+    padding: 0px;
+    margin: 0px;
+}
+.profession{
+    color: var(--texto);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+a, .contact-me-content, .contact-me-content:hover{
+    color: var(--texto);
+}
+a:hover, .contact-me-content:hover{
+    color: var(--titulo);
+}
+
+.botton-rel{
+    color: var(--subtitulo);
+    font-weight: bold;
+    position: relative;
+    bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    margin: 0 10px 0 0;
+}
+.botton-rel:hover{
+    color:var(--titulo);
+}
+
+/* ###########IDS */
+
+#welcome{
+    font-stretch: extra-expanded;
+    letter-spacing: 55px;
+}
+
+#copyright{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1rem; /* 0.5rem = 8px*/
+    text-align: center;
+    color: var(--subtitulo);
+}
+
+#sentence{
+    font-style: italic;
+}

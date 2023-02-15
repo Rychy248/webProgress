@@ -35,7 +35,9 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Sesion 5</title>
-            <link rel="stylesheet" href="./static/css/style-index.css">
+            <link rel="stylesheet" href="./static/css/style-index-text.css">
+            <link rel="stylesheet" href="./static/css/style-index-contents.css">
+            <link rel="stylesheet" href="./static/css/style-index-imgs.css">
             <link rel="icon" href="favicon.ico" type="image/x-icon">
         
         
@@ -82,9 +84,11 @@
 
         <div class="profile">
             <img class="profile-img" src="./static/img/profile.jpg" alt="rychy.jpg">
-            <h3>"El bien de la vida no radíca en su extensión sino en su uso" -Séneca</h3>
-            <h2>Hello.</h2>
-            <h4>Soy profesor multimateria, pero especialmente fascinado con las áreas lógicas, es por ello que las ciencias computacionales son mis preferidas. También me encanta la filosofía y literatura. Como es natural me gusta la comida y los cafés por las tardes :).</h4>
+            <div class="profile-text-cont">
+                <h3 id="sentence">"El bien de la vida no radíca en su extensión sino en su uso" -Séneca</h3>
+                <h2>Hello.</h2>
+                <h4>Soy profesor multimateria, pero especialmente fascinado con las áreas lógicas, es por ello que las ciencias computacionales son mis preferidas. También me encanta la filosofía y literatura. Como es natural me gusta la comida y los cafés por las tardes :).</h4>
+            </div>
         </div>
 
         <hr>
@@ -188,7 +192,7 @@
                 <a class="contact-me-content" href="https://www.facebook.com/Lord.RYKCS">Facebook Profile</a>
             </div>
             <div class="contact-me-row">
-                <img class="contact-me-icon" src="./static/img/icon-map.png" alt="Facebook.png">
+                <img class="contact-me-icon" src="./static/img/icon-map.png" alt="ubication.png">
                 <p class="contact-me-content">Quiché, Guatemala</p>
             </div>
         </div>        
@@ -196,8 +200,22 @@
 
 
     <div class="contanier-bottom">
-        <a class="footer-link" href="https://github.com/Rychy248/">Github Profile</a>
-        <p>© Ricardo Hernández.</p>
+        <div clas="bottom-rels-content">
+            <div class="bottom-item">
+                <img class="botton-icon" src="./static/img/icon-github.png" alt="github.png">
+                <a class="botton-rel" href="https://github.com/Rychy248/">Github Profile</a>
+            </div>
+            <div class="bottom-item">
+                <img class="botton-icon" src="./static/img/icon-gitlab.png" alt="gitlab.png">
+                <a class="botton-rel" href="https://gitlab.com/Rychy248/">Gitlab Profile</a>
+            </div>
+            <div class="bottom-item">
+                <img class="botton-icon" src="./static/img/icon-facebook.png" alt="Facebook.png">
+                <a class="botton-rel" href="https://www.facebook.com/Lord.RYKCS">Facebook Profile</a>
+            </div>
+        </div>
+
+        <p id="copyright">©Ricardo Hernández</p>
     </div>
 
 </body>

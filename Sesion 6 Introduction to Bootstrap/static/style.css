@@ -1,0 +1,29 @@
+:root{
+    --black: #000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+.hr-separator{
+    border: 5px dotted var(--black);
+    border-bottom: 0;
+    width: 40%;
+    margin: 0 auto;
+}
+.content-nav{
+    text-align: right;
+    padding: 1rem;
+}
+
+.high-text{
+    font-weight: bold;
+    color: red;
+}

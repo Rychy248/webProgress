@@ -1,25 +1,18 @@
 :root{
+    --black:#000;
     --white:#fff;
-    --texto:#ede0e0;
+    --texto:#0f0f0f;
     --titulo: #e03737;
     --subitutlo: #f1dede;
     --subitutloHover: #ec7878;
     --backgroundColor: #1e293c;
 }
 
-html{
-    background: linear-gradient(to top, var(--white), var(--backgroundColor)) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-}
 h1{
-    text-shadow: -1px 0px 0px var(--white); /* LEFT*/
-    text-shadow: 1px 0px 0px var(--white); /* RIGHT*/
-    text-shadow: 0px -1px 0px var(--white);/* TOP*/
-    text-shadow: 0px 1px 0px var(--white);/* BOTTOM*/
+    text-shadow: -1px 0px 0px var(--black); /* LEFT*/
+    text-shadow: 1px 0px 0px var(--black); /* RIGHT*/
+    text-shadow: 0px -1px 0px var(--black);/* TOP*/
+    text-shadow: 0px 1px 0px var(--black);/* BOTTOM*/
 }
 h1, h2{
     color: var(--titulo);
@@ -47,6 +40,7 @@ hr, .large-line{
     height: 0px;
     border-color: var(--texto);
     display: block;
+    margin: 0 auto;
 }
 
 /* ############ CLASS */
@@ -90,3 +84,57 @@ nav{
 }
 /* ###########IDS */
 
+
+.contanier-bottom{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.botton-icon{
+    display: inline-block;
+    padding: 0;
+    margin: 2px 0;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin: 0 0 0 10px;
+}
+
+.bottom-item {
+    display: inline-block;
+    margin: 0;
+}
+.bottom-rels-content{
+    margin: 0 auto;
+}
+.botton-rel{
+    color: var(--subtitulo);
+    font-weight: bold;
+    position: relative;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    margin: 0 10px 0 0;
+}
+.botton-rel:hover{
+    color:var(--titulo);
+}
+.botton-icon{
+    display: inline-block;
+    padding: 0;
+    margin: 2px 0;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin: 0 0 0 10px;
+}
+
+#copyright{
+    font-size: 1rem;
+    font-family: Merriweather, serif;
+    font-weight: bold;
+    letter-spacing: 1rem; /* 0.5rem = 8px*/
+    text-align: center;
+    color: var(--subtitulo);
+}

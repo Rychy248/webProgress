@@ -14,3 +14,6 @@ Sesion 4: Introduction to CSS
 Sesion 5: Intermediate CSS
     Productos: CV (Sesion 5 intermediate css/cv.html)
     Display, position, Font styling, float, grid, etc.
+
+Sesion 6: Introduction to Bootstrap
+    

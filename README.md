@@ -1,5 +1,5 @@
 # webProgress 
-[Visite de deployed repository](https://rychy248.github.io/webProgress/index.html)
+[Visite the deployed repository](https://rychy248.github.io/webProgress/index.html)
 
 This is repository, where a save my path learning about web development, you can find lots of excercises, designs, theory, and more, good luck! :=)
 

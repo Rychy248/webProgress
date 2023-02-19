@@ -24,3 +24,7 @@
 h1{
     text-align: center;
 }
+
+.text-light:hover{
+    color:black;
+}

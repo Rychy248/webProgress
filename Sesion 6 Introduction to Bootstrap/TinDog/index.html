@@ -11,57 +11,64 @@
   
   <link rel="stylesheet" href="css/styles.css">
 
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+<section id="title">
 
-  <section id="title">
-
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg bg-danger">
-      <div class="container-fluid">
-          <a class="navbar-brand text-dark fw-bold" href="#">TinDog</a>
-          <button class="navbar-toggler bg-white"  type="button" 
-                  data-bs-toggle="collapse" data-bs-target="#myFirstToogle"
-                  data-bs-theme="ligth"
-                  aria-controls="myFirstToogle"
-                  aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>          
+  <div class="container-fluid bg-danger">
+    <div class="cont-padding-nav">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand text-dark" id="TinDog-Logo" href="#">TinDog</a>
+          <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#myFirstToogle"
+            data-bs-theme="ligth" aria-controls="myFirstToogle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="collapse navbar-collapse" id="myFirstToogle">
-              <ul class="navbar-nav ms-auto ">
-                  <li class="nav-item">
-                      <a class="nav-link text-bg-dark p-2 mt-2 rounded-5" href="../index.html">Return</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-dark mt-2 ms-2" href="#">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-dark mt-2 ms-2" href="#">Princing</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-dark mt-2 ms-2" href="#">Dowloand</a>
-                  </li>
-              </ul>
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item">
+                <a class="nav-link text-bg-dark p-2 mt-2 rounded-5" href="../index.html">Return</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark mt-2 ms-2" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark mt-2 ms-2" href="#">Princing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark mt-2 ms-2" href="#">Download</a>
+              </li>
+            </ul>
           </div>
-      </div>
-  </nav>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
 
 
-
-
+  <div class="container-fluid cont-padding-3-15">
     <!-- Title -->
-
-    <div>
-      <h1>Meet new and interesting dogs nearby.</h1>
-      <button type="button">Download</button>
-      <button type="button">Download</button>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <h1>Meet new and interesting dogs nearby.</h1>
+        <button type="button">Download</button>
+        <button type="button">Download</button>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <img src="images/iphone6.png" alt="iphone-mockup">
+      </div>
     </div>
-    <div>
-      <img src="images/iphone6.png" alt="iphone-mockup">
-    </div>
-
-  </section>
+  </div>
+</section>
 
 
   <!-- Features -->

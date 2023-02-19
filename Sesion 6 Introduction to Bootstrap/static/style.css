@@ -8,13 +8,19 @@
 }
 
 .hr-separator{
-    border: 5px dotted var(--black);
+    border: 5px solid #212529;
     border-bottom: 0;
-    width: 40%;
+    width: 100%;
+    opacity: 1;
     margin: 0 auto;
+    padding: 0;
 }
 
 .high-text{
     font-weight: bold;
     color: red;
+}
+
+h1{
+    text-align: center;
 }

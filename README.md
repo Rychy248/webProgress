@@ -1,5 +1,7 @@
-# webProgress
-A practice about web development
+# webProgress 
+[Visite the deployed repository](https://rychy248.github.io/webProgress/index.html)
+
+This is repository, where a save my path learning about web development, you can find lots of excercises, designs, theory, and more, good luck! :=)
 
 
 Sesion 1: General content

@@ -26,12 +26,12 @@
 <body>
 <section id="title">
 
-  <div class="container-fluid bg-danger shadow">
+  <div class="container-fluid bg-danger shadow p-0">
     <div class="cont-padding-nav">
       <!-- Nav Bar -->
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand text-dark" id="TinDog-Logo" href="#">TinDog</a>
+        <div class="container-fluid p-0">
+          <a class="navbar-brand text-dark" id="TinDog-Logo" href="#">tindog</a>
           <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#myFirstToogle"
             data-bs-theme="ligth" aria-controls="myFirstToogle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,7 +42,7 @@
                 <a class="nav-link text-bg-dark p-2 mt-2 rounded-5" href="../index.html">Return</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark mt-2 ms-2" href="#">Contact</a>
+                <a class="nav-link text-dark mt-2 ms-2" href="#">Contact</a>                
               </li>
               <li class="nav-item">
                 <a class="nav-link text-dark mt-2 ms-2" href="#">Princing</a>
@@ -63,9 +63,9 @@
     <!-- Title -->
     <div class="row">
       <div class="col-lg-6 col-md-12 col-sm-12">
-        <h1>Meet new and interesting dogs nearby.</h1>
-        <button class="btn btn-lg btn-dark" type="button"><i class="fa-brands fa-apple"></i> Download</button>
-        <button class="btn btn-lg btn-outline-light" type="button"><i class="fa-brands fa-google-play"></i>Download</button>
+        <h1 class="text-white" id="title-enter">Meet new and interesting dogs nearby.</h1>
+        <button class="btn btn-lg btn-dark download-btn" type="button"><i class="fa-brands fa-apple"></i> Download</button>
+        <button class="btn btn-lg btn-outline-light download-btn" type="button"><i class="fa-brands fa-google-play"></i>Download</button>
       </div>
       <div class="col-lg-6 col-md-12 col-sm-12">
         <img class="rotate-n270 phone-img" src="images/iphone6.png" alt="iphone-mockup">
@@ -79,14 +79,29 @@
 
   <section id="features">
 
-    <h3>Easy to use.</h3>
-    <p>So easy to use, even your dog could do it.</p>
-
-    <h3>Elite Clientele</h3>
-    <p>We have all the dogs, the greatest dogs.</p>
-
-    <h3>Guaranteed to work.</h3>
-    <p>Find the love of your dog's life or your money back.</p>
+    <div class="container-fluid cont-padding-3-15">
+    
+      <div class="row text-center">
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <p><span class="fa-solid fa-circle-check fa-4x features-icon"></span></p>
+          <h3>Easy to use.</h3>
+          <p class="features-desc">So easy to use, even your dog could do it.</p>
+        </div>
+    
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <p><span class="fa-solid fa-bullseye fa-4x features-icon"></span></p>
+          <h3>Elite Clientele</h3>
+          <p class="features-desc">We have all the dogs, the greatest dogs.</p>
+        </div>
+    
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <p><span class="fa-solid fa-heart fa-4x features-icon"></span></p>
+          <h3>Guaranteed to work.</h3>
+          <p class="features-desc">Find the love of your dog's life or your money back.</p>
+        </div>
+      </div>
+    
+    </div>
 
   </section>
 

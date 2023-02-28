@@ -90,7 +90,6 @@ p{
 }
 
 #testimonials{
-    padding: 5% 0 0 0;
     background-color: #ef8172;
     color: #fff;
 }
@@ -99,7 +98,15 @@ p{
     width: 10%;
     margin: 20px;
 }
+.cont-testimonial{
+    padding: 0 0 0 0;
+    margin: 0;
+}
 
+.cont-textimonial-items{
+    padding: 3% 15% 0 15%;
+    margin: 0;
+}
 
 #press{
     padding-top: 0%;
@@ -111,4 +118,26 @@ p{
 .press-logo{
     width:15%;
     margin: 20px 20px 15px;
+}
+
+.card-header{
+    background-color: var(--bg-title);
+    border:1px solid var(--bg-title);
+}
+.card-body{
+    border:1px solid var(--bg-title);
+    border-radius: 0 0 25% 25%;
+}
+.btn-pay{
+    background-color: #ef8172;
+}
+.btn-pay:hover{
+    background-color: #ff4c68;
+}
+.btn-free{
+    border: 1px solid #ff4c68;
+    background-color: #fff;
+}
+.btn-free:hover{
+    background-color: #ff4c68;
 }

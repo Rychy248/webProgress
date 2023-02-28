@@ -109,17 +109,37 @@
   <!-- Testimonials -->
 
   <section id="testimonials" class="text-center">
-    <div class="container-fluid cont-padding-3-15">
+    <div class="container-fluid cont-testimonial">
 
-      <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
-      <img class="rounded-circle testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
-      <em>Pebbles, New York</em>
+      <div id="testimonial-carrusel" class="carousel slide" data-bs-touch="false">
 
-      <!-- <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
-      <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
-      <em>Beverly, Illinois</em> -->
-    
+        <div class="cont-textimonial-items">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+                <img class="rounded-circle testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+                <em>Pebbles, New York</em>
+            </div>
+            <div class="carousel-item">
+              <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+              <img class="rounded-circle testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+              <em>Beverly, Illinois</em>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
     </div>
+
   </section>
 
 
@@ -137,35 +157,58 @@
 
   <!-- Pricing -->
 
-  <section id="pricing">
+  <section id="pricing" class="text-center">
 
     <h2>A Plan for Every Dog's Needs</h2>
     <p>Simple and affordable price plans for your and your dog.</p>
 
 
-    <h3>Chihuahua</h3>
-    <h2>Free</h2>
-    <p>5 Matches Per Day</p>
-    <p>10 Messages Per Day</p>
-    <p>Unlimited App Usage</p>
-    <button type="button">Sign Up</button>
+    <div class="row pt-0 ps-5 pe-5 pb-0">
+      <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
+          <div class="card m-2 border-0">
+              <div class="card-header">
+                <h3>Chihuahua</h3>
+              </div>
+              <div class="card-body shadow-lg">
+                <h2>Free</h2>
+                <p>5 Matches Per Day</p>
+                <p>10 Messages Per Day</p>
+                <p>Unlimited App Usage</p>
+                <button class="btn w-50 btn-lg btn-free" type="button">Sign Up</button>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
+          <div class="card m-2 border-0">
+              <div class="card-header">
+                <h3>Labrador</h3>
+              </div>
+              <div class="card-body shadow-lg">
+                <h2>$49 / mo</h2>
+                <p>Unlimited Matches</p>
+                <p>Unlimited Messages</p>
+                <p>Unlimited App Usage</p>
+                <button class="btn w-50 btn-lg btn-pay" type="button">Sign Up</button>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
+          <div class="card m-2 border-0">
+              <div class="card-header">
+                <h3>Mastiff</h3>
+              </div>
+              <div class="card-body bg-light shadow-lg">
+                <h2>$99 / mo</h2>
+                <p>Pirority Listing</p>
+                <p>Unlimited Matches</p>
+                <p>Unlimited Messages</p>
+                <p>Unlimited App Usage</p>
+                <button class="btn w-50 btn-pay" type="button">Sign Up</button>
+              </div>
+          </div>
+      </div>
+  </div>
 
-
-    <h3>Labrador</h3>
-    <h2>$49 / mo</h2>
-    <p>Unlimited Matches</p>
-    <p>Unlimited Messages</p>
-    <p>Unlimited App Usage</p>
-    <button type="button">Sign Up</button>
-
-
-    <h3>Mastiff</h3>
-    <h2>$99 / mo</h2>
-    <p>Pirority Listing</p>
-    <p>Unlimited Matches</p>
-    <p>Unlimited Messages</p>
-    <p>Unlimited App Usage</p>
-    <button type="button">Sign Up</button>
 
   </section>
 

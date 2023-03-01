@@ -28,3 +28,29 @@ h1{
 .text-light:hover{
     color:black;
 }
+
+/* Z-INDEX style */
+.container-blocks{
+    position: relative;
+}
+.red, .yellow, .blue{
+    height: 200px;
+    width: 200px;
+    border: 1px solid fuchsia;
+    position: absolute;
+}
+.red{
+    background-color: red;
+    z-index: 1;
+}
+.yellow{
+    background-color: yellow;
+    top: 40px;
+    left: 40px;
+}
+.blue{
+    background-color: blue;
+    z-index: -1;
+    top: 80px;
+    left: 80px;
+}

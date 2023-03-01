@@ -38,6 +38,9 @@ p{
     padding: 3% 15%;
     margin: 0;
 }
+.extra-padding{
+    padding-bottom: 7%;
+}
 .cont-padding-nav{
     padding: 0% 15%;
     margin: 0;
@@ -50,6 +53,9 @@ p{
 .phone-img{
     transform: rotate(25deg);
     width: 60%;
+    position: absolute;
+    right: 30%;
+    /* z-index: -1; */
 }
 
 .download-btn{
@@ -67,11 +73,11 @@ p{
 #title-enter{
     font-size: 3.5rem;
 }
-
-
 /* features  */
 #features{
     padding: 5% 0;
+    background-color: #fff;
+    position: relative;
 }
 
 .features-icon{
@@ -92,6 +98,7 @@ p{
 #testimonials{
     background-color: #ef8172;
     color: #fff;
+    position: relative;
 }
 
 .testimonial-image{
@@ -113,6 +120,7 @@ p{
     padding-bottom: 3%;
     background-color: #ef8172;
     color: #fff;
+    position: relative;
 }
 
 .press-logo{

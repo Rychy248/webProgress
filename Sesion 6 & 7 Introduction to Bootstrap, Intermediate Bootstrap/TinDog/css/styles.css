@@ -58,6 +58,17 @@ p{
     /* z-index: -1; */
 }
 
+@media (max-width: 1028px) {
+    .phone-img{
+        transform: rotate(0deg);
+        width: 70%;
+        position: static;
+    }
+    .title-cont{
+        text-align: center;
+    }
+}
+
 .download-btn{
     margin: 5% 3% 5% 0%;
 }
@@ -148,4 +159,44 @@ p{
 }
 .btn-free:hover{
     background-color: #ff4c68;
+}
+
+#cta{
+    background-color: #ff4c68;
+    color: white;
+    text-align: center;
+    padding: 8% 0 5%;
+}
+.cta-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 900;
+    width: 65%;
+    margin:0 auto;
+}
+
+#footer{
+    background-color: #fff;
+    padding: 5% 0;
+    text-align: center;
+}
+.footer-year{
+    font-weight: bold;
+}
+.footer-icons{
+    padding: 0 10px;
+}
+@media (max-width:1028px) {
+    .cta-title{
+        font-size: 3rem;
+        line-height: 1;
+        font-weight: 900;
+        width: 80%;
+        margin:0 auto;
+    }   
+    #title-enter{
+        line-height: 1;
+        font-size: 2.5;
+    }
 }

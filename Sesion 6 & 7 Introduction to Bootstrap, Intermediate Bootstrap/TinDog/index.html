@@ -68,7 +68,7 @@
         <button class="btn btn-lg btn-outline-light download-btn" type="button"><i class="fa-brands fa-google-play"></i>Download</button>
       </div>
       <div class="col-lg-6 col-md-12 col-sm-12 position-relative">
-          <img class="rotate-n270 phone-img" src="images/iphone6.png" alt="iphone-mockup">
+          <img class="phone-img mx-auto" src="images/iphone6.png" alt="iphone-mockup">
       </div>
     </div>
   </div>
@@ -217,9 +217,9 @@
 
   <section id="cta">
 
-    <h3>Find the True Love of Your Dog's Life Today.</h3>
-    <button type="button">Download</button>
-    <button type="button">Download</button>
+    <h3 class="cta-title">Find the True Love of Your Dog's Life Today.</h3>
+    <button class="btn btn-lg btn-dark download-btn" type="button"><i class="fa-brands fa-apple"></i> Download</button>
+    <button class="btn btn-lg btn-outline-light download-btn" type="button"><i class="fa-brands fa-google-play"></i>Download</button>
 
   </section>
 
@@ -227,12 +227,22 @@
   <!-- Footer -->
 
   <footer id="footer">
-
-    <p>© Copyright TinDog</p>
+    <p>
+      <span class="fa-brands fa-twitter footer-icons"></span>
+      <span class="fa-brands fa-facebook-f footer-icons"></span>
+      <span class="fa-brands fa-instagram footer-icons"></span>
+      <i class="fa-solid fa-envelope footer-icons"></i>
+    </p>
+    <p>© Copyright <span id="footer-year"></span> TinDog</p>
 
   </footer>
 
+  <script>
+    let year
+    year = new Date().getFullYear();
 
+    document.getElementById("footer-year").innerHTML = year;
+  </script>
 </body>
 
 </html>

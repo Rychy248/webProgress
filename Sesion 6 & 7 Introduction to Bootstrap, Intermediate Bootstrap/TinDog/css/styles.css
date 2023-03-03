@@ -12,35 +12,32 @@
 body{
     font-family: "Montserrat",sans-serif;
     font-weight: 400;
+    text-align: center;
 }
-h1{
+h1, h2, h3, h4, h5, h6{
     font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADINGS */
+.big-heading, .price-text, .price-title, .testimonial-text{
     font-size: 3rem;
     line-height: 1.5;
     font-weight: 900;
+    color: #fff;
 }
-h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
-    line-height: 1.5;
-    font-weight: bold;
-}
-h3{
+.features-title{
     font-size: 1.4rem;
-    line-height: 1.5;
     font-weight: bold;
 }
-p{
-    font-family: 'Montserrat', sans-serif;
+.price-text{
+    color: #000;
 }
+
 /* title nav bar */
-.cont-padding-3-15{
-    padding: 3% 15%;
-    margin: 0;
+.container-fluid{
+    padding: 7% 15%;
 }
-.extra-padding{
-    padding-bottom: 7%;
-}
+
 .cont-padding-nav{
     padding: 0% 15%;
     margin: 0;
@@ -83,10 +80,10 @@ p{
 }
 #title-enter{
     font-size: 3.5rem;
+    text-align: left;
 }
 /* features  */
 #features{
-    padding: 5% 0;
     background-color: #fff;
     position: relative;
 }
@@ -94,7 +91,6 @@ p{
 .features-icon{
     color: #ef8172;
     /* for the size of icons from font-awesome, we use "fa-SIZEWANTEDx" */
-    padding-bottom: 1rem;
 }
 
 .features-icon:hover{
@@ -103,7 +99,6 @@ p{
 
 .features-desc{
     color: #8f8f8f;
-    padding: 0 5%;
 }
 
 #testimonials{
@@ -111,24 +106,11 @@ p{
     color: #fff;
     position: relative;
 }
-
 .testimonial-image{
     width: 10%;
     margin: 20px;
 }
-.cont-testimonial{
-    padding: 0 0 0 0;
-    margin: 0;
-}
-
-.cont-textimonial-items{
-    padding: 3% 15% 0 15%;
-    margin: 0;
-}
-
 #press{
-    padding-top: 0%;
-    padding-bottom: 3%;
     background-color: #ef8172;
     color: #fff;
     position: relative;
@@ -150,36 +132,17 @@ p{
 .btn-pay{
     background-color: #ef8172;
 }
-.btn-pay:hover{
-    background-color: #ff4c68;
-}
 .btn-free{
     border: 1px solid #ff4c68;
     background-color: #fff;
 }
-.btn-free:hover{
+.btn-pay:hover, .btn-free:hover{
     background-color: #ff4c68;
 }
 
 #cta{
     background-color: #ff4c68;
     color: white;
-    text-align: center;
-    padding: 8% 0 5%;
-}
-.cta-title{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
-    line-height: 1.5;
-    font-weight: 900;
-    width: 65%;
-    margin:0 auto;
-}
-
-#footer{
-    background-color: #fff;
-    padding: 5% 0;
-    text-align: center;
 }
 .footer-year{
     font-weight: bold;
@@ -188,13 +151,6 @@ p{
     padding: 0 10px;
 }
 @media (max-width:1028px) {
-    .cta-title{
-        font-size: 3rem;
-        line-height: 1;
-        font-weight: 900;
-        width: 80%;
-        margin:0 auto;
-    }   
     #title-enter{
         line-height: 1;
         font-size: 2.5;

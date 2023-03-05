@@ -7,30 +7,232 @@
 
     <link rel="favicon" href="./../favicon.ico" type="image/x-icon">
     <!-- bootstrap -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./static/combiningSelectors.css">
 </head>
 <body>
-    <div class="content-top">
+    <div class="content top">
         <div class="#">
             <a class="#" href="./index.html">Return! :)</a>
         </div>
         <hr>
-        <h1 >Media Query</h1>
-        <p class="#"> </p>
+        <h1 id="top">Combining Selectors</h1>
+        <p class="#">
+            A combinator is something that explains the relationship between the selectors. <br>
+            A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator. <br>
+            There are four different combinators in CSS: <br>
+        </p>
         <hr>
     </div>
 
-    <section class="content-middle">
+    <section class="content middle">
+        <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-Descendent-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Descendent" type="button" role="tab" aria-controls="v-pills-Descendent" aria-selected="true">Descendent</button>
+            <button class="nav-link" id="v-pills-Child-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Child" type="button" role="tab" aria-controls="v-pills-Child" aria-selected="false">Child</button>
+            <button class="nav-link" id="v-pills-Adjacent-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Adjacent" type="button" role="tab" aria-controls="v-pills-Adjacent" aria-selected="false">Adjacent</button>
+            <button class="nav-link" id="v-pills-General-tab" data-bs-toggle="pill" data-bs-target="#v-pills-General" type="button" role="tab" aria-controls="v-pills-General" aria-selected="false">General</button>
+            <button class="nav-link" id="v-pills-Comma-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Comma" type="button" role="tab" aria-controls="v-pills-Comma" aria-selected="false">Comma</button>
+            <button class="nav-link" id="v-pills-two-classes-tab" data-bs-toggle="pill" data-bs-target="#v-pills-two-classes" type="button" role="tab" aria-controls="v-pills-two-classes" aria-selected="false">two-classes</button>
+            </div>
 
+            <div class="tab-content" id="v-pills-tabContent">
+
+            <div class="tab-pane fade container-fluid show active" id="v-pills-Descendent" role="tabpanel" aria-labelledby="v-pills-Descendent-tab" tabindex="0">
+                <h2 id="Descendant">Descendant selector (space)</h2>
+                <p>
+                    The descendant selector matches all elements that are descendants of a specified element. <br><br>
+                    Example <br>
+                </p>
+                <div class="content-code">
+                    <code lang="css">
+                        <pre class="chroma">
+<h3 class="code-title">Example</h3>
+<p>The following example selects all &#60;p&#62; elements inside &#60;div&#62; elements:</p>
+    div p {
+        background-color: yellow;
+    }
+<h3 class="code-title">In this page</h3>
+    .middle h2{
+        color: brown;
+        text-align: left;
+    }
+                    </pre>
+                    </code>
+                </div>
+
+            </div>
+
+              <div class="tab-pane fade container-fluid" id="v-pills-Child" role="tabpanel" aria-labelledby="v-pills-Child-tab" tabindex="0">
+                <h2 id="Child">Child selector (>)</h2>
+                <p>The child selector selects all elements that are the children of a specified element. <br></p>
+                <div class="content-code">
+                    <code lang="css">
+                        <pre class="chroma">
+    <h3 class="code-title">Example</h3>
+    <p>The following example selects all &#60;p&#62; elements that are children of a &#60;div&#62; element:p </p>
+    div > p {
+        background-color: yellow;
+    }
+    <h3 class="code-title">In this page</h3>
+    code > pre > p{
+        color: rgb(71, 15, 124); <input type="color" value="#470f7c">
+        text-decoration: underline;
+    }
+                    </pre>
+                    </code>
+                </div>
+              </div>
+
+              <div class="tab-pane fade container-fluid" id="v-pills-Adjacent" role="tabpanel" aria-labelledby="v-pills-Adjacent-tab" tabindex="0">
+                <h2 id="Adjacent">Adjacent sibling selector (+)</h2>
+                <p>The adjacent sibling selector is used to select an element that is directly after another specific element. <br><br>
+                    Sibling elements must have the same parent element, and "adjacent" means "immediately following".<br>
+                </p>
+                <div class="content-code">
+                    <code lang="css">
+                        <pre class="chroma">
+    <h3 class="code-title">Example</h3>
+    <p>The following example selects the first &#60;p&#62; element that are placed immediately after &#60;div&#62; elements:</p>
+    div + p {
+        background-color: yellow;
+    }
+    <h3 class="code-title">In this page</h3>
+    .adjacente-example + p{
+        background-color: yellow;
+    }
+                        <div class="adjacente-example">
+                            <p>Paragraph 1 in the adjacente-example.</p>
+                            <p>Paragraph 2 in the adjacente-example.</p>
+                        </div>
+                        <p>Paragraph after the adjacente-example.</p>
+                    </pre>
+                    </code>
+                </div>
+              </div>
+
+              <div class="tab-pane fade container-fluid" id="v-pills-General" role="tabpanel" aria-labelledby="v-pills-General-tab" tabindex="0">
+                <h2 id="General">General sibling selector (~)</h2>
+                <p>The general sibling selector selects all elements that are next siblings of a specified element.<br><br></p>
+                <div class="content-code">
+                    <code lang="css">
+                        <pre class="chroma">
+    <h3 class="code-title">Example</h3>
+    <p>The following example selects all &#60;p&#62; elements that are next siblings of &#60;div&#62; elements:</p>
+    div ~ p {
+        background-color: yellow;
+    }
+    <h3 class="code-title">In this page</h3>
+    .head2 ~ th {
+        background-color: #9947e6;
+    }
+    
+    
+    .div-inner ~ p{
+        background-color: yellow;
+    }
+    
+                    </pre>
+                    </code>
+    
+                        <div class="example-general">
+                            <p>Paragraph 1.</p>
+    
+                            <div class="div-inner">
+                                <p>Paragraph 2.</p>
+                            </div>
+    
+                            <p>Paragraph 3.</p>
+                            <code>Some code.</code>
+                            <p>Paragraph 4.</p>
+    
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Head1</th>
+                                        <th class="head2">Head2</th>
+                                        <th>Head3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Data1</td>
+                                        <td>Data2</td>
+                                        <td>Data3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+    
+                </div>
+    
+              </div>
+
+              <div class="tab-pane fade container-fluid" id="v-pills-Comma" role="tabpanel" aria-labelledby="v-pills-Comma-tab" tabindex="0">
+                <h2 id="Comma">Comma(,)</h2>
+                <p>The comma permit setting lots of elemnets, with the same properties.<br><br></p>
+                <div class="content-code">
+                    <code lang="css">
+                        <pre class="chroma">
+    <h3 class="code-title">Example</h3>
+    <p>The following example get &#60;p&#62; and &#60;div&#62; the same color:</p>
+    div, p {
+        background-color: yellow;
+    }
+    <h3 class="code-title">In this page</h3>
+    .head2 ~ th {
+        background-color: #9947e6;
+    }
+    
+    
+    .div-inner ~ p{
+        background-color: yellow;
+    }
+    
+                    </pre>
+                    </code>
+                </div>
+    
+              </div>
+              <div class="tab-pane fade container-fluid" id="v-pills-two-classes" role="tabpanel" aria-labelledby="v-pills-two-classes-tab" tabindex="0">
+                <h2 id="two-classes">two-classes</h2>
+                <p>To select an element with two clases we need to apeend a class to another class.<br><br></p>
+                <div class="content-code">
+                    <code lang="css">
+                        <pre class="chroma">
+    <h3 class="code-title">Example</h3>
+    <p>The following example get the element with the class ".title2" ".container", its mean 'class="title2 container"':</p>
+    .title2.container{
+        background-color: yellow;
+    }
+    <h3 class="code-title">In this page</h3>
+    .red.border{
+        border: 1px #000 solid;
+        background-color: red;
+
+    }
+    <div class="red tex-black">
+        I have the clases .red and .tex-black
+    </div>
+
+                    </pre>
+                    </code>
+                </div>
+    
+              </div>
+
+            </div>
+
+          </div>
+ 
+            
     </section>
 
-    <section class="content-foot">
+    <section class="content foot">
         <a class="#" href="./index.html">Return! :)</a>
     </section>
-    <br>
 
 </body>
 </html>

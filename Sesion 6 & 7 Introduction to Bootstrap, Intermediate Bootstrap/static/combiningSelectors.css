@@ -5,23 +5,63 @@
     border: 0;
 } */
 
-.row{
-    display: block;
-}
-.col-lg-9{
-    width: 70%;
-    display: inline-block;
-    margin-bottom: 20%;
-}
-
-.col-lg-3{
-    width: 25%;
-    display: inline-block;
+body{
+    
 }
 
 h1, h2, h3{
     text-align: center;
     font-size: 30px;
+}
+
+.middle h2{
+    color: brown;
+    text-align: left;
+}
+
+code > pre > p{
+    color: #470f7c;
+    text-decoration: underline;
+}
+.adjacente-example + p{
+    background-color: yellow;
+}
+.combinators > li > a{
+    background-color: rgb(169, 255, 226);
+    border-radius: 30px;
+    color: #000;
+}
+.combinators > li > a:hover{
+    background-color: rgb(54, 138, 233);
+}
+
+table th, table td, table{
+    border: 1px #000 solid;
+    border-collapse: collapse;
+}
+.head2 ~ th {
+    background-color: #9947e6;
+}
+.div-inner ~ p{
+    background-color: yellow;
+}
+
+.red.tex-black{
+    border: 4px #000 solid;
+    background-color: red;
+    color: #000;
+}
+.code-title{
+    color: rgb(20, 24, 243);
+    font-size: 1.5rem;
+    text-align: left;
+    text-decoration: underline;
+}
+.content-code{
+    padding: 2% 2%;
+    border: 0.16rem black outset;
+    border-radius: 30px;
+    background-color: rgba(245, 236, 236, 0.404);
 }
 /* body{
     padding: 2%;
@@ -37,18 +77,6 @@ h1, h2, h3{
     }
 }
 
-.hired-p{
-    display: none;
-}
-@media (max-width: 1000px) and (min-width: 400px){
-    .hired-p{
-        display: block;
-        font-size: 50px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        color: brown;
-    }
-}
 
 a, a:visited{
     margin: 5px auto;
@@ -64,28 +92,12 @@ a:hover{
     background-color: aqua;
 }
 
-.content-top{
-    padding: 2%;
-    text-align: center;
-}
-.content-foot{
-    padding: 2%;
-    text-align: center;
+.content{
+    padding: 1rem 15%;
 }
 
-.content-middle{
-    padding-left: 4%;
-    padding-right: 4%;
-}
-.text-red{
-    color: red;
-    font-weight: bold;
-}
-.text-purple{
-    color: purple;
-    font-weight: bold;
-}
-.text-green{
-    color: green;
-    font-weight: bold;
+@media (max-width: 1200px) {
+    .content{
+        padding: 1rem 5%;
+    }
 }

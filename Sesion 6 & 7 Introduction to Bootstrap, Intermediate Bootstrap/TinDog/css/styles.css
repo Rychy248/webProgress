@@ -1,5 +1,6 @@
 :root{
-    --bg-title: #ff4c68 ;; 
+    --bg-title: #ff4c68; 
+    --bg-secondary-title: #ef8172;
 }
 
 /* 
@@ -38,6 +39,15 @@ h1, h2, h3, h4, h5, h6{
     padding: 7% 15%;
 }
 
+/* SECTIONS COLORS */
+.section-white{
+    background-color: white;
+}
+.section-colored{
+    background-color: var(--bg-title);
+    color: white;
+}
+
 .cont-padding-nav{
     padding: 0% 15%;
     margin: 0;
@@ -55,46 +65,45 @@ h1, h2, h3, h4, h5, h6{
     /* z-index: -1; */
 }
 
+.download-btn{
+    margin: 3% 3% 0% 0%;
+}
+/* ############  IDS   ############ */
+
+#TinDog-Logo{
+    font-family: 'Ubuntu', sans-serif; 
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+#title .big-heading{
+    font-size: 3.5rem;
+    text-align: left;
+}
 @media (max-width: 1028px) {
     .phone-img{
         transform: rotate(0deg);
         width: 70%;
         position: static;
     }
-    .title-cont{
+    #title .big-heading{
         text-align: center;
+        line-height: 1;
+        font-size: 2.5rem;
     }
 }
 
-.download-btn{
-    margin: 5% 3% 5% 0%;
-}
-/* ############  IDS   ############ */
-#title{
-    background-color: var(--bg-title);
-}
-#TinDog-Logo{
-    font-family: 'Ubuntu', sans-serif; 
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-#title-enter{
-    font-size: 3.5rem;
-    text-align: left;
-}
 /* features  */
 #features{
-    background-color: #fff;
     position: relative;
 }
 
 .features-icon{
-    color: #ef8172;
+    color: var(--bg-secondary-title);
     /* for the size of icons from font-awesome, we use "fa-SIZEWANTEDx" */
 }
 
 .features-icon:hover{
-    color: #ff4c68;
+    color: var(--bg-title);
 }
 
 .features-desc{
@@ -102,8 +111,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #testimonials{
-    background-color: #ef8172;
-    color: #fff;
+    background-color: var(--bg-secondary-title);
     position: relative;
 }
 .testimonial-image{
@@ -111,8 +119,7 @@ h1, h2, h3, h4, h5, h6{
     margin: 20px;
 }
 #press{
-    background-color: #ef8172;
-    color: #fff;
+    background-color: var(--bg-secondary-title);
     position: relative;
 }
 
@@ -121,38 +128,24 @@ h1, h2, h3, h4, h5, h6{
     margin: 20px 20px 15px;
 }
 
-.card-header{
-    background-color: var(--bg-title);
-    border:1px solid var(--bg-title);
-}
 .card-body{
     border:1px solid var(--bg-title);
     border-radius: 0 0 25% 25%;
 }
 .btn-pay{
-    background-color: #ef8172;
+    background-color: var(--bg-secondary-title);
 }
 .btn-free{
-    border: 1px solid #ff4c68;
+    border: 1px solid var(--bg-title);
     background-color: #fff;
 }
 .btn-pay:hover, .btn-free:hover{
-    background-color: #ff4c68;
+    background-color: var(--bg-title);
 }
 
-#cta{
-    background-color: #ff4c68;
-    color: white;
-}
 .footer-year{
     font-weight: bold;
 }
 .footer-icons{
     padding: 0 10px;
-}
-@media (max-width:1028px) {
-    #title-enter{
-        line-height: 1;
-        font-size: 2.5;
-    }
 }

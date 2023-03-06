@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Priority</title>
+
+    <link rel="favicon" href="./../favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./static/selectorPriority.css">
+</head>
+<body>
+    <section class="container" id="top">
+        <hr>
+        <h1>Selector Priorities</h1>
+        <button class="btn-black"><a class="#" href="./index.html">Return! <span>:)</span></a></button>
+        <hr>
+    </section>
+
+    <section class="container" id="middle">
+        <div class="sandbox">
+            <div class="all-screen">
+
+                <div id="heading1">
+                    <h2 class="title1">Hi I'm a TITLE1!</h2>
+                </div>
+                <hr>
+                <div id="heading2">
+                    <h3 class="title2">Hi I'm a TITLE2!</h3>
+                </div>
+                <hr>
+                <div id="heading3">
+                    <h4 class="title3">Hi I'm a TITLE3!</h4>
+                </div>
+
+            </div>
+            <div class="half-screen">
+                <h3>HTML</h3>
+                <p>
+                    <code>
+                        &#60;div id="heading1"&#62;<br>
+                        &nbsp;&nbsp;&nbsp; &#60;h2 class="title1"&#62;<br>
+                        <span class="text-tomato">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hi I'm a TITLE1! <br>
+                        </span>
+                        &nbsp;&nbsp;&nbsp; &#60;/h2&#62;<br>
+                        &#60;/div&#62;<br>
+                    </code>
+                    <br>
+                    <span class="comment">
+                        Class(.title1) have more Priorities <br>
+                        than the id(#heading1) <br>
+                        and elements (&#60;h2&#62;).
+                        <br>
+                    </span>
+                </p>
+                <hr>
+                <p>
+                    <code>
+                        &#60;div id="heading2"&#62;<br>
+                        &nbsp;&nbsp;&nbsp; &#60;h3 class="title2"&#62;<br>
+                        <span class="text-purple">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hi I'm a TITLE2! <br>
+                        </span>
+                        &nbsp;&nbsp;&nbsp; &#60;/h3&#62;<br>
+                        &#60;/div&#62;<br>
+                    </code>
+                    <br>
+                    <span class="comment">
+                        Elements (&#60;h3&#62;) <br>
+                        have more Priorities than <br>
+                        the id(#heading2). <br><br>
+                        class(.title2) commented.
+                    </span>
+                </p>
+                <hr>
+                <p>
+                    <code>
+                        &#60;div id="heading3"&#62;<br>
+                        &nbsp;&nbsp;&nbsp; &#60;h4 class="title3"&#62;<br>
+                        <span class="text-blue">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hi I'm a TITLE3! <br>
+                        </span>
+                        &nbsp;&nbsp;&nbsp; &#60;/h4&#62;<br>
+                        &#60;/div&#62;<br>
+                    </code>
+                    <br>
+                    <span class="comment">
+                        The id(#heading3) has the less priority <br>
+                        between the class(.title3) and elements (&#60;h4&#62;). <br><br>
+                        Class (.title3) and element (&#60;h4&#62;) commented.
+                    </span>
+                </p>
+            </div>
+            <div class="half-screen">
+                <h3>CSS</h3>
+                <p>
+                    <code>
+                        .title1{ <br>
+                        &nbsp;&nbsp;&nbsp; color: <span class="text-tomato">tomato</span>; <br>
+                        } <br>
+                        #heading1 { <br>
+                        &nbsp;&nbsp;&nbsp; color: <span class="text-blue">blue</span>; <br>
+                        } <br>
+                        h2{ <br>
+                        &nbsp;&nbsp;&nbsp; color: <span class="text-purple">purple</span>; <br>
+                        } <br>
+                    </code>
+                </p>
+                <hr>
+                <p>
+                    <code>
+                        <span class="comment">
+                            /* <br>
+                            .title2{ <br>
+                            &nbsp;&nbsp;&nbsp; color: tomato; <br>
+                            } <br>
+                            */ <br>
+                        </span>
+                        h3{ <br>
+                        &nbsp;&nbsp;&nbsp; color: <span class="text-purple">purple</span>; <br>
+                        } <br>
+                        #heading2 { <br>
+                        &nbsp;&nbsp;&nbsp; color: <span class="text-blue">blue</span>; <br>
+                        } <br>
+                    </code>
+                </p>
+                <hr>
+                <p>
+                    <code>
+                        #heading3 { <br>
+                        &nbsp;&nbsp;&nbsp; color: <span class="text-blue">blue</span>; <br>
+                        } <br>
+                        <span class="comment">
+                            /* <br>
+                            .title3{ <br>
+                            &nbsp;&nbsp;&nbsp; color: tomato; <br>
+                            } <br>
+                            h3{ <br>
+                            &nbsp;&nbsp;&nbsp; color: purple; <br>
+                            } <br>
+                            */ <br>
+                        </span>
+                    </code>
+                </p>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="container">
+            <button class="btn-black"><a class="#" href="./index.html">Return! <span>:)</span></a></button>
+        <br>
+    </footer>
+
+</body>
+</html>

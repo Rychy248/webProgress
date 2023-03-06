@@ -1,21 +1,47 @@
 # webProgress 
-[Visite the deployed repository](https://rychy248.github.io/webProgress/index.html)
+### [Visite the deployed repository](https://rychy248.github.io/webProgress/index.html)
 
 This is repository, where a save my path learning about web development, you can find lots of excercises, designs, theory, and more, good luck! :=)
 
 
-Sesion 1: General content
+## **Sesion 1:** General content.
 
-Sesion 2: Introducition to the web development, tags
+## **Sesion 2:** Introducition to the web development.
 
-Sesion 3: Html intermediate, Tables, imgs, links, etc.
+    Tags
 
-Sesion 4: Introduction to CSS
+## **Sesion 3:** Html intermediate.
+
+    Tables, imgs, links, etc.
+
+## **Sesion 4:** Introduction to CSS.
+
     Basic with css, releited css with html, font, tables, paragraphs. Ways to rel an css to HTML, etc.
 
-Sesion 5: Intermediate CSS
+## **Sesion 5:** Intermediate CSS.
+
     Productos: CV (Sesion 5 intermediate css/cv.html)
     Display, position, Font styling, float, grid, etc.
 
-Sesion 6: Introduction to Bootstrap
+## **Sesion 6 & 7:** Introduction to Bootstrap, Intermediate Bootstrap.
+
+    Products: TingDog social Media
+    - BOOTSTRAP THINGS
+        - Ways to Install Bootstrap
+        - Wireframes
+        - Font Awesome
+        - Containers
+        - Grid System
+        - Cards
+        - Carrusel
+    - CSS THINGS
+        - Z-Index
+        - Combining Selectors
+        - Media Queries
+        - Selector Priority
     
+## **Sesion 8:** Web Desing School
+A web that Peaople love
+
+
+### **Contact Me at: _jorgeajrha@gmail.com_**

@@ -17,14 +17,34 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 h1, h2{
+    font-size: 3rem;
     text-align: center;
 }
 p, li{
     font-size:1.4rem;
     text-align: left;
+}
+
+button{
+    padding: 15px;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    background-color: var(--black);
+    color: var(--white);
+}
+button a:visited{
+    color: var(--white);
+}
+button:hover, button a:hover{
+    color: var(--yellow);
+}
+button a{
+    text-decoration: none;
 }
 .container-fluid{
     padding: 0% 10%;
@@ -110,53 +130,8 @@ p, li{
     align-content: space-between;
     align-items: flex-start;
 }
-.container-flex li{
-    border-radius: 20px;
-    flex: 1;
-    text-align: center;
-}
-.container-flex li:hover{
-    flex: 2;
-}
-.container-flex .red{
-    background-color: var(--red);
-    color: white;
-    font-weight: bolder;
-}
-.container-flex .yellow{
-    background-color: var(--yellow);
-    color: white;
-    font-weight: bolder;
-}
-.container-flex .green{
-    background-color: var(--green);
-    color: white;
-    font-weight: bolder;
-}
-.container-flex .blue{
-    background-color: var(--blue);
-    color: white;
-    font-weight: bolder;
-}
-.container-flex .purple{
-    background-color: var(--purple);
-    color: white;
-    font-weight: bolder;
-}
 
 
-.container-half, .container-insade{
-    text-align: center;
-}
-.container-insade .container-half img{
-    width: 100%;
-    margin: 0 auto;
-    border-radius: var(--border-radius);
-}
-.container-insade .container-half img:hover{
-    transform: scale(1.5);
-    background-color: var(--white);
-}
 
 /* --------------------------colors */
 .brown{

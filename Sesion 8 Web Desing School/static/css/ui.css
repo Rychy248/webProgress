@@ -62,6 +62,7 @@ button a{
     margin: 0 auto;
     border: 1px var(--black) solid;
     border-radius: var(--border-radius);
+    padding: 2% 0;
 }
 .container-half{
     width: 48%;
@@ -157,14 +158,97 @@ button a{
     text-align: center;
 }
 
+.container-half.invitation{
+    width: 40%;
+}
+.invitation{
+    background-color: var(--green);
+    color: var(--white);
+    text-align: left;
+    /* padding: 15px 0 15px 15px; */
+    padding: 3%;
+    font-size: 2remm;
+}
+.invitation p{
+    text-align: center;
+    font-weight: bolder;
+}
+.invitation span{
+    text-align: center;
+    color: var(--black);
+    font-size: 1rem;
+}
+.container-half.bg-purple button{
+    font-size: 0.5rem;
+    background-color: var(--white);
+    color: black;
+    border: 2px solid var(--black);
+}
+.container-half.bg-purple button:hover{
+    color: black;
+    background-color: var(--pink);
+}
+.container-half.bg-purple span button{
+    font-size: 2rem;
+    font-weight: bolder;
+    background-color: var(--white);
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+.container-half.bg-purple span button:hover{
+    color: black;
+    background-color: var(--green);
+}
 
+.container-insade .container-full img{
+    width: 40%;
+}
+.container-insade .container-half img{
+    width: 80%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container-half ol{
+    font-size: 1rem;
+    padding-left: 20px;
+}
+.container-half li:hover{
+    color: var(--green);
+    font-weight: bolder;
+}
+.container-half.container-half{
+    width: 40%;
+    padding: 3%;
+    font-size: 1rem;
+}
+.container-full .container-half.container-half h1{
+    font-size: 1.5rem;
+}
+.container-full .container-half .container-half p{
+    font-size: 1rem;
+}
+/* --------------------------text-aling */
+.text-left{
+    text-align: left;
+}
+.text-rigth{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-justify{
+    text-align: justify;
+}
 
 /* --------------------------colors */
 .brown{
     color: var(--brown);
 }
 .cyan{
-    color: var(--cya);
+    color: var(--cyan);
 }
 .pink{
     color:var(--pink);
@@ -189,6 +273,43 @@ button a{
 }
 .black{
     color: var(--black);
+}
+.white{
+    color: var(--white);
+}
+/* --------------------------BACKGROUNDS-colors */
+.bg-brown{
+    background-color: var(--brown);
+}
+.bg-cyan{
+    background-color: var(--cyan);
+}
+.bg-pink{
+    background-color:var(--pink);
+}
+.bg-purple-dark{
+    background-color: var(--purple-dark);
+}
+.bg-yellow{
+    background-color: var(--yellow);
+}
+.bg-red{
+    background-color: var(--red);
+}
+.bg-green{
+    background-color: var(--green);
+}
+.bg-blue{
+    background-color: var(--blue);
+}
+.bg-purple{
+    background-color: var(--purple);
+}
+.bg-black{
+    background-color: var(--black);
+}
+.bg-white{
+    background-color: var(--white);
 }
 
 @media (max-width: 1028px) {

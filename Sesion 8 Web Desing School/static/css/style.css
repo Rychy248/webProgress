@@ -17,14 +17,35 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 h1, h2{
+    font-size: 3rem;
     text-align: center;
+    font-weight: bolder;
 }
 p, li{
     font-size:1.4rem;
     text-align: left;
+}
+
+button{
+    padding: 15px;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    background-color: var(--black);
+    color: var(--white);
+}
+button a:visited{
+    color: var(--white);
+}
+button:hover, button a:hover{
+    color: var(--yellow);
+}
+button a{
+    text-decoration: none;
 }
 .container-fluid{
     padding: 0% 10%;

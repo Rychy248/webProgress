@@ -1,5 +1,5 @@
 :root{
-    --brown: rgb(117, 65, 16);
+    --brown: rgb(71, 38, 6);
     --cyan: rgb(19, 186, 252);
     --pink: rgb(255, 26, 186);
     --purple-dark: rgb(70, 33, 100);
@@ -52,15 +52,16 @@ button a{
     text-align: center;
 }
 .container-insade{
+    margin: 1rem 0;
     padding: 5px 0;
     margin: 0 auto;
 }
-.container-insade > h1{
-    color: var(--blue);
-}
-.container-insade > h2{
-    color: var(--purple);
-    text-align: center;
+.container-full{
+    width: 98%;
+    display: block;
+    margin: 0 auto;
+    border: 1px var(--black) solid;
+    border-radius: var(--border-radius);
 }
 .container-half{
     width: 48%;
@@ -68,6 +69,13 @@ button a{
     margin: 0 auto;
     border: 1px var(--black) solid;
     border-radius: var(--border-radius);
+}
+.container-insade > h1{
+    color: var(--blue);
+}
+.container-insade > h2{
+    color: var(--purple);
+    text-align: center;
 }
 .container-half:hover{
     border-color: var(--blue) ;
@@ -129,6 +137,24 @@ button a{
     justify-items: space-around;
     align-content: space-between;
     align-items: flex-start;
+}
+
+
+.bg-brown{
+    background-color: var(--brown);
+    color: white;
+    border-radius: var(--border-radius);
+    border:0;
+    border-bottom:5px dotted var(--white);
+
+}
+.bg-brown h1{
+    font-size: 4rem;
+    text-align: center;
+}
+.bg-brown p{
+    font-size: 1rem;
+    text-align: center;
 }
 
 

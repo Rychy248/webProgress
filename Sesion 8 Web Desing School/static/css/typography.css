@@ -10,14 +10,25 @@
     --purple:rgb(141, 20, 255);
     --black: #000;
     --white: #fff;
+    --gray: rgb(224, 220, 220);
 
     --border-radius: 30px;
 }
+/* 
+font-family: 'Creepster', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Ubuntu', sans-serif;
+*/
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: var(--gray);
 }
 
 
@@ -68,6 +79,15 @@ button a{
     margin: 0 auto;
     border: 1px var(--black) solid;
     border-radius: var(--border-radius);
+    background-color: var(--white);
+}
+.container-square{
+    width: 40%;
+    padding: 1rem;
+    display: block;
+    margin: 0 auto;
+    border: 1px var(--black) solid;
+    background-color: var(--white);
 }
 .container-half:hover{
     border-color: var(--blue) ;
@@ -129,6 +149,51 @@ button a{
     justify-items: space-around;
     align-content: space-between;
     align-items: flex-start;
+}
+.container-flex .container-insade img{
+    width: 40%;
+}
+
+/* .container-flex .container-half{
+    width: 45%;
+} */
+.container-flex .container-insade .big-img{
+    width: 100%;
+}
+.container-flex > .container-insade{
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+ /* SPECIFIC IN THIS LESSON */
+.text-center p{
+    text-align: center;
+}
+.pacifico, .pacifico * {
+    font-family: 'Pacifico', cursive;
+}
+.creepster, .creepster * {
+    font-family: 'Creepster', cursive;
+}
+.ubuntu, .ubuntu * {
+    font-family: 'Ubuntu', sans-serif;
+}
+.montserrat, .montserrat * {
+    font-family: 'Montserrat', sans-serif;
+}
+.courierNew, .courierNew * {
+    font-family:'Courier New', Courier, monospace;
+}
+.lucida, .lucida * {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pacifico h2, .creepster h2{
+    color: var(--red);
+}
+.pacifico img, .creepster img{
+    width: 20%;
+    margin: 0 auto;
 }
 
 

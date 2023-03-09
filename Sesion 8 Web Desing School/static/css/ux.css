@@ -20,6 +20,10 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* the solution of my problem: https://since1979.dev/aligning-your-lists-with-your-text/ */
+li{
+    list-style-position: inside;
+}
 
 h1, h2{
     font-size: 3rem;
@@ -85,39 +89,54 @@ button a{
 }
 .pilar-list hr{
     border: 4px var(--black) solid;
-    opacity: 100%; /* defaulta bootstrap set this porperty to 25% */
     border-left: 0;
     border-right: 0;
     border-bottom: none;
+    opacity: 100%; /* defaulta bootstrap set this porperty to 25% */
     width: 70%;
     margin: 0 auto;
     text-align: center;
 }
 .pilar-list p{ /* web desing */
-    border: 0;
-    margin: 0;
-    pad: 0;
     font-weight: bold;
     font-size: 2rem;
     text-align: center;
 }
 .pilar-list li {
-    height: 35%;
+    padding: 1%;
     margin-left: 5%;
     margin-right: 5%;
+    height: 35%;
+
     display: inline-block;
     border-radius: 30px 30px 0 0;
     border: 2px var(--black) solid;
     background-color: var(--yellow);
     color: var(--black);
-    padding: 1%;
     writing-mode: sideways-lr;
     text-orientation: mixed;
+    text-align: center;
 }
 .pilar-list li:hover{
     border: 2px var(--black) dotted;
     transform: scale(1.3);
     color: var(--red);
+}
+@media (max-width:1028px) {
+    .pilar-list li {
+        padding: 1%;
+        margin-left: 2%;
+        margin-right: 2%;
+        height: 45%;
+    }
+}
+@media (max-width:720px) {
+    .pilar-list li {
+        padding: 1%;
+        margin-left: 2%;
+        margin-right: 2%;
+        height: 50%;
+    }
 }
 
 .container-flex{
@@ -132,13 +151,74 @@ button a{
 }
 
 
+.container-insade ol{
+    text-anchor: middle;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    /* referenc https://www.w3schools.com/css/css3_multiple_columns.asp */
+    column-count: 3;
+    column-fill: balance;
+    column-gap: 5%;
+
+    column-rule-color: var(--cyan);
+    column-rule-style: solid;
+    column-rule-width: 2px;
+
+    /* column-span: all; */
+    column-width: 100%;
+}
+.container-insade > ol {
+    list-style: none;
+    counter-reset: item;
+}
+.container-insade > ol > li {
+    counter-increment: item;
+    margin-bottom: 5px;
+}
+.container-insade > ol > li:before {
+    display: inline-block;
+
+    padding: 5px;
+    content: counter(item);
+    background: var(--green);
+    border-radius: 50%;
+    color: white;
+    width: 1.2rem;
+
+    text-align: center;
+    font-weight: bolder;
+}
+
+ol li span{
+    font-size: 1.8rem;
+    color: var(--green);
+}
+
+@media (max-width: 1028px) and (max-width: 700px) {
+    .container-insade ol{
+        font-size: 1.2rem;
+        line-height: 2rem;
+        column-count: 2;
+    }
+}
+@media (max-width: 699px){
+    .container-insade ol{
+        font-size: 1rem;
+        line-height: 2rem;
+        column-count: 2;
+    }
+}
 
 /* --------------------------colors */
 .brown{
     color: var(--brown);
 }
 .cyan{
-    color: var(--cya);
+    color: var(--cyan);
 }
 .pink{
     color:var(--pink);

@@ -133,8 +133,8 @@
 
                 </script>
 
-                <!-- -------------- Swtching variables -------------- -->
-                                <!-- ------------------------- Concatenation EXCERCISE -------------------------  -->
+                
+                <!-- ------------------------- Concatenation EXCERCISE -------------------------  -->
                 <br>
                 <h2><span>E#4</span> Using length</h2>
                 
@@ -173,8 +173,138 @@
                     </pre>
                 </code>
 
-                <br>
 
+
+                <!-- ------------------------- Concatenation EXCERCISE -------------------------  -->
+                <br>
+                <h2><span>E#5</span> Formating text</h2>
+                <button type="button" onclick="capitalize()">Execute</button> <br>
+                <p>Using toUpperCase, toLowerCase</p>
+
+
+                <script>
+                    function capitalize(){
+                        let name = prompt("Type your name: ");
+                        let nameUppercase = name.toUpperCase();
+                        let nameLowercase = name.toLowerCase();
+                        let nameCapitalice = name.toUpperCase().slice(0,1) + name.toLowerCase().slice(1,);
+
+                        alert(
+                            "Input: " + name + "\n\n"+
+                            "name.toUpperCase():" + name.toUpperCase() + "\n"+
+                            "name.toLowerCase():" + name.toLowerCase() + "\n\n"+
+                            "Capitalice name: " + name.toUpperCase().slice(0,1) + name.toLowerCase().slice(1,)
+                        )
+                    }
+                </script>
+                <code>
+                    <pre>
+                    &#60;script&#62;
+                    <span><b>//Code of</b></span>
+                    function capitalize(){
+                        let name = prompt("Type your name: ");
+                        let nameUppercase = name.toUpperCase();
+                        let nameLowercase = name.toLowerCase();
+                        let nameCapitalice = name.toUpperCase().slice(0,1) + name.toLowerCase().slice(1,);
+
+                        alert(
+                            "Input: " + name + "\n\n"+
+                            "name.toUpperCase():" + name.toUpperCase() + "\n"+
+                            "name.toLowerCase():" + name.toLowerCase() + "\n"+
+                            "Capitalice name:" + name.toUpperCase().slice(0,1) + name.toLowerCase().slice(1,)
+                        )
+                    }
+                    &#60;/script&#62;
+                    </pre>
+                </code>
+
+
+
+                <!-- ------------------------- Dog age to human ange -------------------------  -->
+                <br>
+                <h2><span>E#6</span> Dog age to human age</h2>
+                <p>Fórmula <span>Human Age = (dogAge -2) *4 +1</span></p>
+                
+                <!-- Human Age = (dogAge -2) *4 +1 -->
+                <div class="container-flex">
+                    <button type="button" onclick="getHumanAge()">Calculate</button>
+                    <input type="text" id="dogAge" placeholder="Dog Age">
+                    <input type="text" id="humanAge" placeholder="Human Age" disabled="True">
+                </div>
+                <div class="container-flex">
+                </div>
+
+                <script>
+                    function getHumanAge(){
+                        let dogAgeText = document.getElementById("dogAge");
+                        let dogAge = Number(dogAgeText.value.slice(9,));
+
+                        if (typeof(dogAge) !== typeof(1)) {
+                            dogAge = Number(dogAgeText.value);
+                        }
+
+                        let humanAgeText = document.getElementById("humanAge");
+                        let humanAge;
+                        
+                        if (typeof(dogAge) == typeof(1)) {
+                            if (dogAge > 0) {
+                                humanAge = (Number(dogAge) -2) * 4 + 1;
+                            }else{
+                                humanAge = 0;
+                            };
+                        }else{
+                            humanAge = 0;
+                        };
+
+                        if (humanAge < 0) {humanAge = humanAge*-1;};
+
+                        humanAgeText.value = "Human Age: "+ humanAge;
+                        dogAgeText.value = "Dog Age: "+ dogAge;
+                        
+                        alert(
+                            "Human Age aprox is: " + humanAge  + "\n\n"
+                        );
+                    }
+
+                </script>
+                <code>
+                    <pre>
+                    &#60;script&#62;
+                    <span><b>//Code of</b></span>
+                    function getHumanAge(){
+                        let dogAgeText = document.getElementById("dogAge");
+                        let dogAge = Number(dogAgeText.value.slice(9,));
+
+                        if (typeof(dogAge) !== typeof(1)) {
+                            dogAge = Number(dogAgeText.value);
+                        }
+                        
+                        let humanAgeText = document.getElementById("humanAge");
+                        let humanAge;
+                        
+                        if (typeof(dogAge) == typeof(1)) {
+                            if (dogAge > 0) {
+                                humanAge = (Number(dogAge) -2) * 4 + 1;
+                            }else{
+                                humanAge = 0;
+                            };
+                        }else{
+                            humanAge = 0;
+                        };
+
+                        if (humanAge < 0) {humanAge = humanAge*-1;};
+
+                        humanAgeText.value = "Human Age: "+ humanAge;
+                        dogAgeText.value = "Dog Age: "+ dogAge;
+                        
+                        alert(
+                            "Human Age aprox is: " + humanAge  + "\n\n"
+                        );
+                    }
+
+                    &#60;/script&#62;
+                    </pre>
+                </code>
                 
             </div>
         </div>

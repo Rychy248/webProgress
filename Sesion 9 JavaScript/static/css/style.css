@@ -35,7 +35,7 @@ footer p{
     text-align: center;
     line-height: 1.8;
     letter-spacing: 0.4rem;
-    
+
     color: var(--black-color);
     font-size: 1rem;
     padding: 25px 0;
@@ -51,13 +51,29 @@ h1, h2{
     text-align: center;
 }
 
-
 /* ----------------- PARAGRAHP AND LISTS */
-p, li{
+p{
     font-size:1.4rem;
     text-align: left;
 }
 
+li{
+    list-style-position: inside;
+    font-size:1.4rem;
+    text-align: left;
+    line-height: 2rem;
+}
+ol{
+    list-style-type: upper-latin;
+}
+ol > li > ol{
+    padding-left: 30px;
+    list-style-type:lower-alpha;
+}
+li > ol > li > ol{
+    padding-left: 40px;
+    list-style-type: lower-roman;
+}
 
 pre{
     width: 96%;
@@ -66,7 +82,20 @@ pre{
     border: var(--border-weight) var(--forth-color) solid;
     overflow: auto;
 }
-
+pre span{
+    color: var(--secondary-color);
+    font-style: italic;
+}
+textarea{
+    display: block;
+    text-align: left;
+    border: var(--border-weight) var(--secondary-color) solid;
+    border-radius: var(--border-radius);
+    
+    padding: 2%;
+    width: 98%;
+    margin: 0 auto;
+}
 /* ----------------- BUTTON */
 button{
     padding: 15px;
@@ -102,6 +131,10 @@ button a:visited{
 .container-insade h1, .container-insade h2{
     font-size: 2.5rem;
 }
+.container-insade h2 span{
+    font-style: normal;
+    color: var(--secondary-color);
+}
 .container-insade span{
     font-style: italic;
 }
@@ -133,7 +166,6 @@ button a:visited{
 .container-half:hover{
     border-color: var(--blue) ;
 }
-
 .container-half p, .container-half h3{
     padding: 0 4%;
 }
@@ -145,6 +177,9 @@ button a:visited{
     margin: 0 auto;
     border: 1px var(--black) solid;
     background-color: var(--white);
+}
+.border-none , .border-none:hover{
+    border: none;
 }
 
 #title{

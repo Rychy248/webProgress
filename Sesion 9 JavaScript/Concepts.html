@@ -1,0 +1,125 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepts</title>
+    
+    <link rel="favicon" href="./../favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    -->
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;900&family=Pacifico&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="./static/css/style.css">
+
+
+</head>
+<body>
+
+    <section id="title">
+            <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+            <br>
+            <h1>Sesion 9<br><span>JavaScript</span></h1>
+            <hr>
+        </section>
+        
+        <section id="middle">
+            <div class="container-insade">
+                <button type="button"><a href="./index.html">Return!</a></button>
+                <button type="button"><a href="./excercices.html">Excercices!</a></button>
+            </div>
+        
+        <div class="container-insade" id="Concepts">
+            <h1>Concepts</h1>
+            <div class="container-insade">
+                <!-- ------------------------- NAMING AND NAMING VARIABLES -------------------------  -->
+                <h2>Naming and Naming variables</h2>
+                <p>A variable should have a comprensible name, for that minimal have to complete the follow rules:</p>
+                <br>
+                <ol>
+                    <li>A clear name, example: <span>let userName;</span> </li>
+                    <li>No have especial characters: <span>let user-Name;</span> (wrong)</li>
+                    <li>Can't contain spaces: <span>let user Name;</span> (wrong)</li>
+                    <li>Can't start with a number: <span>let 1userName;</span> (wrong)</li>
+                    <li>A varible should start with a letter: <span>let city;</span></li>
+                    <li>JavaScript use CamelCase:
+                        <ol>
+                            <li><span>let theUserCity;</span></li>
+                            <li><span>let TheUserCity;</span> (wrong)</li>
+                        </ol>
+                    </li>
+                    <li>The all valid characters are:
+                        <ol>
+                            <li>Numbers [1, 2, 3, etc]</li>
+                            <li>Letters [a, b, ..., A, B, C... etc.]</li>
+                            <li>Underscore and dolar sing [_, $]
+                                <ol>
+                                    <li>Numbers [1, 2, 3, etc]</li>
+                                    <li>Letters [a, b, ..., A, B, C... etc.]</li>
+                                    <li>Underscore and dolar sing [_, $]</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>   
+                <!-- ------------------------- Concatenation -------------------------  -->
+                <br>
+                <h2>Concatenation and length</h2>
+
+                <button type="button" onclick="Concatenation()">Concatenation</button>
+                <p>To Concateneid a string in JavaScript  it's just necesary the simbol <span>+</span> example:</p>
+
+                <script>
+                    function Concatenation(){
+                        let name = prompt("Type your name");
+                        let gretting = prompt("Type a gretting");
+
+                        
+                        alert(name + ": " + gretting + ', for you!'+
+                            "\nname.length: " + name.length +
+                            "\ngretting.length: " + gretting.length
+                        )
+                    }
+                </script>
+                <code>
+                    <pre>
+                    &#60;script&#62;
+                    <span><b>// Code of</b></span>
+                    function Concatenation(){
+                        let name = prompt("Type your name");
+                        let gretting = prompt("Type a gretting");
+
+                        <span>//To get the <b>length</b> of a word we just add 
+                        // the keyword <b>"length"</b> at the endword, example <b>name.length</b></span>
+                        alert(name + ": " + gretting + ', for you!'+
+                            "\nname.length: " + name.length +
+                            "\ngretting.length: " + gretting.length
+                        )
+                    }
+                    &#60;/script&#62;
+                    </pre>
+                </code>
+
+                <br>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+        <p> All rigths reserved, Ricardo Hernández <br>
+        <span>+502 4209 0991 | jorgeajrha@gmail.com</span>
+        </p>
+    </footer>
+
+</body>
+</html>

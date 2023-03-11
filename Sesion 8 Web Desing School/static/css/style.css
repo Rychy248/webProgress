@@ -30,7 +30,13 @@ p, li{
     font-size:1.4rem;
     text-align: left;
 }
-
+hr{
+    width: 80%;
+    border: 2px #000 solid;
+    border-bottom: 0;
+    opacity: 40%;
+    margin: 0 auto;
+}
 button{
     padding: 15px;
     border-radius: var(--border-radius);
@@ -121,19 +127,24 @@ button a{
     color: var(--red);
 }
 @media (max-width:1028px) {
+
     .pilar-list li {
         padding: 1%;
-        margin-left: 2%;
-        margin-right: 2%;
-        height: 45%;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: auto;
+        height: auto;
+    
+        display: inline-block;
+        border-radius: 30px;
+
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        text-align: center;
     }
-}
-@media (max-width:720px) {
-    .pilar-list li {
-        padding: 1%;
-        margin-left: 2%;
-        margin-right: 2%;
-        height: 50%;
+
+    h1, h2{
+        font-size: 2rem;
     }
 }
 

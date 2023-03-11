@@ -26,17 +26,18 @@
 
     <section id="title">
             <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
-            <button type="button"><a href="./index.html">Return!</a></button>
             <br>
             <h1>Sesion 9<br><span>JavaScript</span></h1>
             <hr>
     </section>
-
+    
     <section id="middle">
         <div class="container-insade">
+            <button type="button"><a href="./index.html">Return!</a></button>
+            <button type="button"><a href="./Concepts.html">Concepts</a></button>
             <h1>Look at the console (F12)</h1>
             <div class="container-insade">
-                <h2>Type OF</h2>
+                <h2><span>E#1</span> Type Of</h2>
                 <p>It's an general fuction, to comprobate the type of a data, or variable</p>
                 <h2>Variable</h2>
                 <p>It's a received memoty to save data, it's defined with <span>let or var, ECMAC recomend let</span>, so here i'll use <span>let</span></p>
@@ -64,7 +65,7 @@
 
                 <!-- -------------- PRINT MY NAME EXCERCISE -------------- -->
                 <br>
-                <h2 id="nameOfUser">Print my name</h2>
+                <h2 id="nameOfUser"><span>E#2</span> Print my name</h2>
                 <button type="button" onclick="printMyName()">Clink to print</button>
                 <br>
                 <br>
@@ -89,7 +90,7 @@
 
                 <!-- -------------- Swtching variables -------------- -->
                 <br>
-                <h2>Swtching variables</h2>
+                <h2><span>E#3</span> Switching variables</h2>
                 <button type="button" onclick="DisplaytheCode1()">Clik to print</button>
                 <p>
                     Javascript Variables Exercise <br>
@@ -132,8 +133,49 @@
 
                 </script>
 
+                <!-- -------------- Swtching variables -------------- -->
+                                <!-- ------------------------- Concatenation EXCERCISE -------------------------  -->
+                <br>
+                <h2><span>E#4</span> Using length</h2>
+                
+                <div class="container-half border-none">
+                    <textarea name="user-writen" id="userInputText" placeholder="Type something here"></textarea>
+                </div>
+                <div class="container-half border-none">
+                    <button type="button" onclick="lenCharacters()">Count</button> <br>
+                    <label for="user-writen" id="results">Count: left: (max=150)</label>
+                </div>
+
+
                 <script>
+                    function lenCharacters(){
+                        let text = document.getElementById("userInputText");
+                        const max = 150;
+                        document.getElementById("results").innerHTML = ("Count: "+ text.value.length +
+                            " Left: -"+ (max - text.value.length) + " (max=150)"
+                        )
+                    }
                 </script>
+                <code>
+                    <pre>
+                    &#60;script&#62;
+                    <span><b>//Code of</b></span>
+                    function lenCharacters(){
+                        let text = document.getElementById("userInputText");
+                        const max = 150;
+
+                        <span>//Using <b>length</b></span>
+                        document.getElementById("results").innerHTML = ("Count: "+ text.value.length +
+                            " Left: -"+ (max - text.value.length) + " (max=150)"
+                        )
+                    }
+                    &#60;/script&#62;
+                    </pre>
+                </code>
+
+                <br>
+
+                
             </div>
         </div>
 

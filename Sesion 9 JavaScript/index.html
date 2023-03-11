@@ -1,0 +1,125 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    
+    <link rel="favicon" href="./../favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    -->
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;900&family=Pacifico&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="./static/css/style.css">
+
+
+</head>
+<body>
+
+    <section id="title">
+            <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+            <button type="button"><a href="./excercices.html">Excercices!</a></button>
+            <br>
+            <h1>Sesion 9<br><span>JavaScript</span></h1>
+            <hr>
+    </section>
+
+    <section id="middle">
+        <div class="container-insade">
+            <h1>Datatypes</h1>
+            <div class="container-insade">
+                <h2>Strings</h2>
+                <p>Strings are a caden of characters, example: <span>"hello world"</span>, to know it's a string are the quotes <span>(")</span>, strings bascly represent text</p>
+                <h2>Numbers</h2>
+                <p>Numbers are a value representation , example: <span>123</span>, they haven't quotes <span>(")</span>, they don't need any special symbol to say the computer it's a number, the fundamental it's just type the requerid number</p>
+                <h2>Boolean</h2>
+                <p>Booleans represent the statement of a condition, have to states: <span>true false</span>, equal to the numbers don't need any special number, just need to specify <span>true</span> or <span>false</span></p>
+            </div>
+        </div>
+        
+        <div class="container-insade"> 
+            <h1>Using: alerts, variables & typeof funtion</h1>
+            <div class="container-insade">
+        
+                
+                <div class="container-half">
+
+                    <script>
+                        function makeTheSum(){
+                            let sumResult = document.getElementById("sum-result");
+                            
+                            console.log(sumResult.innerHTML);
+                            sumResult.innerHTML = Number(document.getElementById("sumand1").innerHTML) + Number(document.getElementById("sumand2").innerHTML);
+                            alert("Sum solved result: "+sumResult.innerHTML)
+                        
+                        }
+                    </script>
+                    
+                    <p>
+                        <button type="button" onclick="makeTheSum()">Make the sum</button>
+                        <span id="sumand1">1</span> + <span id="sumand2">2</span> = <span id="sum-result">result</span>
+                    </p>
+                    
+                </div>
+
+                <div class="container-half">
+
+                    <script>
+                        function makeTheRest(){
+                            let restResult = document.getElementById("rest-result");
+                            
+                            console.log(restResult.innerHTML);
+                            restResult.innerHTML = Number(document.getElementById("minuend").innerHTML) - Number(document.getElementById("sustract").innerHTML);
+                            alert("Rest solved result: "+restResult.innerHTML)
+                        
+                        }
+                    </script>
+                    
+                    <p>
+                        <button type="button" onclick="makeTheRest()">Make the Rest</button>
+                        <span id="minuend">1</span> - <span id="sustract">2</span> = <span id="rest-result">result</span>
+                    </p>
+
+                </div>
+                <h2>Code of </h2>
+                <code>
+                    <pre>
+&#60;script&#62;
+function makeTheRest(){
+    let restResult = document.getElementById("rest-result");
+        
+    console.log(restResult.innerHTML);
+    restResult.innerHTML = Number(document.getElementById("minuend").innerHTML) - Number(document.getElementById("sustract").innerHTML);
+    alert("Rest solved result: "+restResult.innerHTML)
+    
+}
+&#60;/script&#62;
+
+&#60;p&#62;
+    &#60;button type="button" onclick="makeTheRest()"&#62;Make the Rest&#60;/button&#62;
+    &#60;span id="minuend"&#62;1&#60;/span&#62; + &#60;span id="sustract"&#62;2&#60;/span&#62; = &#60;span id="rest-result"&#62;result&#60;/span&#62;
+&#60;/p&#62;
+                    </pre>
+                </code>
+            </div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+        <p> All rigths reserved, Ricardo Hernández <br>
+        <span>+502 4209 0991 | jorgeajrha@gmail.com</span>
+        </p>
+    </footer>
+
+</body>
+</html>

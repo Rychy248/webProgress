@@ -42,6 +42,12 @@ This is repository, where a save my path learning about web development, you can
     
 ## **Sesion 8:** Web Desing School
 A web that Peaople love
+    
+    Color Theory
+    User Experience Desing (UX)
+    User Interface Desing (UI)
+    Typography
 
+## **Sesion 9:** Introduction to JavaScript ES6
 
 ### **Contact Me at: _jorgeajrha@gmail.com_**

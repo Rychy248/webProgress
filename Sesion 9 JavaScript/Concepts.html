@@ -35,6 +35,7 @@
             <div class="container-insade">
                 <button type="button"><a href="./index.html">Return!</a></button>
                 <button type="button"><a href="./excercices.html">Excercices!</a></button>
+                <button type="button"><a href="./excercices2.html">Short programs!</a></button>
             </div>
         
         <div class="container-insade" id="Concepts">
@@ -118,6 +119,8 @@
                 <button type="button" onclick="sayHello()">I'm a button with a function without params</button>
                 <button type="button" onclick="sayHello2('Rychy')">I'm a button with a function with params</button>
 
+                <button type="button" onclick="sumToNums()">Sum to Numbers</button>
+                
                 <script>
                     function sayHello(){
                         alert("Hello!");
@@ -125,6 +128,16 @@
                     function sayHello2(gretting){
                         alert("Hello " + gretting + "!");
                     };
+
+                    function sum(a=4,b=5){
+                        return a + b;
+                    }
+                    function sumToNums(){
+                        let a = Number(prompt("Give me a number"));
+                        let b = Number(prompt("Give me a number"));
+                        alert("Calling the function 'sum' without arguments, result: "+sum());
+                        alert("The sum function with arguments, a="+a+" + a="+b+" is: "+sum(a + b));
+                    }
                 </script>
                 <code>
                     <pre>
@@ -149,7 +162,8 @@
                     &#60;button type="button" onclick="sayHello()"&#62;I'm a button with a function without params&#60;/button&#62;
                     <span><b>To call a funtion</b> we just have to write the funtion name as in the button is
                     onclick="<b>sayHello()</b>"</span>
-
+                    
+                    <hr>
                     &#60;script&#62;
                     <b>function</b> sayHello2(<b>gretting</b>){
                         alert("Hello " + <b>gretting</b>  + "!");
@@ -159,14 +173,33 @@
                     };
                     &#60;/script&#62;
 
-                    &#60;button type="button" onclick="<b>sayHello2('Rychy')</b>"&#62;I'm a button with a function with a param&#60;/button&#62;
                     <span>To call this funtion it's necesary add the data for parameter,
                     it's mean the <b>argument</b>, in this case the argument for the parameter was <b>Rychy</b></span>
+                    &#60;button type="button" onclick="<b>sayHello2('Rychy')</b>"&#62;I'm a button with a function with a param&#60;/button&#62;
 
                     <span>//You can create a funtion, with optional arguments,
-                    it's mean, with parameters who can get no argument,
-                    search for examples jejeje :)</span>
+                    it's mean, with parameters who can get no argument</span>
 
+                    <hr>
+                    &#60;script&#62;
+                    <span>//Here the parameters <b>a</b> and <b>b</b> have a predeterminated argument, are 4 and 5</span>
+                    function sum(a=4,b=5){ 
+                        return a + b;
+                    }
+                    function SumToNums(){
+                        let a = Number(prompt("Give me a number"));
+                        let b = Number(prompt("Give me a number"));
+
+                        <span>//At this point, we call the function <b>sum()</b> without args and the result is <b>9</b></span>
+                        alert("Calling the function 'sum' without arguments, result: "+sum());
+
+                        <span>//Here we calling the function <b>sum()</b> with the collect args and the result isn't <b>9</b></span>
+                        alert("The sum function with arguments, a="+a+" + a="+b+" is: "+sum(a + b));
+                    }
+                    &#60;/script&#62;
+
+                    <span>The button who call the function responsable to do the sum</span>
+                    &#60;button type="button" onclick="sumToNums()"&#62;Sum to Numbers&#60;button&#62;
                     </pre>
                 </code>
 

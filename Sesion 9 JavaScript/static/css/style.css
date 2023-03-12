@@ -2,6 +2,7 @@
 :root{
     --border-radius: 30px;
     --border-weight: 2px;
+    --border-weight-bold: 4px;
 
     --ubuntu: 'Ubuntu', sans-serif;
     --montserrat: 'Montserrat', sans-serif;
@@ -9,9 +10,10 @@
     --creepster: 'Creepster', cursive;
 
     --principal-color:#d9f3ff;
-    --secondary-color:#AA77FF;
+    --secondary-color:#AA77FF; /*#AA77FF;*/
     --third-color:#62CDFF;
-    --forth-color:#97DEFF;
+    --forth-color:#97DEFF;  
+    --fith-color:#6307cc;
     --white-color: #fff;
     --black-color: #000;
     --gray-color: #f3f3f3;
@@ -84,14 +86,21 @@ pre{
     overflow: auto;
 }
 pre span{
-    color: var(--secondary-color);
+    color: var(--fith-color);
     font-style: italic;
+}
+pre hr{
+    border: var(--border-weight-bold) var(--secondary-color) dotted;
+    border-bottom: 0;
+    width: 60%;
+    opacity: 50%;
+    margin: 0 auto;
 }
 label{
     text-align: left;
     /* border: var(--border-weight) var(--secondary-color) solid; */
     /* border-radius: var(--border-radius); */
-    color: var(--secondary-color);
+    color: var(--fith-color);
     
     padding: 3% 0 0 0;
     margin: 0 0;
@@ -152,7 +161,7 @@ button a:visited{
 .container-insade h1, .container-insade h2{
     font-size: 2.5rem;
 }
-.container-insade h2 span{
+.container-insade h1 span, .container-insade h2 span{
     font-style: normal;
     color: var(--secondary-color);
 }

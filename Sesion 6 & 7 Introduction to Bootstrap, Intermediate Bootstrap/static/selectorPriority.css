@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1{
+    font-size: 3rem;
+}
+h2, h3, h4, h5, h6{
+    font-size: 2.5rem;
+}
+button, a, p{
+    font-size: 2rem;
+}
+
+hr{
+    width: 90%;
+    border: 5px solid #000;
+    margin: 10px auto;
+    border-bottom: 0;
+    /* border: 5px solid #212529; */
+}
+
+button{
+    padding: 0% 3%;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-style: none;
+}
+button a{
+    text-decoration: none;
+    background-color: none;
+}
+
+/* CSS PRACTICE */
+.all-screen .title1{
+    color: tomato;
+}
+.all-screen #heading1 {
+    color: blue;
+}
+.all-screen h2{
+    color: purple;
+}
+/* ----------------- */
+/* .all-screen .title2{
+    color: tomato;
+} */
+.all-screen h3{
+    color: purple;
+}
+.all-screen #heading2 {
+    color: blue;
+}
+/* ----------------- */
+.all-screen #heading3 {
+    color: blue;
+}
+/* .all-screen .title3{
+    color: tomato;
+}
+.all-screen h4{
+    color: purple;
+} */
+
+
+.text-tomato{
+    color: tomato;
+}
+.text-blue{
+    color: blue;
+}
+.text-purple{
+    color:purple
+}
+
+.sandbox p code .comment{
+    color: gray;
+    font-style: italic;
+}
+.sandbox p .comment{
+    color: green;
+}
+
+.container{
+    padding: 3%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sandbox{
+    border: 1px rgb(13, 133, 133) solid;
+    border-radius: 25px;
+    padding: 1%;
+}
+.sandbox hr{
+    border: 1px solid #000;
+}
+.half-screen{
+    display: inline-block;
+    width: 48%;
+    margin: 0 auto auto auto;
+    border: 1px #000 solid;
+    border-radius: 25px;
+}
+.half-screen p{
+    width: 90%;
+    margin:0 auto;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.all-screen{
+    display: block;
+    width: 96%;
+    margin: 1% auto;
+    border: 1px #000 solid;
+    border-radius: 25px;
+}
+
+.btn-black, .btn-black a{
+    background-color: #000;
+    color: #fff;
+}
+.btn-black:hover, .btn-black:hover a{
+    background-color: #fff;
+    color:#000;
+}
+.btn-black:hover span{
+    color: tomato;
+}
+
+@media (max-width: 1028px){
+    .container{
+        padding: 3%;
+    }   
+    button{
+        padding: 0% 3%;
+    }
+    h1, h2, h3, h4, h5, h6{
+        font-size: 2rem;
+    }
+    button, a, p{
+        font-size: 1rem;
+    }
+}

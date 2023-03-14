@@ -1,0 +1,314 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepts</title>
+    
+    <link rel="favicon" href="./../favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    -->
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;900&family=Pacifico&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="./static/css/style.css">
+
+
+</head>
+<body>
+
+    <section id="title">
+            <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+            <br>
+            <h1>Sesion 9<br><span>JavaScript</span></h1>
+            <hr>
+        </section>
+        
+        <section id="middle">
+            <div class="container-insade">
+                <button type="button"><a href="./index.html">Return!</a></button>
+                <button type="button"><a href="./excercices.html">Excercices!</a></button>
+                <button type="button"><a href="./excercices2.html">Short programs!</a></button>
+            </div>
+        
+        <div class="container-insade" id="Concepts">
+            <h1>Concepts</h1>
+            <div class="container-insade">
+                <!-- ------------------------- NAMING AND NAMING VARIABLES -------------------------  -->
+                <h2>Naming and Naming variables</h2>
+                <p>A variable should have a comprensible name, for that minimal have to complete the follow rules:</p>
+                <br>
+                <ol>
+                    <li>A clear name, example: <span>let userName;</span> </li>
+                    <li>No have especial characters: <span>let user-Name;</span> (wrong)</li>
+                    <li>Can't contain spaces: <span>let user Name;</span> (wrong)</li>
+                    <li>Can't start with a number: <span>let 1userName;</span> (wrong)</li>
+                    <li>A varible should start with a letter: <span>let city;</span></li>
+                    <li>JavaScript use CamelCase:
+                        <ol>
+                            <li><span>let theUserCity;</span></li>
+                            <li><span>let TheUserCity;</span> (wrong)</li>
+                        </ol>
+                    </li>
+                    <li>The all valid characters are:
+                        <ol>
+                            <li>Numbers [1, 2, 3, etc]</li>
+                            <li>Letters [a, b, ..., A, B, C... etc.]</li>
+                            <li>Underscore and dolar sing [_, $]
+                                <ol>
+                                    <li>Numbers [1, 2, 3, etc]</li>
+                                    <li>Letters [a, b, ..., A, B, C... etc.]</li>
+                                    <li>Underscore and dolar sing [_, $]</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>   
+                <!-- ------------------------- Concatenation -------------------------  -->
+                <br>
+                <h2>Concatenation and length</h2>
+
+                <button type="button" onclick="Concatenation()">Concatenation</button>
+                <p>To Concateneid a string in JavaScript  it's just necesary the simbol <span>+</span> example:</p>
+
+                <script>
+                    function Concatenation(){
+                        let name = prompt("Type your name");
+                        let gretting = prompt("Type a gretting");
+
+                        
+                        alert(name + ": " + gretting + ', for you!'+
+                            "\nname.length: " + name.length +
+                            "\ngretting.length: " + gretting.length
+                        )
+                    }
+                </script>
+                <code>
+                    <pre>
+                    &#60;script&#62;
+                    <span><b>// Code of</b></span>
+                    function Concatenation(){
+                        let name = prompt("Type your name");
+                        let gretting = prompt("Type a gretting");
+
+                        <span>//To get the <b>length</b> of a word we just add 
+                        // the keyword <b>"length"</b> at the endword, example <b>name.length</b></span>
+                        alert(name + ": " + gretting + ', for you!'+
+                            "\nname.length: " + name.length +
+                            "\ngretting.length: " + gretting.length
+                        )
+                    }
+                    &#60;/script&#62;
+                    </pre>
+                </code>
+
+                <br>
+                <!-- ------------------------- FUNTIONS -------------------------  -->
+                <br>
+                <h2>Funtions</h2>
+
+                <p>Functions are list of instrucions packedn, they could be called when it's necesary; example:</p>
+                <p>The follow button have a funtion called "sayHello()"</p>
+                <button type="button" onclick="sayHello()">I'm a button with a function without params</button>
+                <button type="button" onclick="sayHello2('Rychy')">I'm a button with a function with params</button>
+
+                <button type="button" onclick="sumToNums()">Sum to Numbers</button>
+                
+                <script>
+                    function sayHello(){
+                        alert("Hello!");
+                    };
+                    function sayHello2(gretting){
+                        alert("Hello " + gretting + "!");
+                    };
+
+                    function sum(a=4,b=5){
+                        return a + b;
+                    }
+                    function sumToNums(){
+                        let a = Number(prompt("Give me a number"));
+                        let b = Number(prompt("Give me a number"));
+                        alert("Calling the function 'sum' without arguments, result: "+sum());
+                        alert("The sum function with arguments, a="+a+" + a="+b+" is: "+sum(a + b));
+                    }
+                </script>
+                <code>
+                    <pre>
+                    
+                    &#60;script&#62;
+                    <span><b>// Code of</b></span>
+
+                    <span>This is the function</span>
+                    
+                    <span>//use the keyword <b>function</b> its mean we're going to create a funtion</span>
+                    <b>function</b> sayHello(){ <span>//The next word is the function name <b>sayHello</b></span>
+                        <span>//After the name, it's follow the parethesis <b>(</b>params<b>)</b>, after that the brackets <b>{</b>Your code will be here<b> }</b></span>
+                        <span>//Params, are data for the function, but for this function any parameter has been requerid</span>
+                        
+                        <span>//Insade you can write all the instructions or code you want</span>
+                        
+                        <span>//Here i created an alert where say "Hello!"</span>
+                        alert("Hello!");
+                    };
+                    &#60;/script&#62;
+
+                    &#60;button type="button" onclick="sayHello()"&#62;I'm a button with a function without params&#60;/button&#62;
+                    <span><b>To call a funtion</b> we just have to write the funtion name as in the button is
+                    onclick="<b>sayHello()</b>"</span>
+                    
+                    <hr>
+                    &#60;script&#62;
+                    <b>function</b> sayHello2(<b>gretting</b>){
+                        alert("Hello " + <b>gretting</b>  + "!");
+
+                            <span>//Here the function requered a param <b>gretting</b></span>
+                            <span>//The param "<b>gretting</b>" it's used in the gretting</span>
+                    };
+                    &#60;/script&#62;
+
+                    <span>To call this funtion it's necesary add the data for parameter,
+                    it's mean the <b>argument</b>, in this case the argument for the parameter was <b>Rychy</b></span>
+                    &#60;button type="button" onclick="<b>sayHello2('Rychy')</b>"&#62;I'm a button with a function with a param&#60;/button&#62;
+
+                    <span>//You can create a funtion, with optional arguments,
+                    it's mean, with parameters who can get no argument</span>
+
+                    <hr>
+                    &#60;script&#62;
+                    <span>//Here the parameters <b>a</b> and <b>b</b> have a predeterminated argument, are 4 and 5</span>
+                    function sum(a=4,b=5){ 
+                        return a + b;
+                    }
+                    function SumToNums(){
+                        let a = Number(prompt("Give me a number"));
+                        let b = Number(prompt("Give me a number"));
+
+                        <span>//At this point, we call the function <b>sum()</b> without args and the result is <b>9</b></span>
+                        alert("Calling the function 'sum' without arguments, result: "+sum());
+
+                        <span>//Here we calling the function <b>sum()</b> with the collect args and the result isn't <b>9</b></span>
+                        alert("The sum function with arguments, a="+a+" + a="+b+" is: "+sum(a + b));
+                    }
+                    &#60;/script&#62;
+
+                    <span>The button who call the function responsable to do the sum</span>
+                    &#60;button type="button" onclick="sumToNums()"&#62;Sum to Numbers&#60;button&#62;
+                    </pre>
+                </code>
+
+                <br>
+                <!-- ------------------------- Concatenation -------------------------  -->
+                <br>
+                <h2>slice(x,y)</h2>
+
+                <button type="button" onclick="sliceF()">Slice Funtion</button>
+                <p>Slice is a funtion to cut strings</p>
+
+                <script>
+                    function sliceF(){
+                        let name = prompt("Type your name: (With min 5 characters) ");
+                    
+                        if (name.length < 5){
+                            name = name + "-ADDING"
+                        }
+
+                        
+                        alert("Hello " + name + "!\n"+
+                            "\nname.slice(0,1): " + name.slice(0,1) +
+                            "\nname.slice(4,5): " + name.slice(4,5) +
+                            "\nname.slice(1,5): " + name.slice(4,5)
+                        );
+
+                        alert(
+                            prompt("Type a long text here: ").slice(1,140)
+                        );
+                    }
+                </script>
+                <code>
+                    <pre>
+                    &#60;script&#62;
+                    <span><b>// Code of</b></span>
+                    function sliceF(){
+                        let name = prompt("Type your name: (With min 5 characters) ");
+                    
+                        if (name.length < 5){
+                            name = name + "-ADDING"
+                        }
+
+                        
+                        alert("Hello " + name + "!\n"+
+                            "\nname.slice(0,1): " + name.slice(0,1) +
+                            "\nname.slice(4,5): " + name.slice(4,5) +
+                            "\nname.slice(1,5): " + name.slice(4,5)
+                        );
+
+                        alert(
+                            prompt("Type a long text here: ").slice(1,140)
+                        );
+                    }
+                    &#60;/script&#62;
+                    </pre>
+                </code>
+
+                <!-- ------------------------- Incremet and decrement -------------------------  -->
+                <br>
+                <h2>Increment and decrement</h2>
+                <p>In js, instance of make an manual increment, it's offer a short method to that, as it's come: </p>
+
+                <div class="container-half">
+                    <code>
+                        <pre>
+    <span>//Manual way to make an increment or decrement</span>
+    let a = 1;
+    a = a + 1; <span>//Increment a = 2</span>
+    a = a - 1; <span>//Decrement a = 1</span>
+    
+    let b = 3;
+    <span>A at hits point is = 1</span>
+    a = a + b; <span>//Sum      a = 4</span>
+    a = a - b; <span>//rest     a = -2</span>
+    a = a * b; <span>//multiply a = 3</span>
+    a = a / b; <span>//divition a = 0.33</span>
+                        </pre>
+                    </code>
+                </div>
+                <div class="container-half">
+                    <code>
+                        <pre>
+    <span>//Shortest way to make an increment or decrement</span>
+    let a = 1;
+    a++; <span>// Increment  a = 2</span>
+    a--; <span>// Decrement a = 1</span>
+
+    let b = 3;
+    <span>A at hits point is = 1</span>
+    a += b; <span>//Sum      a = 4</span>
+    a -= b; <span>//rest     a = -2</span>
+    a *= b; <span>//multiply a = 3</span>
+    a /= b; <span>//divition a = 0.33</span>
+                        </pre>
+                    </code>
+                </div>
+
+                <br>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+        <p> All rigths reserved, Ricardo Hernández <br>
+        <span>+502 4209 0991 | jorgeajrha@gmail.com</span>
+        </p>
+    </footer>
+
+</body>
+</html>

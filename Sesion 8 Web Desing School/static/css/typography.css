@@ -1,0 +1,266 @@
+:root{
+    --brown: rgb(117, 65, 16);
+    --cyan: rgb(19, 186, 252);
+    --pink: rgb(255, 26, 186);
+    --purple-dark: rgb(70, 33, 100);
+    --yellow:rgb(255, 220, 20);
+    --red:rgb(255, 20, 20);
+    --green:rgb(48, 194, 61);
+    --blue:rgb(20, 122, 255);
+    --purple:rgb(141, 20, 255);
+    --black: #000;
+    --white: #fff;
+    --gray: rgb(224, 220, 220);
+
+    --border-radius: 30px;
+}
+/* 
+font-family: 'Creepster', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+h1, h2{
+    font-size: 3rem;
+    text-align: center;
+}
+p, li{
+    font-size:1.4rem;
+    text-align: left;
+}
+
+hr{
+    width: 80%;
+    border: 2px #000 solid;
+    border-bottom: 0;
+    opacity: 40%;
+    margin: 0 auto;
+}
+button{
+    padding: 15px;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    background-color: var(--black);
+    color: var(--white);
+}
+button a:visited{
+    color: var(--white);
+}
+button:hover, button a:hover{
+    color: var(--yellow);
+}
+button a{
+    text-decoration: none;
+}
+.container-fluid{
+    padding: 0% 10%;
+    margin: 0 auto;
+    text-align: center;
+}
+.container-insade{
+    padding: 5px 0;
+    margin: 0 auto;
+}
+.container-insade > h1{
+    color: var(--blue);
+}
+.container-insade > h2{
+    color: var(--purple);
+    text-align: center;
+}
+.container-half{
+    width: 48%;
+    display: inline-block;
+    margin: 0 auto;
+    border: 1px var(--black) solid;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+}
+.container-square{
+    width: 40%;
+    padding: 1rem;
+    display: block;
+    margin: 0 auto;
+    border: 1px var(--black) solid;
+    background-color: var(--white);
+}
+.container-half:hover{
+    border-color: var(--blue) ;
+}
+
+.container-half p, .container-half h3{
+    padding: 0 4%;
+}
+
+
+.pilar-list{
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.pilar-list hr{
+    border: 4px var(--black) solid;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: none;
+    opacity: 100%; /* defaulta bootstrap set this porperty to 25% */
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+.pilar-list p{ /* web desing */
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+.pilar-list li {
+    padding: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 35%;
+
+    display: inline-block;
+    border-radius: 30px 30px 0 0;
+    border: 2px var(--black) solid;
+    background-color: var(--yellow);
+    color: var(--black);
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+    text-align: center;
+}
+.pilar-list li:hover{
+    border: 2px var(--black) dotted;
+    transform: scale(1.3);
+    color: var(--red);
+}
+@media (max-width:1028px) {
+
+    .pilar-list li {
+        padding: 1%;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: auto;
+        height: auto;
+    
+        display: inline-block;
+        border-radius: 30px;
+
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        text-align: center;
+    }
+    h1, h2{
+        font-size: 2rem;
+    }
+
+}
+
+.container-flex{
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: space-around;
+    align-content: space-between;
+    align-items: flex-start;
+}
+.container-flex .container-insade img{
+    width: 40%;
+}
+
+/* .container-flex .container-half{
+    width: 45%;
+} */
+.container-flex .container-insade .big-img{
+    width: 100%;
+}
+.container-flex > .container-insade{
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+ /* SPECIFIC IN THIS LESSON */
+.text-center p{
+    text-align: center;
+}
+.pacifico, .pacifico * {
+    font-family: 'Pacifico', cursive;
+}
+.creepster, .creepster * {
+    font-family: 'Creepster', cursive;
+}
+.ubuntu, .ubuntu * {
+    font-family: 'Ubuntu', sans-serif;
+}
+.montserrat, .montserrat * {
+    font-family: 'Montserrat', sans-serif;
+}
+.courierNew, .courierNew * {
+    font-family:'Courier New', Courier, monospace;
+}
+.lucida, .lucida * {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pacifico h2, .creepster h2{
+    color: var(--red);
+}
+.pacifico img, .creepster img{
+    width: 20%;
+    margin: 0 auto;
+}
+
+
+
+/* --------------------------colors */
+.brown{
+    color: var(--brown);
+}
+.cyan{
+    color: var(--cya);
+}
+.pink{
+    color:var(--pink);
+}
+.purple-dark{
+    color: var(--purple-dark);
+}
+.yellow{
+    color: var(--yellow);
+}
+.red{
+    color: var(--red);
+}
+.green{
+    color: var(--green);
+}
+.blue{
+    color: var(--blue);
+}
+.purple{
+    color: var(--purple);
+}
+.black{
+    color: var(--black);
+}
+
+@media (max-width: 1028px) {
+    
+    .container-fluid{
+        padding: 0% 5%;
+    }
+    
+}
+

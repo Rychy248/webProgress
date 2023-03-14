@@ -1,0 +1,100 @@
+
+a, a:visited{
+    margin: 5px auto;
+    border: 2px solid black;
+    background-color: aquamarine;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5%;
+    display: inline-block;
+}
+
+a:hover{
+    background-color: aqua;
+}
+
+code > pre > p{
+    color: #470f7c;
+    text-decoration: underline;
+}
+
+h1, h2, h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+/* TYPES OF COMIBINATOR'S EXAMPLES */
+table th, table td, table{
+    border: 1px #000 solid;
+    border-collapse: collapse;
+}
+
+.middle h2{
+    color: brown;
+    text-align: left;
+}
+
+.adjacente-example + p{
+    background-color: yellow;
+}
+.combinators > li > a{
+    background-color: rgb(169, 255, 226);
+    border-radius: 30px;
+    color: #000;
+}
+.combinators > li > a:hover{
+    background-color: rgb(54, 138, 233);
+}
+
+
+.head2 ~ th {
+    background-color: #9947e6;
+}
+
+.div-inner ~ p{
+    background-color: yellow;
+}
+
+.red.tex-black{
+    border: 4px #000 solid;
+    background-color: red;
+    color: #000;
+}
+
+
+
+
+.code-title{
+    color: rgb(20, 24, 243);
+    font-size: 1.5rem;
+    text-align: left;
+    text-decoration: underline;
+}
+.content-code{
+    padding: 2% 2%;
+    border: 0.16rem black outset;
+    border-radius: 30px;
+    background-color: rgba(245, 236, 236, 0.404);
+}
+
+@media (max-width: 900px){
+    h1, h2, h3{
+        color: red;
+        font-size: 60px;
+    }
+    body{
+        padding: 1%;
+    }
+}
+
+.content{
+    padding: 1rem 15%;
+}
+
+@media (max-width: 1200px) {
+    .content{
+        padding: 1rem 5%;
+    }
+}

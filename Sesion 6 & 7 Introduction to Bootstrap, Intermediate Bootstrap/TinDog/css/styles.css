@@ -1,0 +1,151 @@
+:root{
+    --bg-title: #ff4c68; 
+    --bg-secondary-title: #ef8172;
+}
+
+/* 
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    
+    Montserrat:wght@400;900 (Font-weight)
+    Ubuntu:wght@400;700     (Font-weight)
+*/
+body{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADINGS */
+.big-heading, .price-text, .price-title, .testimonial-text{
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 900;
+    color: #fff;
+}
+.features-title{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.price-text{
+    color: #000;
+}
+
+/* title nav bar */
+.container-fluid{
+    padding: 7% 15%;
+}
+
+/* SECTIONS COLORS */
+.section-white{
+    background-color: white;
+}
+.section-colored{
+    background-color: var(--bg-title);
+    color: white;
+}
+
+.cont-padding-nav{
+    padding: 0% 15%;
+    margin: 0;
+}
+/* TITLE DOWLAND IMG BTN */
+.btn{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+.phone-img{
+    transform: rotate(25deg);
+    width: 60%;
+    position: absolute;
+    right: 30%;
+    /* z-index: -1; */
+}
+
+.download-btn{
+    margin: 3% 3% 0% 0%;
+}
+/* ############  IDS   ############ */
+
+#TinDog-Logo{
+    font-family: 'Ubuntu', sans-serif; 
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+#title .big-heading{
+    font-size: 3.5rem;
+    text-align: left;
+}
+@media (max-width: 1028px) {
+    .phone-img{
+        transform: rotate(0deg);
+        width: 70%;
+        position: static;
+    }
+    #title .big-heading{
+        text-align: center;
+        line-height: 1;
+        font-size: 2.5rem;
+    }
+}
+
+/* features  */
+#features{
+    position: relative;
+}
+
+.features-icon{
+    color: var(--bg-secondary-title);
+    /* for the size of icons from font-awesome, we use "fa-SIZEWANTEDx" */
+}
+
+.features-icon:hover{
+    color: var(--bg-title);
+}
+
+.features-desc{
+    color: #8f8f8f;
+}
+
+#testimonials{
+    background-color: var(--bg-secondary-title);
+    position: relative;
+}
+.testimonial-image{
+    width: 10%;
+    margin: 20px;
+}
+#press{
+    background-color: var(--bg-secondary-title);
+    position: relative;
+}
+
+.press-logo{
+    width:15%;
+    margin: 20px 20px 15px;
+}
+
+.card-body{
+    border:1px solid var(--bg-title);
+    border-radius: 0 0 25% 25%;
+}
+.btn-pay{
+    background-color: var(--bg-secondary-title);
+}
+.btn-free{
+    border: 1px solid var(--bg-title);
+    background-color: #fff;
+}
+.btn-pay:hover, .btn-free:hover{
+    background-color: var(--bg-title);
+}
+
+.footer-year{
+    font-weight: bold;
+}
+.footer-icons{
+    padding: 0 10px;
+}

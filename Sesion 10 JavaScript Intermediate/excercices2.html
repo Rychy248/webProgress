@@ -25,10 +25,11 @@
 <body>
 
     <section id="title">
-            <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
-            <br>
-            <h1>Sesion 9<br><span>JavaScript</span></h1>
-            <hr>
+        <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+        <br>
+        <h1>Sesion 10<br><span>JavaScript</span>
+        <br><span>Intermediate</span></h1>
+        <hr>
     </section>
 
     <section id="middle">
@@ -103,8 +104,8 @@
 
                 <script>
                     function getTheIBM() {
-                        let weightType = document.getElementById("weight").value;
-                        let heightType = document.getElementById("height").value;
+                        let weightType = document.getElementById("weight");
+                        let heightType = document.getElementById("height");
 
                         let weight = Number(document.getElementById("weightHuman").value);
                         let height = Number(document.getElementById("heightHuman").value);
@@ -123,16 +124,7 @@
                         ){
                             document.getElementById("BMIresult").innerHTML = "Your IBM is: <b> x </b>.";
                         }else{
-                            if (BMI > 24.9) {
-                                document.getElementById("BMIresult").innerHTML = "Your IBM is: <b>" + BMI + "</b>." +
-                                "<br>You're overweight";
-                            } else if (BMI < 24.9 && BMI >=18.5 ){
-                                document.getElementById("BMIresult").innerHTML = "Your IBM is: <b>" + BMI + "</b>." +
-                                "<br>You have a normal weight";
-                            } else{ // under 18.5
-                                document.getElementById("BMIresult").innerHTML = "Your IBM is: <b>" + BMI + "</b>." +
-                                "<br>You're underweight";
-                            };
+                            document.getElementById("BMIresult").innerHTML = "Your IBM is: <b>" + BMI + "</b>.";
                         };
                     };
                 </script>

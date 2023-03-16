@@ -1,0 +1,328 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercices</title>
+
+    <link rel="favicon" href="./../favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    -->
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;900&family=Pacifico&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/style.css">
+
+
+</head>
+<body>
+
+    <section id="title">
+        <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+        <br>
+        <h1>Sesion 10<br><span>JavaScript</span>
+        <br><span>Intermediate</span></h1>
+        <hr>
+    </section>
+    
+    <section id="middle">
+        <div class="container-insade">
+            <button type="button"><a href="./index.html">Return!</a></button>
+            <button type="button"><a href="./Concepts.html">Concepts</a></button>
+            <button type="button"><a href="./excercices2.html">Short programs!</a></button>
+            <div class="container-insade">
+                <h2><span>E#1</span> Type Of</h2>
+
+                <p>Look at the console (F12).</p><br>
+                <p>Type of, it's an general fuction, to comprobate the type of a data, or variable</p>
+                <h2>Variable</h2>
+                <p>It's a received memoty to save data, it's defined with <span>let or var, ECMAC recomend let</span>, so here i'll use <span>let</span></p>
+                <br>
+                <h2>Now, look at the console</h2>
+                <code>
+                    <pre>
+                        &#60;script&#62;
+                            let myVar1 = "Hello";
+                            let myVar2 = 123;
+
+                            console.log("typeof myVar1: "+typeof(myVar1))
+                            console.log("typeof myVar2: "+typeof(myVar2))
+                        &#60;/script&#62;
+                    </pre>
+                </code>
+                <!-- -------------- USING TYPE FUNTION EXCERCISE -------------- -->
+                <script>
+                    let myVar1 = "Hello";
+                    let myVar2 = 123;
+
+                    console.log("typeof myVar1: "+typeof(myVar1))
+                    console.log("typeof myVar2: "+typeof(myVar2))
+                </script>
+
+                <!-- -------------- PRINT MY NAME EXCERCISE -------------- -->
+                <br>
+                <h2 id="nameOfUser"><span>E#2</span> Print my name</h2>
+                <button type="button" onclick="printMyName()">Clink to print</button>
+                <br>
+                <br>
+                <script>
+                    function printMyName(){
+                        let name = prompt("Hello what's your name: ");
+
+                        document.getElementById("nameOfUser").innerHTML = "Hello! Welcom " + name + "!";
+                    }
+                </script>
+                <code>
+                    <pre>
+                        &#60;script&#62;
+                            function printMyName(){
+                                let name = prompt("Hello whats your name: ");
+
+                                document.getElementById("nameOfUser").innerHTML = "Hello! Welcom " + name;
+                            }
+                        &#60;/script&#62;
+                    </pre>
+                </code>
+
+                <!-- -------------- Swtching variables -------------- -->
+                <br>
+                <h2><span>E#3</span> Switching variables</h2>
+                <button type="button" onclick="DisplaytheCode1()">Clik to print</button>
+                <p>
+                    Javascript Variables Exercise <br>
+                    Given the existing code below, can you write some code so that their values are switched around? <br>
+                    <br>
+                    var a = "3"; <br>
+                    var b = "8"; <br>
+                    <br>
+                    So that the variable a holds the value "8". <br>
+                    And the variable b holds the value "3". <br>
+                    When the code is run, it should output: <br>
+                    <br>
+                    a is 8 <br><br>
+                    b is 3 <br><br>
+                    Do NOT change any of the existing code. <br>
+                    You are NOT allowed to type any numbers. <br>
+                    You should NOT redeclare the variables a and b. <br>
+                    Hint: Use this code playground to run your code and see if it matches your expectations. <br>
+                    Hint: The solution is just 3 lines of code. <br>
+                </p>
+                <br>
+                <br>
+                <script>
+                    function DisplaytheCode1() {
+                        let a = "3";
+                        let b = "8";
+
+                    /***********Do not change the code above 👆*******/
+                    //Write your code on lines 7 - 9:
+                        let c = a;
+                        a = b;
+                        b = c;
+                    /***********Do not change the code below 👇*******/
+
+                        console.log("a is " + a);
+                        console.log("b is " + b);
+                        alert("let a = '3'; \nlet b = '8';\n\n"+
+                        "\nlet c = a; \na = b; \nb = c;\n\n"+"a is " + a+"\nb is "+b)
+                    }
+
+                </script>
+
+                
+                <!-- ------------------------- Concatenation EXCERCISE -------------------------  -->
+                <br>
+                <h2><span>E#4</span> Using length</h2>
+                
+                <div class="container-half border-none">
+                    <textarea name="user-writen" id="userInputText" placeholder="Type something here"></textarea>
+                </div>
+                <div class="container-half border-none">
+                    <button type="button" onclick="lenCharacters()">Count</button> <br>
+                    <label for="user-writen" id="results">Count: left: (max=150)</label>
+                </div>
+
+
+                <script>
+                    function lenCharacters(){
+                        let text = document.getElementById("userInputText");
+                        const max = 150;
+                        document.getElementById("results").innerHTML = ("Count: "+ text.value.length +
+                            " Left: -"+ (max - text.value.length) + " (max=150)"
+                        )
+                    }
+                </script>
+                <code>
+                    <pre>
+                    &#60;script&#62;
+                    <span><b>//Code of</b></span>
+                    function lenCharacters(){
+                        let text = document.getElementById("userInputText");
+                        const max = 150;
+
+                        <span>//Using <b>length</b></span>
+                        document.getElementById("results").innerHTML = ("Count: "+ text.value.length +
+                            " Left: -"+ (max - text.value.length) + " (max=150)"
+                        )
+                    }
+                    &#60;/script&#62;
+                    </pre>
+                </code>
+
+
+
+                <!-- ------------------------- Concatenation EXCERCISE -------------------------  -->
+                <br>
+                <h2><span>E#5</span> Formating text</h2>
+                <button type="button" onclick="capitalize()">Execute</button> <br>
+                <p>Using toUpperCase, toLowerCase</p>
+
+
+                <script>
+                    function capitalize(){
+                        let name = prompt("Type your name: ");
+                        let nameUppercase = name.toUpperCase();
+                        let nameLowercase = name.toLowerCase();
+                        let nameCapitalice = name.toUpperCase().slice(0,1) + name.toLowerCase().slice(1,);
+
+                        alert(
+                            "Input: " + name + "\n\n"+
+                            "name.toUpperCase():" + name.toUpperCase() + "\n"+
+                            "name.toLowerCase():" + name.toLowerCase() + "\n\n"+
+                            "Capitalice name: " + name.toUpperCase().slice(0,1) + name.toLowerCase().slice(1,)
+                        )
+                    }
+                </script>
+                <code>
+                    <pre>
+                    &#60;script&#62;
+                    <span><b>//Code of</b></span>
+                    function capitalize(){
+                        let name = prompt("Type your name: ");
+                        let nameUppercase = name.toUpperCase();
+                        let nameLowercase = name.toLowerCase();
+                        let nameCapitalice = name.toUpperCase().slice(0,1) + name.toLowerCase().slice(1,);
+
+                        alert(
+                            "Input: " + name + "\n\n"+
+                            "name.toUpperCase():" + name.toUpperCase() + "\n"+
+                            "name.toLowerCase():" + name.toLowerCase() + "\n"+
+                            "Capitalice name:" + name.toUpperCase().slice(0,1) + name.toLowerCase().slice(1,)
+                        )
+                    }
+                    &#60;/script&#62;
+                    </pre>
+                </code>
+
+
+
+                <!-- ------------------------- Dog age to human ange -------------------------  -->
+                <br>
+                <h2><span>E#6</span> Dog age to human age</h2>
+                <p>Fórmula <span>Human Age = (dogAge -2) *4 +1</span></p>
+                
+                <!-- Human Age = (dogAge -2) *4 +1 -->
+                <div class="container-flex">
+                    <button type="button" onclick="getHumanAge()">Calculate</button>
+                    <input type="text" id="dogAge" placeholder="Dog Age">
+                    <input type="text" id="humanAge" placeholder="Human Age" disabled="True">
+                </div>
+                <div class="container-flex">
+                </div>
+
+                <script>
+                    function getHumanAge(){
+                        let dogAgeText = document.getElementById("dogAge");
+                        let dogAge = Number(dogAgeText.value.slice(9,));
+
+                        if (typeof(dogAge) !== typeof(1)) {
+                            dogAge = Number(dogAgeText.value);
+                        }
+
+                        let humanAgeText = document.getElementById("humanAge");
+                        let humanAge;
+                        
+                        if (typeof(dogAge) == typeof(1)) {
+                            if (dogAge > 0) {
+                                humanAge = (Number(dogAge) -2) * 4 + 1;
+                            }else{
+                                humanAge = 0;
+                            };
+                        }else{
+                            humanAge = 0;
+                        };
+
+                        if (humanAge < 0) {humanAge = humanAge*-1;};
+
+                        humanAgeText.value = "Human Age: "+ humanAge;
+                        dogAgeText.value = "Dog Age: "+ dogAge;
+                        
+                        alert(
+                            "Human Age aprox is: " + humanAge  + "\n\n"
+                        );
+                    }
+
+                </script>
+                <code>
+                    <pre>
+                    &#60;script&#62;
+                    <span><b>//Code of</b></span>
+                    function getHumanAge(){
+                        let dogAgeText = document.getElementById("dogAge");
+                        let dogAge = Number(dogAgeText.value.slice(9,));
+
+                        if (typeof(dogAge) !== typeof(1)) {
+                            dogAge = Number(dogAgeText.value);
+                        }
+                        
+                        let humanAgeText = document.getElementById("humanAge");
+                        let humanAge;
+                        
+                        if (typeof(dogAge) == typeof(1)) {
+                            if (dogAge > 0) {
+                                humanAge = (Number(dogAge) -2) * 4 + 1;
+                            }else{
+                                humanAge = 0;
+                            };
+                        }else{
+                            humanAge = 0;
+                        };
+
+                        if (humanAge < 0) {humanAge = humanAge*-1;};
+
+                        humanAgeText.value = "Human Age: "+ humanAge;
+                        dogAgeText.value = "Dog Age: "+ dogAge;
+                        
+                        alert(
+                            "Human Age aprox is: " + humanAge  + "\n\n"
+                        );
+                    }
+
+                    &#60;/script&#62;
+                    </pre>
+                </code>
+                
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+    <footer>
+        <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+        <p> All rigths reserved, Ricardo Hernández <br>
+        <span>+502 4209 0991 | jorgeajrha@gmail.com</span>
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -9,11 +9,12 @@
     --pacifico: 'Pacifico', cursive;
     --creepster: 'Creepster', cursive;
 
-    --principal-color:#d9f3ff;
-    --secondary-color:#AA77FF; /*#AA77FF;*/
-    --third-color:#62CDFF;
-    --forth-color:#97DEFF;  
-    --fith-color:#6307cc;
+    --principal-color:#F0A500;
+    --secondary-color:#082032; /*#AA77FF;*/
+    --third-color:#000000;
+    --forth-color:#334756;
+    --fith-color:#f5a700;
+
     --white-color: #fff;
     --black-color: #000;
     --gray-color: #f3f3f3;
@@ -101,6 +102,7 @@ label{
     /* border: var(--border-weight) var(--secondary-color) solid; */
     /* border-radius: var(--border-radius); */
     color: var(--fith-color);
+    font-size: 1.6rem;
     
     padding: 3% 0 0 0;
     margin: 0 0;
@@ -184,7 +186,11 @@ button:hover{
     background-color: var(--white-color);
     border-color: var(--forth-color);
 }
-.container-insade .container-insade *{
+.container-insade .container-insade p ,
+.container-insade .container-insade h1 ,
+.container-insade .container-insade h2 ,
+.container-insade .container-insade code
+{
     text-align: left;
 }
 
@@ -225,6 +231,10 @@ button:hover{
     text-align: center;
 }
 
+.container-flex h1{
+    text-align: center;
+}
+
 .border-none , .border-none:hover{
     border: none;
 }
@@ -242,6 +252,12 @@ button:hover{
     padding-left: 25px;
     padding-right: 0px;
     /* text-decoration: overline var(--secondary-color); */
+}
+#calculatorResult, #yearResult{
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+
 }
 
 @media (max-width: 1028px) {

@@ -34,11 +34,156 @@
         
         <section id="middle">
             <div class="container-insade">
-                <button type="button"><a href="./excercices.html">Excercices!</a></button>
-                <button type="button"><a href="./Concepts.html">Concepts</a></button>
-                <button type="button"><a href="./excercices2.html">Short programs!</a></button>
+                <button type="button"><a href="./Concepts.html">Array</a></button>
                 
                 <div class="container-insade">
+                <!---------------------------- FIZZ BUZZ -->
+                    <h1>Fizz Buzz</h1>
+                    <p>Using for, if, and arrays.</p>
+
+                    <p id="fizzBuzzResult">Fizz Buzz: </p>
+                    <button type="button" onclick="next()">Next</button>
+                    <button type="button" onclick="nextN()">Next * 10</button>
+                    <button type="button" onclick="nextN(100)">Next * 100</button>
+                    <button type="button" onclick="reset()">Reset</button>
+                    <button type="button" onclick="showCode1()">Show the code</button>
+
+                    <script>
+
+                        var count = -1;
+                        var fizzBuzz = [];
+
+                        function printFizz() {
+                            document.getElementById("fizzBuzzResult").innerHTML 
+                                += fizzBuzz.length > 1 
+                                    ? (", " + fizzBuzz[count])
+                                    : ("0 ");
+                            ;
+                        }
+                        function fizzOrBuzz(num){
+                            return (num % 3 === 0 && num % 5 === 0) ? "<i>FizzBuzz</i>":
+                                    (num % 3 === 0) ? "Fizz":
+                                    (num % 5 === 0) ? "Buzz": num
+                                    ;
+                        };
+
+                        function next() {
+                            fizzBuzz.push(fizzOrBuzz(++count));
+                            printFizz();
+                        };
+                        function nextN(rounds=10) {
+                            for (let i = 0; i < rounds; i++) {
+                                next();
+                            };
+                        };
+                        function reset() {
+                            count = -1;
+                            fizzBuzz = [];
+                            document.getElementById("fizzBuzzResult").innerHTML ="Fizz Buzz: ";
+                        };
+
+                        function showCode1(){
+                            alert(`
+    var count = -1;
+    var fizzBuzz = [];
+
+    function printFizz() {
+        document.getElementById("fizzBuzzResult").innerHTML 
+            += fizzBuzz.length > 1 
+                ? (", " + fizzBuzz[count])
+                : ("0 ");
+        ;
+    }
+    function fizzOrBuzz(num){
+        return (num % 3 === 0 && num % 5 === 0) ? "<i>FizzBuzz</i>":
+                (num % 3 === 0) ? "Fizz":
+                (num % 5 === 0) ? "Buzz": num
+                ;
+    };
+
+    function next() {
+        fizzBuzz.push(fizzOrBuzz(++count));
+        printFizz();
+    };
+    function nextN(rounds=10) {
+        for (let i = 0; i < rounds; i++) {
+            next();
+        };
+    };
+    function reset() {
+        count = -1;
+        fizzBuzz = [];
+        document.getElementById("fizzBuzzResult").innerHTML ="Fizz Buzz: ";
+    };
+                                `);
+                            };
+                                
+                        </script>
+                <br><br>
+                <!---------------------------- FIZZ BUZZ -->
+                    <h1>Fibonacci Sequence</h1>
+
+                    <p id="fibonacciResult">Fibonacci: 0, 1, 1</p>
+                    <button type="button" onclick="fibonacciNext()">Next</button>
+                    <button type="button" onclick="fibonacciNextN()">Next * 10</button>
+                    <button type="button" onclick="fibonacciNextN(100)">Next * 100</button>
+                    <button type="button" onclick="fibonacciReset()">Reset</button>
+                    <button type="button" onclick="showCode2()">Show the code</button>
+
+                    <script>
+                        var x = 1;
+                        var y = 1;
+                        var z;
+
+                        function fibonacciNext() {
+                            z = x + y;
+                            x = y;
+                            y = z;
+                            
+                            document.getElementById("fibonacciResult").innerHTML += `, ${z}`;
+
+                        };
+                        function fibonacciNextN(rounds=10) {
+                            for (let i = 0; i < rounds; i++) {
+                                fibonacciNext();
+                            };
+                        };
+                        function fibonacciReset() {
+                            x = 1;
+                            y = 1;
+                            document.getElementById("fibonacciResult").innerHTML ="Fibonacci: 0, 1, 1";
+                        };
+
+                        function showCode2(){
+                            alert(`
+var x = 1;
+var y = 1;
+var z;
+
+    function fibonacciNext() {
+        z = x + y;
+        x = y;
+        y = z;
+        
+        document.getElementById("fibonacciResult").innerHTML += \`, \${z}\`;
+
+    };
+    function fibonacciNextN(rounds=10) {
+        for (let i = 0; i < rounds; i++) {
+            fibonacciNext();
+        };
+    };
+    function fibonacciReset() {
+        x = 1;
+        y = 1;
+        document.getElementById("fibonacciResult").innerHTML ="Fibonacci: 0, 1, 1";
+    };
+            `);
+                        };
+                                
+                        </script>
+                <br><br>
+                <!---------------------------- LOve calculator -->
                     <h1>Love calculator</h1>
                     <p>Using, if statement and logical comparators.</p>
                     <div class="container-flex">
@@ -82,7 +227,7 @@
 
                         };
                     </script>
-
+                    <br><br>
                     <!---------------------------- MATH FLOOR -->
                     <br>
                     <h1>Get a random number between 1 and 6</h1>
@@ -93,6 +238,7 @@
                             alert(randNum()); //randNum, it's a funtion below
                         };
                     </script>
+                    <br><br>
                     <!-- ------------------------- more with if -->
                     <br>
                     <h1>Is a year leap?</h1>

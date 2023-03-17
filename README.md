@@ -49,5 +49,26 @@ A web that Peaople love
     Typography
 
 ## **Sesion 9:** Introduction to JavaScript ES6
+    -Products
+        -BMI calculator
+        -My Life in weeks
+    -Js
+        -Variables
+        -Functions
+        -Parameters
+        -strings
+        -Increment and Decrement
+
+## **Sesion 10:** JavaScript ES6 Intermediate
+    -Products
+        -FizzBuzz
+        -Fibonacci
+        -Is a yera leap?
+    -Js
+        -Control Statements
+        -Comparators
+        -Collections, array
+
+## **Sesion 11:** The Document Object Model (DOM)
 
 ### **Contact Me at: _jorgeajrha@gmail.com_**

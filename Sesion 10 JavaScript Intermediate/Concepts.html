@@ -35,8 +35,6 @@
         <section id="middle">
             <div class="container-insade">
                 <button type="button"><a href="./index.html">Return!</a></button>
-                <button type="button"><a href="./excercices.html">Excercices!</a></button>
-                <button type="button"><a href="./excercices2.html">Short programs!</a></button>
             </div>
         
         <div class="container-insade" id="Concepts">
@@ -52,7 +50,40 @@
                 <br>
                 another function it's includes, myArray.includes("data1") = returnABoleean;
                 </p>
+            <br>
+            <h2>Admin your array</h2>
+            <label for="#" id="yourArray">yourArray = []</label> <br>
+            <input type="text" id="arrayInput" placeholder="Add something to your array">
+            <button type="button" onclick="arrayInput()">Add</button>
+            <br>
+            <button type="button" onclick="removeItem()">Delete</button>
 
+            <script>
+                var yourArray =[];
+
+                function printScreen() {
+                    document.getElementById("yourArray").innerHTML = "yourArray = [" + yourArray + "]";
+                };
+                function arrayInput() {
+                    let input = document.getElementById("arrayInput").value;
+                    if (input){
+                        yourArray.push(input);
+                        document.getElementById("arrayInput").value = "";
+                        printScreen();
+                    }else{
+                        alert("Input something (if you want a space, type a space)");
+                    };
+                };
+                function removeItem(params) {
+                    if (yourArray.length > 0){
+                        alert("item '" + yourArray.pop() + "' removed");
+                        printScreen();
+                    }else{
+                        alert("Array empty");
+                    };
+                };
+
+            </script>
                 <br>
 
                 <!-- ------------------------- Concatenation -------------------------  -->

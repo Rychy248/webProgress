@@ -1,0 +1,308 @@
+/* ---------------------GENERAL--------------------- */
+:root{
+    --border-radius: 30px;
+    --border-weight: 2px;
+    --border-weight-bold: 4px;
+
+    --ubuntu: 'Ubuntu', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    --pacifico: 'Pacifico', cursive;
+    --creepster: 'Creepster', cursive;
+
+    --principal-color:#75c6ee;
+    --secondary-color:#424651; /*#AA77FF;*/
+    --third-color:#AF3B6E;
+    --forth-color:#fad3ea;
+    --fith-color:#1dd17a;
+
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #f3f3f3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: var(--montserrat);
+}
+body{
+    text-align: center;
+    background-color: var(--principal-color);
+}
+section, footer{
+    padding: 0% 10%;
+    margin: 0.5rem auto;
+    text-align: center;
+}
+footer p{
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 0.4rem;
+
+    color: var(--black-color);
+    font-size: 1rem;
+    padding: 25px 0;
+}
+/* ----------------- HEADERS */
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--ubuntu);
+    color: var(--third-color);
+    font-weight: bolder;
+}
+h1, h2{
+    font-size: 3.1rem;
+    text-align: center;
+}
+h1, h2{
+    font-size: 2.9rem;
+    text-align: center;
+}
+
+/* ----------------- PARAGRAHP AND LISTS */
+p{
+    font-size:1.4rem;
+    text-align: left;
+}
+
+li{
+    list-style-position: inside;
+    font-size:1.4rem;
+    text-align: left;
+    line-height: 2rem;
+}
+ol{
+    list-style-type: upper-latin;
+}
+ol > li > ol{
+    padding-left: 30px;
+    list-style-type:lower-alpha;
+}
+li > ol > li > ol{
+    padding-left: 40px;
+    list-style-type: lower-roman;
+}
+
+code{
+    padding: 2%;
+    width: 96%;
+    display: block;
+    border-radius: var(--border-radius);
+    border: var(--border-weight) var(--secondary-color) solid;
+    color: var(--third-color);
+    background-color: var(--white-color);
+}
+pre{
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    overflow: auto;
+}
+pre span{
+    color: var(--fourth-color);
+}
+pre hr{
+    border: var(--border-weight-bold) var(--secondary-color) dotted;
+    border-bottom: 0;
+    width: 60%;
+    opacity: 50%;
+    margin: 0 auto;
+}
+label{
+    text-align: left;
+    /* border: var(--border-weight) var(--secondary-color) solid; */
+    /* border-radius: var(--border-radius); */
+    color: var(--fith-color);
+    font-size: 1.6rem;
+    
+    padding: 3% 0 0 0;
+    margin: 0 0;
+}
+textarea, input{
+    text-align: left;
+    border: var(--border-weight) var(--secondary-color) solid;
+    border-radius: var(--border-radius);
+    color: var(--secondary-color);
+    
+    padding: 2%;
+    margin: 0 auto;
+}
+textarea{
+    display: block;
+    width: 98%;
+}
+input{
+    display: inline-block;
+}
+input:disabled{
+    color: var(--secondary-color);
+    font-weight: bolder;
+    background-color: var(--gray-color);
+}
+/* ----------------- BUTTON */
+button{
+    padding: 15px;
+    border-radius: var(--border-radius);
+    border: var(--border-weight) var(--forth-color) double;
+
+    background-color: var(--third-color);
+
+    font-weight: bol;
+    font-size: 1.2rem;
+    color: var(--forth-color);
+}
+button:hover, button a:hover{
+    background-color: var(--forth-color);
+    color: var(--third-color);
+    border-color: var(--third-color);
+}
+button a{
+    text-decoration: none;
+}
+button a:visited{
+    color: var(--principal);
+}
+button:hover{
+    cursor:grabbing;
+}
+/* ----------------- CONTAINERS */
+.container-insade{
+    padding: 5px 0;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: var(--border-radius);
+}
+.container-insade h1{
+    font-size: 3rem;
+    margin: 4px 0;
+}
+.container-insade h2{
+    font-size: 2.5rem;
+}
+.container-insade h1 span, .container-insade h2 span{
+    font-style: normal;
+    color: var(--secondary-color);
+}
+.container-insade span{
+    font-style: italic;
+}
+.container-insade > p{
+    columns: 2;
+    column-rule-color: var(--third-color);
+    column-rule-width: var(--border-weight);
+    column-rule-style: solid;
+}
+
+.container-insade .container-insade{
+    width: 94%;
+    padding: 2%;
+    margin: 1%;
+    background-color: var(--forth-color);
+    border: var(--border-weight) var(--third-color) solid;
+}
+.container-insade .container-insade p ,
+.container-insade .container-insade h1 ,
+.container-insade .container-insade h2 ,
+.container-insade .container-insade code
+{
+    text-align: left;
+}
+
+.container-half{
+    width: 48%;
+    display: inline-block;
+    margin: 0 auto;
+    border: var(--border-weight) var(--principal-color) solid;
+    border-radius: var(--border-radius);
+}
+.container-half:hover{
+    border-color: var(--blue) ;
+}
+.container-half p, .container-half h3{
+    padding: 0 4%;
+}
+
+.container-square{
+    width: 96%;
+    padding: 1rem;
+    display: block;
+    margin: 0 auto;
+    border: 1px var(--forth-color) solid;
+    background-color: var(--principal);
+}
+.container-flex{
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    justify-items: space-around;
+    align-content:start;
+    align-items: flex-start;
+}
+.container-flex button:hover{
+    flex: 0.5;
+    text-align: center;
+}
+
+.container-flex h1{
+    text-align: center;
+}
+
+.border-none , .border-none:hover{
+    border: none;
+}
+
+#title{
+    padding-top: 2rem; /*  2*16=32px  */
+
+}
+
+#title h1 span{
+    /* font-stretch:extra-expanded; */
+    letter-spacing: 2rem;
+    background-color: var(--third-color);
+    color: var(--forth-color);
+    padding-left: 25px;
+    padding-right: 0px;
+    /* text-decoration: overline var(--secondary-color); */
+}
+
+.comment{
+    color: var(--secondary-color);
+}
+@media (max-width: 1028px) {
+
+    section, footer{
+        padding: 0% 5%;
+    }
+
+
+    h1, h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    p, li{
+        font-size:1rem;
+    }
+
+    button{
+        padding: 10px;
+        font-size: 1rem;
+    }
+    .container-insade > h1{
+        font-size: 1.3rem;
+    }
+    .container-square{
+        padding: 0.7rem;
+    }
+    #title{
+        padding-top: 1.5rem; /*  2*16=32px  */
+    }
+
+    #title h1 span{
+        letter-spacing: 1rem;
+        padding-left: 15px;
+        padding-right: 0px;
+    }
+
+}

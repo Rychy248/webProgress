@@ -1,0 +1,107 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object MOdel, DOM</title>
+    
+    <link rel="favicon" href="./../favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    -->
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;900&family=Pacifico&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="./static/css/style.css">
+
+</head>
+<body onload="//function puttedn into script tag">
+
+    <section id="title">
+            <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+            <br>
+            <h1>Sesion 11
+            <br><span>The Document Object Model<br>-DOM-</span></h1>
+            <hr>
+    </section>
+        
+    <section id="middle">
+            <div class="container-insade">
+                <button type="button"><a href="./DOM.html">DOM concepts</a></button>
+                
+                <h1>Adding JS to the web</h1>
+                <div class="container-insade">
+                <!---------------------------- JS FROM ONLOAD -->
+                <h2>Adding from the onload on the body tag</h2>
+                <p>We can add JavaScript in the body with <span>onload</span>, we'll write our code into the double quotes,
+                    but the onload don't suport functions or advanced js, like the next example:</p>
+
+                <button type="button" onclick="hiBody()">Hello from body</button>
+                
+                <code>
+                    &#60;body <span>onload="alert('Hello from the body onload!')"</span>&#62; <br><br>
+                    //On load means, wherever the js is, it's called
+                </code>
+
+                <!---------------------------- JS FROM SCRIPT TAG -->
+                <h2>Adding from the script tag</h2>
+                <p>You can add js, insade the html, just adding the tag "script", and inside him all your wantend code</p>
+                
+                <button type="button" onclick="hiScript()">Hello from Script</button>
+
+                <script>
+                    function hiBody(){ 
+                        alert('Hello from the body onload!');
+                    };
+
+                    function hiScript() {
+                        alert("Hello from the script tag!");
+                    };
+                </script>
+
+                <!---------------------------- JS FROM AN EXTERNAL JS FILE -->
+                <code>
+                    <b>&#60;scrip&#62;</b> <br><br>
+                        <span class="comment">//Here you can add your code like this</span> <br><br>
+
+                        function hiScript() {
+                            alert("Hello from the script tag!");
+                        };                        
+
+                        <br><br>
+                    <b>&#60;/scrip&#62;</b>
+                </code>
+                
+                <h2>Adding from an external js file</h2>
+                <p>You can add js, from  an external js file, white the script tag, but, adding some atributes. <br> JUST ONE BEST PRACTICE, the js are adding at the bottom of the body, cause on that don't will be crashed with the inexisting html tags or css, on that place, the js will be played until all the html struture is loaded, and it will give an fast aparience</p>
+
+                
+                <button type="button" onclick="hiExternalJS()">Hello from an external JS</button>
+
+                <script src="./static/js/index.js" charset="utf-8"></script>
+                <code>
+                    <b>&#60;scrip</b>  src="./static/js/index.js" charset="utf-8" <b>&#62;</b><b>&#60;/scrip&#62;</b>
+                </code>
+
+                <br><br>
+                </div>
+            </div>
+        <!-- ------------------------- code of excercices -------------------------  -->
+
+    </section>
+
+    <footer>
+        <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+        <p> All rigths reserved, Ricardo Hernández <br>
+        <span>+502 4209 0991 | jorgeajrha@gmail.com</span>
+        </p>
+    </footer>
+
+</body>
+</html>

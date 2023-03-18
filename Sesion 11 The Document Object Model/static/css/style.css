@@ -83,7 +83,7 @@ li > ol > li > ol{
     list-style-type: lower-roman;
 }
 
-code{
+.container-insade > code{
     padding: 2%;
     width: 96%;
     display: block;
@@ -137,6 +137,22 @@ input:disabled{
     color: var(--secondary-color);
     font-weight: bolder;
     background-color: var(--gray-color);
+}
+table{
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+}
+table, table th, table td{
+    border-collapse: collapse;
+    border: var(--border-weight) var(--third-color) solid;
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+}
+table code{
+    width: auto;
+    background-color: var(--fith-color);
+    margin: none;
+    padding: nonek;
 }
 /* ----------------- BUTTON */
 button{
@@ -266,6 +282,7 @@ button:hover{
     padding-right: 0px;
     /* text-decoration: overline var(--secondary-color); */
 }
+
 
 .comment{
     color: var(--secondary-color);

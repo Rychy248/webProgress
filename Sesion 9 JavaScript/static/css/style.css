@@ -145,6 +145,7 @@ button:hover, button a:hover{
 }
 button a{
     text-decoration: none;
+    color: var(--secondary-color);
 }
 button a:visited{
     color: var(--white);

@@ -34,11 +34,12 @@
         <section id="middle">
             <div class="container-insade">
                 <button type="button"><a href="./index.html">Return!</a></button>
+                <button type="button"><a href="./JSandCSS.html">Styling with JS!</a></button>
             </div>
         
         <div class="container-insade" id="top">
             <h1>Document Object Model -DOM-</h1>
-            <button><a href="#DOM-box">Dom excercices</a></button>
+            <button><a href="#touching">Dom excercices</a></button>
             <div class="container-insade">
                 <!-- ------------------------- DOM -------------------------  -->
                 <h2>Definition</h2>
@@ -231,21 +232,86 @@
                 </p>
             </div>
 
-            <h1>Tuching the DOM</h1>
+            <h1 id="touching">Touching the DOM</h1>
             <button><a href="#top">Go a head</a></button>
             <div class="container-insade" id="DOM-box">
-                <h2>Toching the DOM</h2>
+                <h2>Touching the DOM</h2>
                 <button onclick="changeMyTtile()">Change My Ttile</button>
+                <button onclick="changeMyTtile(color=true)">Change Color</button>
 
                 <code>
                     <pre>
-                        function changeMyTtile(){
-                            let container = document.getElementById("DOM-box");
+                        function changeMyTtile(color=false){
+                            <b><span>let container = document.getElementById("DOM-box");</span></b>
                         
-                            console.log(container.firstElementChild)
-                            alert("Im the 'The first Child' container.firstElementChild " + container.firstElementChild);
-                        
-                            container.firstElementChild.innerHTML = "I'm modified succesfull";
+                            console.log("Im the 'The first Child' container.firstElementChild " + container.firstElementChild);
+                            
+                            if(color){
+                                alert("Color changed ");
+                                <b><span>container.firstElementChild.style.color = randomColor();</b></span>
+                            }else{
+                                alert("Im the 'The first Child' container.firstElementChild " + JSON.stringify(container.firstElementChild));
+                                <b><span>container.firstElementChild.innerHTML = "I'm modified succesfull";</b></span>
+                            };
+                        };
+                    </pre>
+                </code>
+
+                <h2>Query Selectors</h2>
+                <p>
+                    The atributes can be reached using dots example: <span>car.colour;</span>. <br>
+                    This is called <b>>get an atribute</b><br>
+                    An atribute can be modified like this: <span>car.colour = #ff33ff33;</span>
+                    <br><br>
+                    On the same way, we can use the methods, for example <span>car.drive();</span><br>
+                    this is called <b>call a method</b><br>
+
+                    <span><b>atribute</b> is an aspect or caracteristic of the object, <b>method</b> is something that an object can do</span>
+                    The difference between a function and a method is: A method is realtionated to an object, a funtion is a group of instructions unrelated to a method.
+
+                </p>
+                <button type="button" onclick="querySelectorInputs()">Marq all fruits</button>
+                <button type="button" onclick="mangoToKiwi()">MangoToKiwi</button>
+                <div class="container-flex">
+                    <fieldset>
+                        <legend>Choose your favorite fruits</legend>
+                        <div>
+                            <label for="apple">Apple</label>
+                            <input type="checkbox" id="apple">
+                        </div>
+                        <div>
+                            <label for="Kiwi">Kiwi</label>
+                            <input type="checkbox" id="Kiwi">
+                        </div>
+                        <div>
+                            <label for="mango">Mango</label>
+                            <input type="checkbox" id="mango">
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <ul>
+                        <li>Apple</li>
+                        <li>Kiwi</li>
+                        <li>Mango</li>
+                    </ul>
+                </div>
+                <code>
+                    <pre>
+                        function querySelectorInputs() {
+                            
+                            //Encontrar un elemento a traves del valor de sus atributos
+                            <b><span>let checboxes = document.querySelectorAll("input[type='checkbox']");</span></b>
+
+                            alert("All checkboxes marqued with js");
+                            checboxes.forEach(checkbox => {
+                                <b><span>checkbox.click()</b></span>
+                            });
+                        };
+
+                        function mangoToKiwi() {
+                            alert("list element 'Mango' has changed to 'Kiwi'");
+                            document.querySelector("#DOM-box ul").lastElementChild.innerHTML = "Kiwi";
                         };
                     </pre>
                 </code>

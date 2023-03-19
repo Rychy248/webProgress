@@ -1,0 +1,133 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CONCEPTS</title>
+    
+    <link rel="favicon" href="./../favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    -->
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;900&family=Pacifico&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="./static/css/style.css">
+
+
+</head>
+<body>
+
+    <section id="title">
+        <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+        <br>
+        <h1>Sesion 11<br><span>The Document Object Model<br>-DOM-</span></h1>
+        <hr>
+    </section>        
+
+
+
+    <section id="middle">
+        <nav>
+            <div class="container-insade">
+                <button type="button"><a href="./index.html">Return!</a></button>
+                <button type="button"><a href="./DOM.html">DOM Concepts!</a></button>
+            </div>
+        </nav>
+
+        <div class="container-insade" id="top">
+            <h1>STYLING WITH JS</h1>
+            <div class="container-insade">
+                <!-- ------------------------- DOM -------------------------  -->
+                <fieldset>
+                    <legend>To modify</legend>
+
+                    <div class="container-flex">
+                        <button type="button" onclick="fieldWhite()">BG-fieldset to white</button>
+                        <button type="button" onclick="CheckBgColor()">BG-Checkbox</button>
+                        
+                        <button type="button" onclick="h2High()">Big Title</button>
+                        <button type="button" onclick="h2Normal()" hidden>Normal Title</button>
+
+                        <button type="button" onclick="liChar1()">List Circle</button>
+                        <button type="button" onclick="liChar2()" hidden>List Square</button>
+                    </div>
+
+                    <h2>Style WITH JS</h2>
+                    <p>Hello I'm a P element
+                        <a href="www.google.com" target="_blank">Google</a>
+                    </p>
+                    
+
+                    <div class="chekcDIv">
+                        <label for="myCheck">Check Me</label>
+                        <input type="checkbox" id="myCheck">
+                    </div>
+                    <ul id="myTodoDoList">
+                        <li class="list-item"><a href="www.google.com" target="_blank">Google</a></li>
+                        <li class="list-item">Brush Teeths</li>
+                        <li class="list-item">Wash the face</li>
+                        <li class="list-item">Clean the room</li>
+                        <li class="list-item">Reed your book</li>
+                    </ul>
+                </fieldset>
+            </div>
+
+
+            <h1>Classes list</h1>
+            <div class="container-insade">
+                <h1>NodeElement.<b>classList</b></h1>
+                <p>This is a function of the DOM to return all of clases of a element have</p>
+                <p>For crashed moments <a href="https://dmitripavlutin.com/dom-node-element/" target="_blank">Node and Node Element, diferences</a>, it's a great place to understand them</p>
+                <br><br>
+
+                <p>THIS ALLOWS US, to add class instance of modify directly the css of the elements of the web</p>
+
+                <fieldset>
+                    <legend>Some things inside me</legend>
+
+                    <button type="button" onclick="checkboxClases()">Show the clases of the checkbox</button>
+                    <button type="button" onclick="addCheckClass()">Add a class to checkbox</button>
+                    <button type="button" onclick="removCheckClass()">remove a class to checkbox</button>
+                    <!-- <button type="button" onclick="hideP()">hidde p element</button> -->
+
+                    <br>
+                    <div class="chekcDIv thisIsAnotherClass classTrh">
+                        <label for="myCheck2">Check Me</label>
+                        <input type="checkbox" id="myCheck2">
+                        <p id="pToPlay">Hi i'm the paragraph inside the fieldset</p>
+                    </div>
+                </fieldset>
+
+                <p>classList, methods are</p>
+                <ol>
+                    <li>add, add a class</li>
+                    <li>remove, remove a class</li>
+                    <li>toggle, swithc a class to aply or not aply, depending if it's aplayed or not</li>
+                </ol>
+                <code>
+                    <pre>
+
+                    </pre>
+                </code>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <button type="button"><a href="../index.html">BACK TO HOME!</a></button>
+        <p> All rigths reserved, Ricardo Hernández <br>
+        <span>+502 4209 0991 | jorgeajrha@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- ------------------------ SCRIPT TAGS JS..... -->
+                <script src="./static/js/JS andCSS.js"></script>
+</body>
+</html>

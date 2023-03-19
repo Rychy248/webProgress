@@ -13,7 +13,7 @@
     --secondary-color:#424651; /*#AA77FF;*/
     --third-color:#AF3B6E;
     --forth-color:#fad3ea;
-    --fith-color:#1dd17a;
+    --fith-color:#4aad7d;
 
     --white-color: #fff;
     --black-color: #000;
@@ -112,9 +112,10 @@ label{
     /* border: var(--border-weight) var(--secondary-color) solid; */
     /* border-radius: var(--border-radius); */
     color: var(--fith-color);
+    font-weight: bold;
     font-size: 1.6rem;
     
-    padding: 3% 0 0 0;
+    padding: 3% 3px 3px 0;
     margin: 0 0;
 }
 textarea, input{
@@ -125,6 +126,15 @@ textarea, input{
     
     padding: 2%;
     margin: 0 auto;
+}
+fieldset{
+    width: 92%;
+    border: var(--border-weight) var(--third-color) solid;
+    border-radius: var(--border-radius);
+    padding: 4%;
+}
+fieldset > div{
+    display: inline-block;
 }
 textarea{
     display: block;
@@ -173,6 +183,7 @@ button:hover, button a:hover{
 }
 button a{
     text-decoration: none;
+    color: var(--forth-color);
 }
 button a:visited{
     color: var(--principal);
@@ -323,3 +334,37 @@ button:hover{
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* FOR THE CSS AND JS LESSON */
+.bg-green {
+    background-color: var(--fith-color);
+    color: var(--white-color);
+    padding: 5px;
+    border-radius: var(--border-weight);
+    font-size: 5rem;
+};
+
+.unvisibility{
+    visibility: hidden;
+};
+#pToPlay{
+    visibility: hidden;
+}
+
+.huge{
+    font-size: 10rem;
+};

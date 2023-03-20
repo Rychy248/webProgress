@@ -43,6 +43,8 @@
 
         <div class="container-insade" id="top">
             <h1>STYLING WITH JS</h1>
+            <button type="button" class="button-insade"><a href="#classList">ClassList</a></button>
+            <button type="button" class="button-insade"><a href="#text">Text</a></button>
             <div class="container-insade">
                 <!-- ------------------------- DOM -------------------------  -->
                 <fieldset>
@@ -61,7 +63,7 @@
 
                     <h2>Style WITH JS</h2>
                     <p>Hello I'm a P element
-                        <a href="www.google.com" target="_blank">Google</a>
+                        <a href="https://www.google.com" target="_blank">Google</a>
                     </p>
                     
 
@@ -70,7 +72,7 @@
                         <input type="checkbox" id="myCheck">
                     </div>
                     <ul id="myTodoDoList">
-                        <li class="list-item"><a href="www.google.com" target="_blank">Google</a></li>
+                        <li class="list-item"><a href="https://www.google.com" target="_blank">Google</a></li>
                         <li class="list-item">Brush Teeths</li>
                         <li class="list-item">Wash the face</li>
                         <li class="list-item">Clean the room</li>
@@ -80,7 +82,8 @@
             </div>
 
 
-            <h1>Classes list</h1>
+            <h1 id="classList">Classes list</h1>
+            <button type="button" class="button-insade"><a href="#top">up</a></button>
             <div class="container-insade">
                 <h1>NodeElement.<b>classList</b></h1>
                 <p>This is a function of the DOM to return all of clases of a element have</p>
@@ -95,13 +98,14 @@
                     <button type="button" onclick="checkboxClases()">Show the clases of the checkbox</button>
                     <button type="button" onclick="addCheckClass()">Add a class to checkbox</button>
                     <button type="button" onclick="removCheckClass()">remove a class to checkbox</button>
-                    <!-- <button type="button" onclick="hideP()">hidde p element</button> -->
+                    <button type="button" onclick="hideP()">hidde p element</button>
 
                     <br>
                     <div class="chekcDIv thisIsAnotherClass classTrh">
                         <label for="myCheck2">Check Me</label>
                         <input type="checkbox" id="myCheck2">
-                        <p id="pToPlay">Hi i'm the paragraph inside the fieldset</p>
+                        <p id="hiThere"> Hi im a paragrahp!</p>
+                        <p>Remeber, add a ";" after the "{}", like this "};" become null the rule of the css.</p>
                     </div>
                 </fieldset>
 
@@ -111,6 +115,72 @@
                     <li>remove, remove a class</li>
                     <li>toggle, swithc a class to aply or not aply, depending if it's aplayed or not</li>
                 </ol>
+                <code>
+                    <pre>
+                        function CheckBgColor(){
+                            let check = document.querySelectorAll("fieldset .chekcDIv")[0];
+                            check.style.backgroundColor = fithColor;
+                            check.style.borderRadius = borderRadius;
+                            check.style.padding = "15px";
+                            check.firstElementChild.style.color = white;
+                            check.lastElementChild.style.color = grayColor;
+                        };
+                        
+                        function checkboxClases(){
+                            let check = document.querySelectorAll("fieldset .chekcDIv")[1];
+                            console.log(check.classList)
+                            alert(check.classList)
+                        };
+                        
+                        function addCheckClass(){
+                            document.querySelectorAll("fieldset .chekcDIv")[1].classList.add("bg-green");
+                            document.querySelectorAll("fieldset .chekcDIv")[1].classList.remove("thisIsAnotherClass");
+                        };
+                        function removCheckClass(){
+                            document.querySelectorAll("fieldset .chekcDIv")[1].classList.remove("bg-green");
+                        };
+                        function hideP(){
+                            document.querySelector("#hiThere").classList.toggle("unvisibility");
+                        };
+                    </pre>
+                </code>
+            </div>
+
+            <h1 id="text">Modifying text</h1>
+            <button type="button" class="button-insade"><a href="#top">Up</a></button>
+            <div class="container-insade">
+                <h1>TextContent</h1>
+                <p>This modify the text insade an element</p>
+                <p>element.<span>inner.HTML</span> return literally all the html insade of an element, for example:</p>
+                <p> "&#60;h1&#62;&#60;span&#62;Hello&#60;/span&#62;&#60;/h1&#62;", of this innterHTML return: &#60;span&#62;Hello&#60;/span&#62; </p>
+                <p>In another way, element.<span>textContent</span> return just the text</p>
+                <p> "&#60;h1&#62;&#60;span&#62;Hello&#60;/span&#62;&#60;/h1&#62;", of this textContent return: Hello</p>
+
+                <br>
+                <br>
+
+                <h3>Atributes</h3>
+                <p>To modify atributes, we need to select the elemente, after that, set the atribute of the element with the whised value</p>
+                <h3>Getting</h3>
+                <p>element<span>.atributes</span>, return the list of atributes of the element</p>
+                <p>White element.<span>getAtribute("atributeName")</span> we can get the name of the wished atribute</p>
+                <h3>Setting</h3>
+                <p>White element.<span>setAtribute("atributeName", "atributeNewValue")</span> we can change the name of the wished atribute</p>
+
+                <button type="button" onclick="head1()">Change h1</button>
+                <button type="button" onclick="aAtr()">Show the &#60;a&#62; atributes</button>
+                <button type="button" onclick="getHrefOfA()">Get the href of &#60;a&#62;</button>
+                <button type="button" onclick="setHrefOfA()">Set a new href of &#60;a&#62;</button>
+
+                <fieldset id="field3">
+                    <legend>Hi i'm another fieldset</legend>
+                    <h1>Heading 1</h1>
+                    <a href="https://www.google.com" target="_blank">Google</a>
+                    <p>A paragrahp</p>
+                </fieldset>
+
+                <p>classList, methods are</p>
+
                 <code>
                     <pre>
 

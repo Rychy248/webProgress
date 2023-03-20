@@ -63,5 +63,30 @@ function removCheckClass(){
     document.querySelectorAll("fieldset .chekcDIv")[1].classList.remove("bg-green");
 };
 function hideP(){
-    document.querySelector("footer").classList.toggle("unvisibility");
+    document.querySelector("#hiThere").classList.toggle("unvisibility");
+};
+
+
+
+
+function head1() {
+    document.querySelector("#field3 h1").textContent = "Rychy was here!";
+    
+};
+function aAtr() {
+    alert("Look at the console");
+    console.log(document.querySelector("#field3 a").attributes);
+};
+function getHrefOfA() {
+    alert("href atribute of 'a': " + document.querySelector("#field3 a").getAttribute("href"));
+    console.log("href atribute of 'a': " + document.querySelector("#field3 a").getAttribute("href"));
+};
+function setHrefOfA() {
+    alert("href atribute of 'a': " + document.querySelector("#field3 a").getAttribute("href"));
+    console.log("href atribute of 'a': " + document.querySelector("#field3 a").getAttribute("href"));
+
+    document.querySelector("#field3 a").setAttribute("href","https://www.bing.com");
+
+    alert("href atribute of 'a': " + document.querySelector("#field3 a").getAttribute("href"));
+    console.log("href atribute of 'a': " + document.querySelector("#field3 a").getAttribute("href"));
 };

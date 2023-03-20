@@ -298,6 +298,44 @@ button:hover{
 .comment{
     color: var(--secondary-color);
 }
+
+
+.button-insade{
+    background-color: var(--fith-color);
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.button-insade:hover, .button-insade:hover a{
+    background-color: var(--white-color);
+    color: var(--third-color);
+}
+
+
+/* FOR THE CSS AND JS LESSON */
+#hiThere{
+    background-color: var(--fith-color);
+    color: white;
+    padding: 5px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+.unvisibility{
+    visibility: hidden;
+}
+.bg-green {
+    background-color: var(--fith-color);
+    color: var(--white-color);
+    padding: 5px;
+    border-radius: var(--border-weight);
+    font-size: 5rem;
+}
+.huge{
+    font-size: 10rem;
+}
+
+
+
 @media (max-width: 1028px) {
 
     section, footer{
@@ -334,37 +372,3 @@ button:hover{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* FOR THE CSS AND JS LESSON */
-.bg-green {
-    background-color: var(--fith-color);
-    color: var(--white-color);
-    padding: 5px;
-    border-radius: var(--border-weight);
-    font-size: 5rem;
-};
-
-.unvisibility{
-    visibility: hidden;
-};
-#pToPlay{
-    visibility: hidden;
-}
-
-.huge{
-    font-size: 10rem;
-};

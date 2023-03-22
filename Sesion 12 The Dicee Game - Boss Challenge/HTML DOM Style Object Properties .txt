@@ -1,0 +1,3 @@
+https://www.w3schools.com/jsref/dom_obj_style.asp
+
+https://betterprogramming.pub/creating-dice-in-flexbox-in-css-a02a5d85e516

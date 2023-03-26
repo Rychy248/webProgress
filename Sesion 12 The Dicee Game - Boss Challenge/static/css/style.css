@@ -9,6 +9,7 @@
     --font-pc-size-m: 2rem;
     --font-pc-size-s: 1.5rem;
     
+    --font-mv-size-xl: 3.3rem;
     --font-mv-size-l: 2.3rem;
     --font-mv-size-m: 1.6rem;
     --font-mv-size-s: 1.2rem;
@@ -274,11 +275,11 @@ img {
 
 
     h1, h2{
-        font-size: 2rem;
+        font-size:var(--font-mv-size-xl);
         text-align: center;
     }
     p, li{
-        font-size:1rem;
+        font-size:var(--font-mv-size-m);
     }
 
     button{
@@ -287,7 +288,7 @@ img {
     }
 
     #title{
-        padding-top: 1.5rem; /*  2*16=32px  */
+        font-size:var(--font-mv-size-l);
     }
 
     #title h1 span{

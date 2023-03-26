@@ -4,15 +4,15 @@
     --border-weight: 2px;
     --border-weight-bold: 4px;
 
-    --font-pc-size-xl: 5rem;
-    --font-pc-size-l: 3rem;
+    --font-pc-size-xl: 3.5rem;
+    --font-pc-size-l: 2.5rem;
     --font-pc-size-m: 2rem;
     --font-pc-size-s: 1.5rem;
     
-    --font-mv-size-xl: 3.3rem;
-    --font-mv-size-l: 2.3rem;
-    --font-mv-size-m: 1.6rem;
-    --font-mv-size-s: 1.2rem;
+    --font-mv-size-xl: 5rem;
+    --font-mv-size-l: 4rem;
+    --font-mv-size-m: 3rem;
+    --font-mv-size-s: 2rem;
 
 
     --ubuntu: 'Ubuntu', sans-serif;
@@ -173,18 +173,6 @@ button a:visited{
 }
 
 
-.button-insade{
-    background-color: var(--fith-color);
-    color: var(--white-color);
-    font-weight: bold;
-}
-
-.button-insade:hover, .button-insade:hover a{
-    background-color: var(--white-color);
-    color: var(--third-color);
-}
-
-
 
 /* ----------------- CONTAINERS */
 
@@ -210,28 +198,6 @@ button a:visited{
     column-rule-style: solid;
 }
 
-.container-half{
-    width: 48%;
-    display: inline-block;
-    margin: 0 auto;
-    border: var(--border-weight) var(--principal-color) solid;
-    border-radius: var(--border-radius);
-}
-
-.container-flex{
-    padding: 1%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
-    justify-items: space-around;
-    align-content:start;
-    align-items: flex-start;
-}
-.container-flex button:hover{
-    flex: 0.5;
-    text-align: center;
-}
 
 #title{
     padding-top: 2rem; /*  2*16=32px  */
@@ -267,24 +233,34 @@ img {
     font-family: var(--indie-flower);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1028px) {
+    .container {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    .container-insade{
+        padding: 3px 0;
+        width: 96%;
+        margin: 20px auto;
+        border-radius: var(--border-radius);
+    }
 
+    button{
+        padding: 15px;
+        font-size: var(--font-mv-size-m);
+    }
     section, footer{
         padding: 0% 5%;
     }
 
 
     h1, h2{
-        font-size:var(--font-mv-size-xl);
+        font-size:var(--font-mv-size-l);
         text-align: center;
     }
     p, li{
         font-size:var(--font-mv-size-m);
-    }
-
-    button{
-        padding: 10px;
-        font-size: 1rem;
     }
 
     #title{
@@ -297,6 +273,17 @@ img {
         padding-right: 0px;
     }
 
+    footer{
+        font-size: var(--font-mv-size-m);
+        padding: 25px 0;
+    }
+    
+    img {
+        width: 100%;
+    }
+    .dice {
+        margin: 2rem;
+    }
 }
 
 

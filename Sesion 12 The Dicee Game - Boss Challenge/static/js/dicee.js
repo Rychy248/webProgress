@@ -39,6 +39,7 @@ function changeDiceeFace(p1, p2){
     dice2.style.rotate = `${degree(dice2.style.rotate)}deg`;
     
 };
+
 function printWinner(p1, p2){
     //deleting the dicees roateted
     document.querySelector(".img1").style.rotate = "0deg";
@@ -78,4 +79,5 @@ function play() {
 // - Ver el número más grande
 
 // - pintar pantalla con el numero más grande
+
 

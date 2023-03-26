@@ -267,7 +267,7 @@ img {
     font-family: var(--indie-flower);
 }
 
-@media (max-width: 1028px) {
+@media (max-width: 720px) {
 
     section, footer{
         padding: 0% 5%;

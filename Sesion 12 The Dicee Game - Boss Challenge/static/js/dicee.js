@@ -49,7 +49,10 @@ function printWinner(p1, p2){
     document.querySelector("#player-win").textContent =  (p1 > p2) ? "Player 1" :
                                                         (p1 === p2) ? "Draw" : "Player 2";
 };
-
+function hidePlayButton(hide){
+    
+    document.querySelector("button[onclick='play()']").style.visibility = (hide)? "hidden":"visible";
+};
 function play() {
     let player1=0;
     let player2=0;
@@ -63,21 +66,14 @@ function play() {
             player2 = randomNum();
 
             changeDiceeFace(player1,player2);
-
-            if (index === 15) {
+            if (index === 1) {
+                hidePlayButton(true);
+            } else if (index === 15) {
                 printWinner(player1,player2);
+                hidePlayButton(false);
             };
 
         }, time);
     };
 
 };
-
-// obtener numeros para jugadores
-// - cambiar cara segun un numero aleatorio que se obtenga
-
-// - Ver el número más grande
-
-// - pintar pantalla con el numero más grande
-
-

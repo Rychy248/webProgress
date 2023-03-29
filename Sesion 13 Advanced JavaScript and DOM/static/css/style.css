@@ -123,7 +123,6 @@ button a:visited{
 }
 
 
-
 /* ----------------- CONTAINERS */
 
 .container {
@@ -160,20 +159,32 @@ button a:visited{
     /* text-shadow: 3px 0 var(--forth-color); */
     color: var(--secondary-color);
 }
-.w {}
+.w {
+    background-image: url("../images/tom1.png");
+}
+.a {
+    background-image: url("../images/tom2.png");
+}
 
-.a {}
+.s {
+    background-image: url("../images/tom3.png");
+}
 
-.s {}
+.d {
+    background-image: url("../images/tom4.png");
+}
 
-.d {}
+.j {
+    background-image: url("../images/snare.png");
+}
 
-.j {}
+.k {
+    background-image: url("../images/crash.png");
+}
 
-.k {}
-
-.l {}
-
+.l {
+    background-image: url("../images/kick.png");
+}
 
 .game-over {
     background-color: var(--fith-color);
@@ -210,6 +221,15 @@ button a:visited{
     text-align: center;
     background-color: white;
 }
+
+
+.sound{
+    background-color: var(--secondary-color);
+    color: var(--fith-color);
+    border-color: var(--secondary-color);
+    cursor:grabbing;
+}
+
 
 @media (max-width: 1028px) {
     .container {

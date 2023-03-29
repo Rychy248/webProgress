@@ -1,0 +1,261 @@
+/* ---------------------GENERAL--------------------- */
+:root{
+    --border-radius: 30px;
+    --border-weight: 2px;
+    --border-weight-bold: 4px;
+
+    --font-pc-size-xl: 3rem;
+    --font-pc-size-l: 2rem;
+    --font-pc-size-m: 1.5rem;
+    --font-pc-size-s: 1.2rem;
+    
+    --font-mv-size-xl: 5rem;
+    --font-mv-size-l: 4rem;
+    --font-mv-size-m: 3rem;
+    --font-mv-size-s: 2rem;
+
+
+    --ubuntu: 'Ubuntu', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    --arvo: "Arvo", cursive;
+
+    --principal-color:#003049;
+    --secondary-color:#d62828; /*#AA77FF;*/
+    --third-color:#f77f00;
+    --forth-color:#e9c46a;
+    --fith-color:#fcbf49;
+    --sixth-color:#eae2b7;
+
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #f3f3f3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: var(--ubuntu);
+}
+
+body{
+    text-align: center;
+    background-color: var(--principal-color);
+}
+section, footer{
+    padding: 0% 10%;
+    margin: 0.5rem auto;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 0.4rem;
+    
+    font-family: var(--arvo);
+    font-size: var(--font-pc-size-m);
+    color: var(--fith-color);
+    padding: 25px 0;
+}
+
+hr{
+    border: var(--border-weight) var(--third-color) groove;
+    border-bottom: 0;
+    border-width: var(--border-weight-bold);
+    
+}
+
+
+
+/* ----------------- HEADERS */
+h1, h2, h3, h4, h5, h6{
+    color: var(--third-color);
+    font-weight: bolder;
+
+    text-shadow: 3px 0 var(--forth-color);
+    font-family: var(--arvo);
+}
+
+
+h1{
+    font-size: var(--font-pc-size-xl);
+}
+h2{
+    font-size: var(--font-pc-size-l);
+}
+
+/* ----------------- PARAGRAHP AND LISTS */
+p{
+    font-size: var(--font-pc-size-m);
+    font-family: var(--montserrat);
+    text-align: center;
+    color: var(--third-color);
+}
+
+
+
+
+/* ----------------- BUTTON */
+button{
+    padding: 15px;
+
+    border-radius: var(--border-radius);
+    border: var(--border-weight) var(--secondary-color) ridge;
+
+    background-color: var(--fith-color);
+    
+    font-weight: bold;
+    font-size: var(--font-pc-size-s);
+    color: var(--secondary-color);
+}
+button:hover, button a:hover{
+    background-color: var(--secondary-color);
+    color: var(--fith-color);
+    border-color: var(--secondary-color);
+    cursor:grabbing;
+}
+button a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+button a:visited{
+    color: var(--secondary);
+}
+
+
+
+/* ----------------- CONTAINERS */
+
+.container {
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+
+#title{
+    padding-top: 2rem; /*  2*16=32px  */
+
+}
+
+#title span{
+    /* font-stretch:extra-expanded; */
+    letter-spacing: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--forth-color);
+    padding-left: 25px;
+    padding-right: 0px;
+    /* text-decoration: overline var(--secondary-color); */
+}
+
+
+/* ---------------------------------------------- */
+.game-title{
+    font-size: var(--font-pc-size-xl);
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: var(--white-color);
+    text-shadow:0.3rem 0 var(--third-color);
+    /* text-shadow: 3px 0 var(--forth-color); */
+    color: var(--secondary-color);
+}
+.w {}
+
+.a {}
+
+.s {}
+
+.d {}
+
+.j {}
+
+.k {}
+
+.l {}
+
+
+.game-over {
+    background-color: var(--fith-color);
+    opacity: 0.8;
+}
+
+.pressed {
+    box-shadow: 0 3px 4px 0 var(--forth-color);
+    opacity: 0.5;
+}
+
+.red {
+    color: red;
+}
+
+.drum {
+    outline: none;
+    border: var(--border-weight-bold) solid var(--third-color);
+
+    font-family: var(--arvo);
+    color: var(--secondary-color);
+    text-shadow: 3px 0 var(--third-color);
+    font-size: 4.5rem;
+    line-height: 2;
+    font-weight: 900;
+
+    border-radius: var(--border-radius);
+    display: inline-block;
+
+    width: 9rem;
+    height: 9rem;
+
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+@media (max-width: 1028px) {
+    .container {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    .container-insade{
+        padding: 3px 0;
+        width: 96%;
+        margin: 20px auto;
+        border-radius: var(--border-radius);
+    }
+
+    button{
+        padding: 15px;
+        font-size: var(--font-mv-size-m);
+    }
+    section, footer{
+        padding: 0% 5%;
+    }
+
+
+    h1, h2{
+        font-size:var(--font-mv-size-l);
+        text-align: center;
+    }
+    p, li{
+        font-size:var(--font-mv-size-m);
+    }
+
+    #title{
+        font-size:var(--font-mv-size-l);
+    }
+
+    #title h1 span{
+        letter-spacing: 1rem;
+        padding-left: 15px;
+        padding-right: 0px;
+    }
+
+    footer{
+        font-size: var(--font-mv-size-m);
+        padding: 25px 0;
+    }
+    
+}
+
+

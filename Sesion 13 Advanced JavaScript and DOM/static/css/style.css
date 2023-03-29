@@ -109,9 +109,9 @@ button{
     color: var(--secondary-color);
 }
 button:hover, button a:hover{
-    background-color: var(--secondary-color);
+    background-color: var(--third-color);
     color: var(--fith-color);
-    border-color: var(--secondary-color);
+    border-color: var(--third-color);
     cursor:grabbing;
 }
 button a{
@@ -224,9 +224,9 @@ button a:visited{
 
 
 .sound{
-    background-color: var(--secondary-color);
+    background-color: var(--third-color);
     color: var(--fith-color);
-    border-color: var(--secondary-color);
+    border-color: var(--third-color);
     cursor:grabbing;
 }
 

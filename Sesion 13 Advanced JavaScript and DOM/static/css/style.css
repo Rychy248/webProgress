@@ -109,9 +109,9 @@ button{
     color: var(--secondary-color);
 }
 button:hover, button a:hover{
-    background-color: var(--third-color);
+    background-color: var(--forth-color);
     color: var(--fith-color);
-    border-color: var(--third-color);
+    border-color: var(--forth-color);
     cursor:grabbing;
 }
 button a{

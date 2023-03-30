@@ -272,10 +272,26 @@ button a:visited{
     }
 
     footer{
-        font-size: var(--font-mv-size-m);
+        font-size: var(--font-mv-size-s);
         padding: 25px 0;
     }
     
+
+    /* ---------------------------------------------- */
+    .game-title{
+        font-size: var(--font-mv-size-xl);
+    }
+
+    .drum {
+        font-size: var(--font-mv-size-l);
+        width: 12rem;
+        height: auto;
+
+        margin: 10px;
+        
+    }
+
+
 }
 
 

@@ -1,0 +1,153 @@
+:root{
+    --color-1: #E5B8F4;
+    --color-2: #C147E9;
+    --color-3: #810CA8;
+    --color-4: #2D033B;
+    --color-5: #CDF0EA;
+
+    --border-radius: 30px;
+    --border-weight: 2px;
+    --border-weight-bold: 4px;
+
+    --font-pc-size-xl: 4rem;
+    --font-pc-size-l: 2rem;
+    --font-pc-size-m: 1.5rem;
+    --font-pc-size-s: 1.2rem;
+    
+    --font-mv-size-xl: 5rem;
+    --font-mv-size-l: 4rem;
+    --font-mv-size-m: 3rem;
+    --font-mv-size-s: 2rem;
+
+
+    --ubuntu: 'Ubuntu', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+};
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    background-color: var(--color-1);
+    font-family: var(--montserrat);
+    font-weight: var(--font-pc-size-s);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--ubuntu);
+    color: var(--color-4);
+}
+h1{
+    font-size: var(--font-pc-size-l);
+}
+p{
+    color: var(--color-4);
+    font-size: var(--font-pc-size-s);
+    
+    
+
+    columns: 2;
+    column-rule-color: var(--color-2);
+    column-rule-width: var(--border-weight);
+    column-rule-style: dashed;
+}
+
+button{
+    padding: 4px;
+    border: var(--border-weight) var(--color-4) solid;
+    background-color: var(--color-3);
+    border-radius: var(--border-radius);
+
+    font-size: var(--font-pc-size-m);
+    color: var(--color-4);
+    text-decoration: none;
+}
+button a{
+    font-size: var(--font-pc-size-m);
+    color: var(--color-4);
+    text-decoration: none;
+}
+
+button:hover{
+    border: var(--border-weight) var(--color-4) dotted;
+    background-color: var(--color-2);
+}
+
+
+
+.container{
+    width: 70%;
+    margin:0 auto 0 21%;
+}
+
+
+
+.top{
+    width: 90%;
+    margin: 0 auto;
+    opacity: 50%;
+    padding-top:1rem;
+}
+
+.top:hover{
+    opacity: 100%;
+}
+.top h1{
+    text-align: center;
+    line-height: 0.5rem;
+    font-size: var(--font-pc-size-xl);
+    color: var(--color-2);
+    text-shadow: 5px 0px var(--color-4);
+
+}
+
+
+.nav{
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+}
+
+.nav-item{
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    margin: 0.3rem 0;
+
+    border-radius: 0 50px 50px 0;
+}
+
+.code{
+    display: block;
+    width: 100%;
+    font-size: var(--font-pc-size-s);
+    
+    background-color: var(--color-2);
+    color: var(--color-5);    
+    padding: 3%;
+
+    border-radius: var(--border-radius);
+    border: var(--border-weight) var(--color-4) solid;
+
+    display: block;
+    
+    overflow-x: scroll;
+    scroll-padding: 9px;
+    scroll-behavior: auto;
+    scrollbar-color: var(--color-4);
+    scrollbar-width: 80%;
+    
+}
+.code p{
+    columns: 1;
+}
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+@media screen {
+    
+}

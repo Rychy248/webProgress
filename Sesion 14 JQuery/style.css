@@ -54,9 +54,13 @@ p{
 }
 
 button{
+    display: inline-block;
     padding: 4px;
+    margin: auto;
+    text-align: center;
+
     border: var(--border-weight) var(--color-4) solid;
-    background-color: var(--color-3);
+    background-color: var(--color-1);
     border-radius: var(--border-radius);
 
     font-size: var(--font-pc-size-m);
@@ -70,15 +74,16 @@ button a{
 }
 
 button:hover{
-    border: var(--border-weight) var(--color-4) dotted;
+    border: var(--border-weight) var(--color-4) dashed;
     background-color: var(--color-2);
 }
 
 
-
 .container{
-    width: 70%;
+    width: 74.1%;
     margin:0 auto 0 21%;
+    display: block;
+    position: static;
 }
 
 
@@ -108,9 +113,11 @@ button:hover{
     width: 20%;
     height: 100%;
     position: fixed;
+    top: auto;
 }
 
 .nav-item{
+    background-color: var(--color-3);
     display: block;
     position: relative;
     width: 100%;
@@ -122,7 +129,7 @@ button:hover{
 
 .code{
     display: block;
-    width: 100%;
+    width: 93%;
     font-size: var(--font-pc-size-s);
     
     background-color: var(--color-2);
@@ -143,6 +150,19 @@ button:hover{
 }
 .code p{
     columns: 1;
+}
+.comment {
+    font-style: italic;
+    color: var(--color-5);
+}
+.commentTitle{
+    font-style: bold;
+    color: var(--color-5);
+    text-decoration: underline double;
+}
+.inline-text{
+    font-style: bold;
+    background-color: var(--color-5);
 }
 ::-webkit-scrollbar {
     width: 9px;

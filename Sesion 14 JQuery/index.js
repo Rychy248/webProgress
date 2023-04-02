@@ -28,25 +28,11 @@ function changeText(elment, txt) {
     
 // });
 
-function modifyTxt1(){
-    
-    if ($(this).data("type-of") === "js"){
-        document.querySelector(".text1").textContent = "Modify with js"
-    }else{
-        $(".text1").textContent = "Modify with JQuery"
-    };
-};
-
-let index = 0;
 $(".select-btn").each(()=>{
-    console.log($(this))
-
-    if (index === 0) {
-        $(this).data("type-of","js");
-        index++;
-    }else{
-        $(this).data("type-of","jquery");
-    };
-    $(this).bind('click',modifyTxt1());
+    $(this).bind('click',()=>{
+        $(".text1").textContent = "Modify with "+this.data("type-of");
+    });
     
+    console.log(this)
+    console.log($(this))
 });

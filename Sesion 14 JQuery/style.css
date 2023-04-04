@@ -76,6 +76,7 @@ button a{
 button:hover{
     border: var(--border-weight) var(--color-4) dashed;
     background-color: var(--color-2);
+    cursor: grab;
 }
 
 
@@ -160,14 +161,28 @@ button:hover{
     color: var(--color-5);
     text-decoration: underline double;
 }
+.commentInlineHiglith{
+    font-style: bold;
+    color: var(--color-1);
+    background-color: var(--color-4);
+}
 .inline-text{
     font-style: bold;
     background-color: var(--color-5);
 }
+
 ::-webkit-scrollbar {
     width: 9px;
 }
 
+.big-title{
+    font-size: var(--font-pc-size-xl);
+    text-align: center;
+    margin: 0 auto;
+}
+.italic{
+    font-style: italic;
+}
 @media screen {
     
 }

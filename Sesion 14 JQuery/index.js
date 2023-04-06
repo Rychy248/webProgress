@@ -123,3 +123,77 @@ $($(".modify-text-btn")[1]).on("click",function(){
     let name = prompt("type your name: ");
     $(".title-3").html("Hi <i>"+name+"</i>");
 });
+
+
+//------------------ ATTRIBUTES MANIPULATING WITH JQUERY
+
+// button PRINT YOUR NAME
+function hi() {
+    alert("Hi i'm a test button");
+};
+/*
+    disabled true | dar false
+    disabled false | dar true
+*/
+// disabled button 
+$($(".modify-atributes-btn")[0]).on("click",function () {
+    let disabled = $(".btn-test").prop("disabled");
+    $(".btn-test").prop("disabled",(disabled ? false : true));
+});
+
+// pineapple button 
+$($(".modify-atributes-btn")[1]).on("click",function () {
+    let img = $(".img-1")
+    if (!(img.prop("img") == 1)) {
+        img.prop("src","pineapple.png");
+        img.prop("alt","pineapple.png");
+        img.prop("img","1");
+    } else {
+        img.prop("src","tomato.png");
+        img.prop("alt","tomato.png");
+        img.prop("img","2");
+    };
+});
+
+//------------------ ADDING EVENTS WITH JQUERY
+
+// SAY HI
+$(".modify-event-btn").on("click",function () {
+    alert("Hi, my clases are:"+$(this).prop("class"));
+});
+
+// KEY DOWN DETECTER
+$(document).on("keydown",function (event) {
+    let actualText = $(".label-1").text();
+    if (event.key == "Backspace") {
+        
+    } else if(actualText.length >21){
+        actualText = actualText.slice(1,22)
+        $(".label-1").text(actualText + event.key)
+    }else{
+        $(".label-1").text(actualText + event.key)
+    }
+    
+});
+
+//------------------ ADDING AND REMOVING ELMENTS WITH JQUERY
+
+// ADD BUTTONS
+function addElement() {
+    $(".add-before-me").before("<button type='button' class='btn-added' onclick='hi()'>I'm a new button</button>");
+};
+// REMOVE BUTTONS
+function removeBtn() {
+    let btns = $(".btn-added")
+    let len = btns.length
+
+    if (len === 0) {
+        alert("There's not any bnt-new to delete");
+    }else{
+        $(btns[len-1]).remove();
+    };
+
+};
+
+$($(".add-rem-elme-btn")[0]).on("click",addElement);
+$($(".add-rem-elme-btn")[1]).on("click",removeBtn);

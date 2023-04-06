@@ -43,17 +43,17 @@
         <div class="code">
             <p>
                 <span class="commentTitle">The CDN</span><br>
-                &#60;script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"&#63;&#60;/script&#63;
+                &#60;script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"&#62;&#60;/script&#62;
                 <br><br>
 
                 <span class="commentTitle">In the file.html</span><br>
-                <span class="comment">&#60;!-- JQuery --&#63;</span>
+                <span class="comment">&#60;!-- JQuery --&#62;</span>
                 <br>
 
-                &#60;script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"&#63;&#60;/script&#63;<br>
+                &#60;script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"&#62;&#60;/script&#62;<br>
                 
-                <span class="comment">&#60;!-- own js --&#63;</span><br>
-                &#60;script src="./index.js"&#63;&#60;/script&#63;
+                <span class="comment">&#60;!-- own js --&#62;</span><br>
+                &#60;script src="./index.js"&#62;&#60;/script&#62;
             </p>
         </div>
     </div>
@@ -132,36 +132,129 @@
             <p>
                 passing the whised text as a paramneter<br>
                 <span class="commentTitle">//-------Set text with text()</span><br>
-                $(".title-3")<span class="commentInlineHiglith">.text(</span>"Hi &#60;i &#63;"+name+" &#60;/i &#63;"<span class="commentInlineHiglith">)</span>;
+                $(".title-3")<span class="commentInlineHiglith">.text(</span>"Hi &#60;i&#62;"+name+" &#60;/i&#62;"<span class="commentInlineHiglith">)</span>;
                 <br><br>
                 
                 <span class="commentTitle">//-------Set text with html()</span><br>
-                $(".title-3")<span class="commentInlineHiglith">.html(</span>"Hi &#60;i &#63;"+name+" &#60;/i &#63;"<span class="commentInlineHiglith">)</span>;
+                $(".title-3")<span class="commentInlineHiglith">.html(</span>"Hi &#60;i&#62;"+name+" &#60;/i&#62;"<span class="commentInlineHiglith">)</span>;
                     
             </p>
         </div>
     </div>
+
     <div class="container" id="Manipulatgin-atributes">
         <h1>Manipulating Atributes</h1>
         <p>
-            some text here
+            We can add or change atributes by the function <span class="inline-text">.prop("property","valueIfWantedToChange")</span>
         </p>
+        <button class="btn-test" onclick="hi()" value="btn-value">I'm a button</button>
+        <img class="img-1" img="1" src="pineapple.png" alt="pineapple.png">
+        <br>
+        <button type="button" class="modify-atributes-btn">Disable button</button>
+        <button type="button" class="modify-atributes-btn">Change img</button>
+        <div class="code">
+            <p>
+                passing the whised value as a the second paramneter<br><br>
+
+                <span class="commentInlineHiglith">let img = $(".img-1")</span> <br><br>
+                <span class="commentTitle">//-------Set src atribute</span><br>
+                img<span class="commentInlineHiglith">.prop("src","pineapple.png");</span>;<br>
+                img<span class="commentInlineHiglith">.prop("src","tomato.png");</span>;<br><br>
+                
+                <span class="commentTitle">//-------Set src atribute</span><br>
+                let disabled = $(".btn-test")<span class="commentInlineHiglith">.prop("disabled")</span>; //-- method called without the second parameter, so it's return the value with any change <br> 
+                
+                $(".btn-test")<span class="commentInlineHiglith">.prop("disabled",</span>(disabled ? false : true)<span class="commentInlineHiglith">);</span>
+                <br>
+            </p>
+        </div>
     </div>
+
     <div class="container" id="adding-event-listeners">
         <h1>Adding Event Listeners</h1>
         <p>
-            some text
+            We can add event listeners with the method <span class="inline-text">.on("event",callBackFunction)</span>
         </p>
+        <button type="button" class="modify-event-btn">Say hi!</button>
+        <label class="label-1">Type... </label>
+        <div class="code">
+            <p>
+                
+                <span class="commentTitle">//-------SAY HI</span><br>
+                $(".modify-event-btn")<span class="commentInlineHiglith">.on("click",function () {</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; alert("Hi, my clases are:"+$(this).prop("class"));<br>
+                <span class="commentInlineHiglith">});</span> <br><br>
+
+                <span class="commentTitle">//-------disabled button</span> (this button is above, in the <a href="#Manipulatgin-atributes">Manipulating atributes</a> )<br>
+                $($(".modify-atributes-btn")[0])<span class="commentInlineHiglith">.on("click",function () {</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; let disabled = $(".btn-test").prop("disabled");<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; $(".btn-test").prop("disabled",(disabled ? false : true));<br>
+                <span class="commentInlineHiglith">});</span><br><br>
+
+                <span class="commentTitle">// KEY DOWN DETECTER</span><br>
+                <span class="commentInlineHiglith">$(document).on("keydown",function (event) {</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; let actualText = $(".label-1").text(); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; if(actualText.length >21){ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; actualText = actualText.slice(1,22) <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; $(".label-1").text(actualText) <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; }; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; $(".label-1").text(actualText + event.key) <br>
+                <span class="commentInlineHiglith">});</span><br>
+            </p>
+        </div>
     </div>
     <div class="container" id="adding-remove-elements">
         <h1>Adding and remove elements</h1>
         <p>
-            some text
+            We can add or delete new elements, in current serverd page, for that:
+            <br>
+            <ol>
+                <li><b>CREATE AN ELEMENT:</b> For that we select the elemente, and with <span class="inline-text">.before("html_code_to_add")</span> we add the wished content
+                instance of that we can create elements with the command <span class="inline-text">.after("html_code_to_add")</span> too, with that we're going to add an elemente after the elmente selected
+                <ul>METHODS TO ADD:
+                    <li><span class="inline-text">.before("html_code_to_add"):</span> It would add the the code <b>before the elment</b> selected </li>
+                    <li><span class="inline-text">.after("html_code_to_add"):</span> It would add the code <b>after the element</b> selected </li>
+                    <li><span class="inline-text">.prepend("html_code_to_add"):</span>It would add the code <b>inside</b> the elemente selected, but <b>before</b> the cotent, &#60;h1&#62; <i>"html_code_displayed"</i> <b>"content"</b> &#60;/h1&#62; </li>
+                    <li><span class="inline-text">.append("html_code_to_add"):</span>It would add the code <b>inside</b> the elemente selected, but <b>after</b> the cotent, &#60;h1&#62; <b>"content"</b> <i>"html_code_displayed"</i> &#60;/h1&#62; </li>
+                </ul>
+                </li>
+                <li><b>REMOVE AN ELEMENT:</b> For we just use the method <span class="inline-text">.remove()</span> with the selected elemente wished to delete</li>
+            </ol>
         </p>
+        <div class="add-before-me">
+
+        </div>
+        <button type="button" class="add-rem-elme-btn">Add a new button</button>
+        <button type="button" class="add-rem-elme-btn">Remove a button</button>
+        
+        <div class="code">
+            <p>
+
+                <span class="commentTitle">//-------ADD ELEMENTS</span><br>
+                function addElement() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; $(".add-before-me")<span class="commentInlineHiglith">.before("</span>&#60;button type='button' class='btn-added' onclick='hi()'&#62;I'm a new button&#60;/button&#62;<span class="commentInlineHiglith">")</span>;<br>
+                };<br><br>
+
+                <span class="commentTitle">//-------REMOVE ELEMENTS</span><br>
+                function removeBtn() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; let btns = $(".btn-added")<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; let len = btns.length<br>
+                <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; if (len === 0) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; alert("There's not any bnt-new to delete");<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; }else{<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; $(btns[len-1])<span class="commentInlineHiglith">.remove()</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; };<br>
+                <br>
+                };<br>
+
+            </p>
+        </div>
     </div>
     <div class="container" id="animations">
         <h1>Animations</h1>
         <p>
+            <a href="https://www.w3schools.com/jquery/jquery_ref_effects.asp" target="_blank">W3schools documentation</a> about jquery effect methods <br><br>
             some text
         </p>
     </div>

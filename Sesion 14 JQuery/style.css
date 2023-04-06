@@ -183,6 +183,22 @@ button:hover{
 .italic{
     font-style: italic;
 }
+.btn-test{
+    background-color: var(--color-5);
+    margin-bottom: 5px;
+}
+.btn-test:hover{
+    background-color: var(--color-4);
+    color: var(--color-1);
+}
+.btn-test:disabled, .btn-test:disabled:hover{
+    background-color: gray;
+    color: rgb(90, 90, 90);
+    cursor: not-allowed;
+}
+.img-1{
+    width: 3rem;
+}
 @media screen {
     
 }

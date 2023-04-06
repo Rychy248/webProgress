@@ -87,6 +87,17 @@ button:hover{
     position: static;
 }
 
+.container-flex{
+    display: flex;
+    margin: 0 auto;
+    gap: 0.6rem;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .top{
@@ -198,6 +209,49 @@ button:hover{
 }
 .img-1{
     width: 3rem;
+}
+.img-2{
+    width: 6rem;
+}
+
+
+.box-flex-row{
+    flex-direction: row;
+    
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+.box-flex-column{
+    flex-direction: column;
+    gap: 0rem;
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.flex-item{
+    flex-grow: 2;
+    display: inline;
+}
+h1.flex-item{
+    background-color: #C147E9;
+    color: var(--color-5);
+    margin: 0;
+    width: 90%;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: var(--border-radius);
+};
+
+.border-higlith{
+    border-width: 3px;
+    border-color: var(--color-3);
 }
 @media screen {
     

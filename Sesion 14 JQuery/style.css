@@ -215,9 +215,13 @@ button:hover{
 }
 
 
+.border-higlith{
+    border: var(--border-weight) var(--color-2) solid;
+    border-radius: var(--border-radius);
+}
 .box-flex-row{
     flex-direction: row;
-    
+
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -249,10 +253,7 @@ h1.flex-item{
     border-radius: var(--border-radius);
 };
 
-.border-higlith{
-    border-width: 3px;
-    border-color: var(--color-3);
-}
+
 @media screen {
     
 }

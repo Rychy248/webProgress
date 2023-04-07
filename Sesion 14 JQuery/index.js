@@ -203,27 +203,23 @@ $($(".add-rem-elme-btn")[1]).on("click",removeBtn);
 // IMG FADE AND SLIDE
 function imgFadeToogle() {
     $(".img-2").fadeToggle();
-}
+};
 function imgSlideToogle() {
     $(".img-2").slideToggle();
-}
+};
+//adding functions to the buttons
 $(
     $(".box-flex-row")[0]
-).children(".effect-btn").each((index, element)=>
-    {
-        $(element).on("click", index === 0 ? imgFadeToogle : imgSlideToogle);
-    }
-);
+).children(".effect-btn").each((index, element)=>{
+    $(element).on("click", index === 0 ? imgFadeToogle : imgSlideToogle);
+});
 
 
 function resalt() {
-    $(this).father
-}
+    let buttons = $($(this).parent().children(".box-flex-row").children())
+    buttons.addClass("border-higlith");
+    setTimeout(() => {
+        buttons.removeClass("border-higlith");
+    }, 700);
+};
 $("h1.flex-item").on("click",resalt);
-// $(".select-btn").each((index, element)=>{
-//     $(element).prop("type-of",(index === 0 ? "js" : "jquery"));
-//     $(element).on('click',()=>{
-//         $(".text1").text("Modify with "+ $(element).prop("type-of").toUpperCase() );
-//     });
-    
-// });

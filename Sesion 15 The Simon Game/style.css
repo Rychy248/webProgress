@@ -20,6 +20,11 @@
     --color-green-dark: #50ad5d;
     --color-blue-dark: #2d70ce;
 
+    --color-red-border: #ee54548c;
+    --color-yellow-border: #f8ca1070;
+    --color-green-border: #50ad5c7a;
+    --color-blue-border: #2d70ce8c;
+
     --border-radius-less: 0.5rem;
     --border-radius: 2rem;
     --border-weight: 0.2rem;
@@ -67,6 +72,10 @@ h1{
 p{
     color: var(--color-4);
     font-size: var(--font-pc-size-s);
+}
+label{
+    font-weight: bold;
+    color: var(--color-3);
 }
 footer{
     padding-top: 0.5rem;
@@ -238,6 +247,7 @@ input{
     border-radius: var(--border-radius);
     width: 90%;
     padding: 0.5rem;
+    transition: opacity 1s;
 }
 
 .btn{
@@ -255,38 +265,47 @@ input{
     font-family: var(--press-start);
 }
 
-.quarter-circle1 { border-radius: 100% 5% 5% 5%; }
-.quarter-circle2 { border-radius: 5% 100% 5% 5%; }
-.quarter-circle3 { border-radius: 5% 5% 100% 5%; }
-.quarter-circle4 { border-radius: 5% 5% 5% 100%; }
+.quarter-circle1, .quarter-circle2, .quarter-circle3, .quarter-circle4 {
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+.quarter-circle1 {
+    border-radius: 100% 5% 5% 5%; 
+    background-color: var(--color-green);
+}
+.quarter-circle2 {
+    border-radius: 5% 100% 5% 5%; 
+    background-color: var(--color-red);
+}
+.quarter-circle3 {
+    border-radius: 5% 5% 100% 5%; 
+    background-color: var(--color-yellow);
+}
+.quarter-circle4 {
+    background-color: var(--color-blue);
+    border-radius: 5% 5% 5% 100%; 
+}
+.quarter-circle1-clicked {border-color: var(--color-green-border);}
+.quarter-circle2-clicked {border-color: var(--color-red-border);}
+.quarter-circle3-clicked {border-color: var(--color-yellow-border);}
+.quarter-circle4-clicked {border-color: var(--color-blue-border);}
 
 .game-over {
     background-color: var(--color-red-dark);
     opacity: 0.8;
 }
 
-
-.red {
-    background-color: var(--color-red);
-}
-
-.green {
-    background-color: var(--color-green);
-}
-
-.blue {
-    background-color: var(--color-blue);
-}
-
-.yellow {
-    background-color: var(--color-yellow);
-}
-
 .pressed {
     box-shadow: 0 0 20px var(--color-3);
     background-color: grey;
 }
-
+/* .btn-opacity {
+    opacity: 0.5;
+} */
+.input-focus{
+    background-color: var(--color-3);
+    /* border: var(--color-4) var(--border-weight) solid; */
+}
 
 @media (max-width: 925px) { 
 

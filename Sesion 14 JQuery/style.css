@@ -123,7 +123,6 @@ button:hover{
 .nav{
     display: inline-block;
     width: 20%;
-    height: 100%;
     position: fixed;
     top: auto;
 }
@@ -132,9 +131,9 @@ button:hover{
     background-color: var(--color-3);
     display: block;
     position: relative;
-    width: 100%;
     text-align: left;
     margin: 0.3rem 0;
+    width: 100%;
 
     border-radius: 0 50px 50px 0;
 }
@@ -182,9 +181,6 @@ button:hover{
     background-color: var(--color-5);
 }
 
-::-webkit-scrollbar {
-    width: 9px;
-}
 
 .big-title{
     font-size: var(--font-pc-size-xl);
@@ -254,6 +250,23 @@ h1.flex-item{
 };
 
 
-@media screen {
+@media (min-width: 900px) {
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
     
+    .nav{
+        display: block;
+        position: static;
+        width: 90%;
+    }
+    
+    .nav-item{
+        display: inline-block;
+        position: static;
+        margin: 0.3rem 0;
+        width: 20%;
+    }
 }

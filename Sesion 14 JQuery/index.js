@@ -1,4 +1,52 @@
 
+function reportWindowSize() {
+    if(window.innerWidth < 800){
+        
+        $(".container").css({
+            "width":"90%",
+            "margin": "0 auto",
+            "display": "block",
+        });
+    
+        $(".nav").css({
+            "display":" block",
+            "position":" static",
+            "width":" 90%",
+            "align-items": "center",
+        });
+        
+        $(".nav-item").css({
+            "display": "inline-block",
+            "position": "static",
+            "margin": "0.3rem 0",
+            "width": "auto",
+        });
+    }else{
+        
+        $(".container").css({
+            "width":"74.1%",
+            "margin": "0 auto 0 21%",
+            "display": "block",
+        });
+    
+        $(".nav").css({
+            "display":" inline-block",
+            "position":"fixed",
+            "width":" 20%",
+            "top": "auto",
+        });
+
+        $(".nav-item").css({
+            "display": "block",
+            "position": "relative",
+            "margin": "0.3rem 0",
+            "width": "100%",
+        });
+
+    };
+};
+
+window.onresize = reportWindowSize;
 
 // FIRST ALERT WE YOU GO INTO THE PAGE
 

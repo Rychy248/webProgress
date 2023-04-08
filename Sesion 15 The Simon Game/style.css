@@ -1,0 +1,368 @@
+/*
+    documentation
+    https://sharkcoder.com/tag/shapes
+
+*/
+
+:root{
+    --color-1: #F6F1E9;
+    --color-2: #FFD93D;
+    --color-3: #FF8400;
+    --color-4: #4F200D;
+
+    --color-red: #FF6B6B;
+    --color-yellow: #FFD93D;
+    --color-green: #6BCB77;
+    --color-blue: #4D96FF;
+
+    --color-red-dark: #ee5454;
+    --color-yellow-dark: #f8ca10;
+    --color-green-dark: #50ad5d;
+    --color-blue-dark: #2d70ce;
+
+    --border-radius-less: 0.5rem;
+    --border-radius: 2rem;
+    --border-weight: 0.2rem;
+    --border-weight-bold: 0.4rem;
+
+    --font-pc-size-xl: 3rem;
+    --font-pc-size-l: 2rem;
+    --font-pc-size-m: 1.5rem;
+    --font-pc-size-s: 1.2rem;
+    
+    --font-mv-size-xl: 2rem;
+    --font-mv-size-l: 1.5rem;
+    --font-mv-size-m: 1rem;
+    --font-mv-size-s: 0.8rem;
+
+    --ubuntu: 'Ubuntu', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    --press-start: 'Press Start 2P', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    color: var(--color-4);
+    font-size: var(--font-pc-size-s);
+}
+
+body{
+    text-align: center;
+    background-color: var(--color-1);
+    font-family: var(--montserrat);
+    font-weight: var(--font-pc-size-s);
+    /* background-color: #011F3F; */
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--ubuntu);
+    color: var(--color-4);
+}
+h1{
+    font-size: var(--font-pc-size-l);
+}
+p{
+    color: var(--color-4);
+    font-size: var(--font-pc-size-s);
+}
+footer{
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+
+    font-family: var(--press-start);
+    font-size: 0.9rem;
+}
+button{
+    display: inline-block;
+    padding: 0.5rem;
+    margin: auto;
+    text-align: center;
+
+    border: var(--border-weight) var(--color-4) solid;
+    background-color: var(--color-1);
+
+    /* border-radius: var(--border-radius); */
+    border-radius: 10px 20px 30px 40px/30px;
+
+    font-size: var(--font-pc-size-m);
+    color: var(--color-4);
+    text-decoration: none;
+}
+button a{
+    font-size: var(--font-pc-size-m);
+    color: var(--color-4);
+    text-decoration: none;
+}
+
+button:hover{
+    border: var(--border-weight) var(--color-4) solid;
+    background-color: var(--color-3);
+    cursor: grab;
+}
+
+.button-disabled, .button-disabled:hover{
+    opacity: 0.5;
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.top{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding-top:1rem;
+}
+
+.top button{
+    margin-top: 0.8rem;
+}
+
+.top h1{
+    letter-spacing: 1rem;
+    line-height: 3rem;
+    font-size: var(--font-pc-size-xl);
+    color: var(--color-2);
+
+    text-shadow: 0.4rem 0rem var(--color-4);
+    -webkit-text-stroke: 0.05rem var(--color-4);
+}
+
+.top h1:hover{
+    color: var(--color-3);
+}
+
+.container{
+    display: block;
+    width: 90%;
+    margin:0 auto;
+    position: static;
+}
+
+.container-data{
+    display: inline-block;
+
+    width: 20%;
+    height: 100%;
+    margin:0;
+    position: static;
+
+    /* display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center; */
+
+}
+.container-circle{
+    display: inline-block;
+    width: 70%;
+    margin:0;
+    padding: 0;
+    position: static;
+}
+
+.container-flex{
+    display: flex;
+    margin: 0 auto;
+    gap: 0.6rem;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-flex-column, .box-flex-row{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+
+    width: 100%;
+}
+
+.box-flex-row{
+    flex-direction: row;
+}
+.box-flex-column{
+    flex-direction: column;
+    gap: 0rem;
+}
+
+.flex-item{
+    flex-grow: 2;
+    display: inline;
+}
+
+h1.flex-item{
+    background-color: #C147E9;
+    color: var(--color-5);
+    margin: 0;
+    width: 90%;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: var(--border-radius);
+}
+
+.score{
+    color: var(--color-2);
+    -webkit-text-stroke: 0.05rem var(--color-4);
+    font-size: var(--font-pc-size-l);
+}
+
+.color-2{
+    color: var(--color-2);
+    -webkit-text-stroke: 0.05rem var(--color-4);
+    font-size: var(--font-pc-size-l);
+}
+.color-2:hover{
+    color: var(--color-4);
+}
+
+
+#level-title {
+    font-family: var(--press-start);
+    font-size: var(--font-pc-size-l);
+    color: var(--color-3);
+    margin: 0.4rem;
+    margin-top: 2rem;
+}
+
+input{
+    background-color: var(--color-2);
+    border: var(--color-4) var(--border-weight) solid;
+    border-radius: var(--border-radius);
+    width: 90%;
+    padding: 0.5rem;
+}
+
+.btn{
+    margin: 0.4rem;
+    height: 12.5rem;
+    width: 12.5rem;
+    border: 0.9rem solid black;
+
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    font-size: var(--font-pc-size-m);
+    font-family: var(--press-start);
+}
+
+.quarter-circle1 { border-radius: 100% 5% 5% 5%; }
+.quarter-circle2 { border-radius: 5% 100% 5% 5%; }
+.quarter-circle3 { border-radius: 5% 5% 100% 5%; }
+.quarter-circle4 { border-radius: 5% 5% 5% 100%; }
+
+.game-over {
+    background-color: var(--color-red-dark);
+    opacity: 0.8;
+}
+
+
+.red {
+    background-color: var(--color-red);
+}
+
+.green {
+    background-color: var(--color-green);
+}
+
+.blue {
+    background-color: var(--color-blue);
+}
+
+.yellow {
+    background-color: var(--color-yellow);
+}
+
+.pressed {
+    box-shadow: 0 0 20px var(--color-3);
+    background-color: grey;
+}
+
+
+@media (max-width: 925px) { 
+
+    .btn{
+        margin: 0.2rem;
+        height: 8rem;
+        width: 8rem;
+        border: 0.5rem solid black;
+    }
+
+    .container-data{
+        width: 30%;
+    
+    }
+    .container-circle{
+        width: 60%;
+    }
+}
+@media (max-width: 700px) { 
+
+    .btn{
+        height: 7rem;
+        width: 7rem;
+        border: 0.5rem solid black;
+    }
+
+    .container-data{
+        width: 30%;
+    
+    }
+    .container-circle{
+        width: 60%;
+    }
+
+    .btn{
+        font-size: var(--font-mv-size-m);
+    }
+    .score{
+        font-size: var(--font-mv-size-l);
+    }
+    
+    .color-2{
+        font-size: var(--font-mv-size-l);
+    }
+    
+    
+    #level-title {
+        font-size: var(--font-mv-size-l);
+    }
+    
+    input{
+        width: 60%;
+    }
+    
+    h1{
+        font-size: var(--font-mv-size-l);
+    }
+    button{
+        font-size: var(--font-mv-size-m);
+    }
+}
+
+@media (max-width: 600px) { 
+
+    .btn{
+        margin: 0.2rem;
+        height: 6rem;
+        width: 6rem;
+        border: 0.5rem solid black;
+    }
+
+    .container-data{
+        width: 90%;
+    
+    }
+    .container-circle{
+        width: 90%;
+    }
+}

@@ -22,7 +22,7 @@
 
     --ubuntu: 'Ubuntu', sans-serif;
     --montserrat: 'Montserrat', sans-serif;
-};
+}
 
 *{
     margin: 0;
@@ -247,7 +247,7 @@ h1.flex-item{
     text-align: center;
     padding: 0.6rem;
     border-radius: var(--border-radius);
-};
+}
 
 
 @media (min-width: 900px) {

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&family=Montserrat:wght@400;family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="top">
+        <h1>Sesion 15</h1>
+        <h1> The Simon Game</h1>
+        <button><a href="../index.html">Back to Home</a></button>
+    </div>
+    
+    <div class="container">
+        <h1 id="level-title">Press <span class="color-2">A</span> Key to Start</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="container-data">
+            <div class="box-flex-column">
+                <label for="player">Your Name</label>
+                <input type="text" placeholder="your name" name="player">
+                <h2>High Score</h2>
+                <h2 class="score">-00-</h2>
+                <br>
+                <button type="button" >Show the squence</button>
+
+            </div>
+        </div>
+
+        <div class="container-circle">
+            <div class="box-flex-column">
+                <div class="box-flex-row">
+                    <div type="button" id="green" class="btn green quarter-circle1">W</div>
+                    <div type="button" id="red" class="btn red quarter-circle2">D</div>
+                </div>
+            
+                <div class="box-flex-row">
+                    <div type="button" id="blue" class="btn blue quarter-circle4">A</div>
+                    <div type="button" id="yellow" class="btn yellow quarter-circle3">S</div>
+                </div>
+                <footer>
+                    By Ricardo Hernández <br>
+                    jorgeajrha@gmail.com
+                </footer>
+            </div>
+        
+        </div>
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    
+    <!-- own js -->
+    <script src="./index.js"></script>
+
+</body>
+</html>

@@ -35,10 +35,10 @@
     --font-pc-size-m: 1.5rem;
     --font-pc-size-s: 1.2rem;
     
-    --font-mv-size-xl: 2rem;
-    --font-mv-size-l: 1.5rem;
-    --font-mv-size-m: 1rem;
-    --font-mv-size-s: 0.8rem;
+    --font-mv-size-xl: 1.4rem;
+    --font-mv-size-l: 1rem;
+    --font-mv-size-m: 0.8rem;
+    --font-mv-size-s: 0.6rem;
 
     --ubuntu: 'Ubuntu', sans-serif;
     --montserrat: 'Montserrat', sans-serif;
@@ -254,7 +254,7 @@ input{
     margin: 0.4rem;
     height: 12.5rem;
     width: 12.5rem;
-    border: 0.9rem solid black;
+    border: 0.9rem var(--color-4) ridge;
 
     display: inline-flex;
     text-align: center;
@@ -330,6 +330,7 @@ input{
         height: 7rem;
         width: 7rem;
         border: 0.5rem solid black;
+        font-size: var(--font-mv-size-m);
     }
 
     .container-data{
@@ -339,10 +340,39 @@ input{
     .container-circle{
         width: 60%;
     }
+    .top button{
+        margin-top: 0.2rem;
+    }
 
-    .btn{
+
+    #level-title {
+        font-size: var(--font-mv-size-l);
+        margin: 0.4rem;
+        margin-top: 1rem;
+    }
+
+    .top h1{
+        letter-spacing: 0.3rem;
+        line-height: 1.4rem;
+        font-size: var(--font-mv-size-xl);
+        text-shadow: 0.1rem 0rem var(--color-4);
+        -webkit-text-stroke: 0.05rem var(--color-4);
+    }
+    button{
         font-size: var(--font-mv-size-m);
     }
+    button a{
+        font-size: var(--font-mv-size-m);
+    }
+
+    input{
+        width: 60%;
+    }
+    
+    h1{
+        font-size: var(--font-mv-size-m);
+    }
+
     .score{
         font-size: var(--font-mv-size-l);
     }
@@ -351,26 +381,13 @@ input{
         font-size: var(--font-mv-size-l);
     }
     
-    
-    #level-title {
-        font-size: var(--font-mv-size-l);
-    }
-    
-    input{
-        width: 60%;
-    }
-    
-    h1{
-        font-size: var(--font-mv-size-l);
-    }
-    button{
-        font-size: var(--font-mv-size-m);
-    }
+
 }
 
 @media (max-width: 600px) { 
 
     .btn{
+        font-size: var(--font-mv-size-m);
         margin: 0.2rem;
         height: 6rem;
         width: 6rem;
@@ -384,4 +401,48 @@ input{
     .container-circle{
         width: 90%;
     }
+
+    .top button{
+        margin-top: 0.2rem;
+    }
+
+
+    #level-title {
+        font-size: var(--font-mv-size-l);
+        margin: 0.4rem;
+        margin-top: 1rem;
+    }
+
+    .top h1{
+        letter-spacing: 0.3rem;
+        line-height: 1.4rem;
+        font-size: var(--font-mv-size-xl);
+        text-shadow: 0.1rem 0rem var(--color-4);
+        -webkit-text-stroke: 0.05rem var(--color-4);
+    }
+
+    button{
+        font-size: var(--font-mv-size-m);
+    }
+
+    button a{
+        font-size: var(--font-mv-size-m);
+    }
+
+    .score{
+        font-size: var(--font-mv-size-l);
+    }
+    
+    .color-2{
+        font-size: var(--font-mv-size-l);
+    }
+    
+    input{
+        width: 60%;
+    }
+    
+    h1{
+        font-size: var(--font-mv-size-m);
+    }
+
 }

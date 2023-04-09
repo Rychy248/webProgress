@@ -102,7 +102,7 @@ function inputTyping(event){
 
 // SHOW SEQUENCE ACTIVE AND DESACTIINB THE BUTTON
 function showSquence(event) {
-    if (showSquenceFlag){
+    if (showSquenceFlag && gameActive){
         //invalid player actions
         playerActionWait = false;
         playerSequence = [];

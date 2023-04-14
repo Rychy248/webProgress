@@ -4,12 +4,14 @@ let showSquenceFlag = true;
 
 let gameActive = false;
 let gameOver = false;
+
 let higScore = 0;
+let sequence = [];
+
 let playerName = "";
 let playerActionWait = false;
-
-let sequence = [];
 let playerSequence = [];
+
 
 // ----------------------FUNCTIONS
 
@@ -81,6 +83,7 @@ function inputTyping(event){
         
         let inputText = this.value;
         let parentIsContainerData = this.parentElement.parentElement.classList == "container-data";
+
         if (inputText.length > 3 && parentIsContainerData){
             // formating name
             inputText = inputText[0].toUpperCase() + inputText.slice(1, (inputText.length)).toLowerCase()
@@ -92,7 +95,7 @@ function inputTyping(event){
             this.addEventListener('transitionend', () => this.remove());
 
         }else if (parentIsContainerData){
-            alert("Typer a name bigger than 3 characters");
+            alert("Type a name bigger than 3 characters");
         };
     }else{ // event type == "focus"
         this.classList.add("input-focus")
@@ -100,17 +103,18 @@ function inputTyping(event){
     }
 };
 
-// SHOW SEQUENCE ACTIVE AND DESACTIINB THE BUTTON
+// SHOW SEQUENCE ACTIVE AND DESACTIVE THE BUTTON
 function showSquence(event) {
     if (showSquenceFlag && gameActive){
+        showSquenceFlag = false;
+        document.querySelector("#level-title").innerText = `${(playerName.length > 0)? playerName + " ": ""}Pay Atention!`
+        
         //invalid player actions
         playerActionWait = false;
         playerSequence = [];
-        document.querySelector("#level-title").innerText = `${(playerName.length > 0)? playerName + " ": ""}Pay Atention!`
 
         this.disabled = true;
         this.classList.add("button-disabled")
-        showSquenceFlag = false;
 
         let time = 400;
         
@@ -231,8 +235,8 @@ function startGame() {
     
     document.querySelectorAll(".container-circle .btn").forEach((btn, index) => {
         btn.style.opacity = '1';
-
     });
+
     document.querySelector("#level-title").innerText = `Le'ts Go${(playerName.length > 0)? " " + playerName : ""}!`
     nextSequence();
 };
@@ -297,7 +301,7 @@ function checkInput(key) {
 
 
 
-// ----------------------ADDING EVENTS
+// ------------------------------------ADDING EVENTS
 //START THE GAME
 document.querySelector("#level-title .color-2").addEventListener("click",startGame)
 

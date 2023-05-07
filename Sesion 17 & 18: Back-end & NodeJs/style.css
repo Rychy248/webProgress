@@ -141,6 +141,10 @@ button:hover{
     color: #50ad5d;
     font-family: var(--montserrat);
 }
+.code-comment{
+    font-style: italic;
+    color: var(--color-2);
+}
 
 .button-disabled, .button-disabled:hover{
     opacity: 0.5;
@@ -246,9 +250,6 @@ input{
     background-color: var(--color-3);
 }
 
-@media (max-width: 925px) { 
-
-}
 
 @media (max-width: 700px) { 
     .top button{
@@ -271,7 +272,7 @@ input{
     }
 
     h1{
-        font-size: var(--font-mv-size-m);
+        font-size: var(--font-mv-size-xl);
     }
 
 }
@@ -283,24 +284,22 @@ input{
     }
 
 
-    .top h1{
+    /* .top h1{
         letter-spacing: 0.3rem;
         line-height: 1.4rem;
         font-size: var(--font-mv-size-xl);
         text-shadow: 0.1rem 0rem var(--color-4);
         -webkit-text-stroke: 0.05rem var(--color-4);
-    }
+    } */
 
     button{
         font-size: var(--font-mv-size-m);
     }
 
-    button a{
+    /* button a{
         font-size: var(--font-mv-size-m);
     }
 
-    h1{
-        font-size: var(--font-mv-size-m);
-    }
+ */
 
 }

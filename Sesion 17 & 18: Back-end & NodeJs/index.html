@@ -24,10 +24,21 @@
         <h1>Sesion 17 & 18</h1>
         <h1>Backend / NodeJs</h1>
         <button><a href="../index.html">Back to Home</a></button>
+        <br>
+        <ol type="i">
+            <li><a href="#backe-end">Back-end</a></li>
+            <li><a href="#about-nodejs">About Nodejs</a></li>
+            <li><a href="#REPL-NODE">REPL-NODE</a></li>
+            <li><a href="#node-native-modules">Node-native-modules</a></li>
+            <li><a href="#using-native-module">Using-native-module</a></li>
+            <li><a href="#about-npm">About-npm</a></li>
+            <li><a href="#install-modules-with-npm">Install-modules-with-npm</a></li>
+        </ol>
+
     </div>
     
     <div class="container">
-        <h1>Back-end</h1>
+        <h1 id="backe-end">Back-end</h1>
         <p>Back-end development means working on server-side software, which focuses on everything you can’t see on a website. Back-end developers ensure the website performs correctly, focusing on databases, back-end logic, application programming interface (APIs), architecture, and servers. They use code that helps browsers communicate with databases, store, understand, and delete data.</p>
         <p>On a team, back-end developers collaborate with front-end developers, product managers, principal architects, and website testers to build the structure of a website or mobile app. Back-end developers must be familiar with many kinds of tools and frameworks, including languages such as Python, Java, and Ruby. They make sure the back-end performs quickly and responsively to front-end user requests.</p>
 
@@ -36,7 +47,7 @@
     </div>
 
     <div class="container">
-        <h1>NodeJs</h1>
+        <h1 id="about-nodejs">NodeJs</h1>
         <p>As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep.</p>
 
         <h2><a href="https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu-and-update-npm-to-the-latest-version/" target="_blank">Install the latest version of NodeJs</a></h2>
@@ -61,7 +72,7 @@
     </div>
 
     <div class="container">
-        <h1>REPL (Read, Evaluation, Print, Loop)</h1>
+        <h1 id="REPL-NODE">REPL (Read, Evaluation, Print, Loop)</h1>
         <p>This permit excecute code from cli like in navigator, for acces it we just need to type node insade the terminal.</p>
 
         <div class="code">
@@ -80,7 +91,7 @@
     </div>
 
     <div class="container">
-        <h1>Native Node Modules</h1>
+        <h1 id="node-native-modules">Native Node Modules</h1>
         <p>When we install Node, we al ready install a bunch of libraries of node</p>
         <ul>
             <li><a href="https://nodejs.org/api/">NodeJs General Documentation</a></li>
@@ -103,6 +114,106 @@
         </div>
     </div>
 
+    <div class="container">
+        <h1 id="using-native-module">Creating a Copy of file with <span>fs</span> native module of Nodejs</h1>
+        <p>For that, we just have to import, in this case, with require the "fs" module</p>
+
+        <div class="code">
+            <p>
+                <span class="code-comment">The index.js</span><br><br>
+                console.log("Hello World");<span class="code-comment"> // A simple hello world with console function</span> <br> <br>
+                const fs = require("fs");<span class="code-comment"> // Importing the module "fs"</span><br> 
+                fs.copyFileSync("./file1.txt","./Copy of file1.txt")<span class="code-comment"> // Using the method, "copyFileSync" for make a copy of the "file1.txt"</span><br>
+            </p>
+
+        </div>
+        <p>The follow, is the console commands instructions for execute the index.js with nodejs</p>
+        <div class="code">
+            <p>
+                <span class="code-highlith">rychy@popped:~/Documents/.../node$</span> ls -l<br>
+                total 12<br>
+                -rw-rw-r-- 1 rychy rychy  25 may  6 23:56  file1.txt<br>
+                -rw-rw-r-- 1 rychy rychy 164 may  7 00:00  index.js<br>
+                <span class="code-highlith">rychy@popped:~/Documents/.../node$</span>node index.js <br>
+                Hello World<br>
+                <span class="code-highlith">rychy@popped:~/Documents/.../node$</span> ls -l<br>
+                total 12<br>
+                -rw-rw-r-- 1 rychy rychy  25 may  7 00:00 'Copy of file1.txt'<br>
+                -rw-rw-r-- 1 rychy rychy  25 may  6 23:56  file1.txt<br>
+                -rw-rw-r-- 1 rychy rychy 164 may  7 00:00  index.js<br>
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 id="about-npm">Nodejs Packet Manager<span>NPM</span></h1>
+        <p>NPM is a collection, in fact the largest collections, of packets writeed for other people, packets for anybody use. Nodejs incluede NPM, when we install Nodejs also we installed  NPM.</p>
+
+        <p>The follow, is a file for resgiste the principal characteristcs of a proyect in nodejs, with NPM init</p>
+        <div class="code">
+            <p>
+                <span class="code-highlith">rychy@popped:~/Documents/.../node$</span> npm init br>
+                This utility will walk you through creating a package.json file.<br>
+                It only covers the most common items, and tries to guess sensible defaults.<br>
+                    <br>
+                See `npm help init` for definitive documentation on these fields<br>
+                and exactly what they do.<br>
+                    <br>
+                Use `npm install &#60;pkg&#62;` afterwards to install a package and<br>
+                save it as a dependency in the package.json file.<br>
+                    <br>
+                Press ^C at any time to quit.<br>
+                package name: (node)<br>
+                version: (1.0.0)<br>
+                description: "A test of npm init"<br>
+                entry point: (index.js)<br>
+                test command:<br>
+                git repository:<br>
+                keywords:<br>
+                author: Rychy<br>
+                license: (ISC)<br>
+                About to write to /home/rychy/Documents/STUDY time/2022 & 2023 Practice/webProgress/Sesion 17 & 18: Back-end & NodeJs/node/package.json:<br>
+                    <br>
+                {<br>
+                    "name": "node",<br>
+                    "version": "1.0.0",<br>
+                    "description": "\"A test of npm init\"",<br>
+                    "main": "index.js",<br>
+                    "scripts": {<br>
+                    "test": "echo \"Error: no test specified\" && exit 1"<br>
+                    },<br>
+                    "author": "Rychy",<br>
+                    "license": "ISC"<br>
+                }<br>
+                    <br>
+                    <br>
+                Is this OK? (yes)<br>
+                <span class="code-highlith">rychy@popped:~/Documents/.../node$</span><br>
+
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 id="install-modules-with-npm">Installing a Module with NPM<span>Superheros</span></h1>
+        <p>We can visit the page of <a href="https://www.npmjs.com/" target="_blank">NPMJS MOdules</a> to get modules.</p>
+        <p>To get the documentation about visit his page <a href="https://www.npmjs.com/package/superheroes" target="_blank">Superhero documentation</a></p>
+
+        <p>The follow, is the console commands instructions for execute the index.js with nodejs</p>
+        <div class="code">
+            <p>
+                <span class="code-highlith">rychy@popped:~/Documents/.../node$</span> npm install superheroes<br>
+                npm WARN node@1.0.0 No repository field.<br>
+                <br>
+                + superheroes@3.0.0<br>
+                updated 1 package and audited 3 packages in 3.892s<br>
+                found 0 vulnerabilities<br>
+                <br>
+                <span class="code-highlith">rychy@popped:~/Documents/.../node$</span><br>
+
+            </p>
+        </div>
+    </div>
 
     <!-- own js -->
     <script src="./index.js"></script>

@@ -64,6 +64,11 @@ h1, h2{
     text-align: center;
 }
 
+h1 > a, h2 > a, h3 > a{
+    color: var(--third-color);
+    font-family: var(--pacifico);
+    font-size: var(--font-size-m);
+}
 /* ----------------- PARAGRAHP AND LISTS */
 p{
     text-align: left;
@@ -75,7 +80,8 @@ li{
     line-height: 2rem;
 }
 ol{
-    list-style-type: upper-latin;
+    list-style-type: lower-latin;
+    padding-left: 20px;
 }
 ol > li > ol{
     padding-left: 30px;
@@ -89,13 +95,13 @@ li > ol > li > ol{
 pre{
     width: 96%;
     padding: 2%;
-    border-radius: var(--border-radius);
-    border: var(--border-weight) var(--forth-color) solid;
     overflow: auto;
     text-align: left;
     color: var(--secondary-color);
     font-family: var(--code);
+    background-color: var(--black-color);
 }
+
 pre span{
     color: var(--secondary-color);
     font-style: italic;
@@ -152,7 +158,13 @@ button a:visited{
     flex: 0.3;
 }
 
-
+.code-container{
+    background-color: var(--black-color);
+    text-align: left;
+    width: 96%;
+    padding: 2%;
+    color: var(--forth-color);
+}
 
 .code-higlith{
     color: var(--forth-color);
@@ -164,6 +176,15 @@ button a:visited{
     font-family: var(--code);
 }
 
+
+.border{
+    border-radius: var(--border-radius);
+    border: var(--border-weight) var(--forth-color) solid;
+}
+
+.resalt{
+    color: var(--forth-color);
+}
 @media (max-width: 1028px) {
 
     section, footer{

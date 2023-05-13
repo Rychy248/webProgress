@@ -23,63 +23,108 @@
     </div>
     <div class="content">
         <h1>Creating our first Server with <span>NODE JS</span></h1>
-        <p>For that, we follow the next steps:
-            <ul>
-                <li><span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express$</span><span class="code-input">mkdir node</span></li>
-                <li><span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express$</span><span class="code-input">cd node/</span></li>
-                <li><span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express/node$</span><span class="code-input">touch server.js/</span></li>
-                <li><span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express/node$</span><span class="code-input">npm init/</span></li>
+        <p>For more, read the <a href="https://expressjs.com/en/starter/installing.html" target="_blank">Started documentation</a></p>
+        <p>For that, we follow the next steps:</p>
+
+        <div class="code-container border">
+                <span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express$</span><span class="code-input">mkdir node</span>
+                <span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express$</span><span class="code-input">cd node/</span>
+                <span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express/node$</span><span class="code-input">touch server.js/</span>
+                <span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express/node$</span><span class="code-input">npm init/</span>
                 <pre>
-This utility will walk you through creating a package.json file.
-It only covers the most common items, and tries to guess sensible defaults.
-
-See `npm help init` for definitive documentation on these fields
-and exactly what they do.
-
-Use `npm install &#60;pkg&#62;` afterwards to install a package and
-save it as a dependency in the package.json file.
-
-Press ^C at any time to quit.
-package name: (nodeserver) 
-version: (1.0.0) 
-description: 
-entry point: (server.js) 
-test command: 
-git repository: 
-keywords: 
-author: 
-license: (ISC) 
-About to write to /home/rychy/Documents/STUDY time/2022 & 2023 Practice/webProgress/Session 24 Express/nodeServer/package.json:
-
-{
-  "name": "nodeserver",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
+    This utility will walk you through creating a package.json file.
+    It only covers the most common items, and tries to guess sensible defaults.
+    
+    See `npm help init` for definitive documentation on these fields
+    and exactly what they do.
+    
+    Use `npm install &#60;pkg&#62;` afterwards to install a package and
+    save it as a dependency in the package.json file.
+    
+    Press ^C at any time to quit.
+    package name: (nodeserver) 
+    version: (1.0.0) 
+    description: 
+    entry point: (server.js) 
+    test command: 
+    git repository: 
+    keywords: 
+    author: 
+    license: (ISC) 
+    About to write to /home/rychy/Documents/STUDY time/2022 & 2023 Practice/webProgress/Session 24 Express/nodeServer/package.json:
+    
+    {
+    "name": "nodeserver",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
-}
-
-
-Is this OK? (yes) 
-
-
-   ╭───────────────────────────────────────────────────────────────╮
-   │
-   │      New major version of npm available! 6.14.18 → 9.6.6
-   │   Changelog: https://github.com/npm/cli/releases/tag/v9.6.6
-   │               Run npm install -g npm to update!
-   │
-   ╰───────────────────────────────────────────────────────────────╯
+    },
+    "author": "",
+    "license": "ISC"
+    }
+    
+    
+    Is this OK? (yes) 
+    
+    
+    ╭───────────────────────────────────────────────────────────────╮
+    │
+    │      New major version of npm available! 6.14.18 → 9.6.6
+    │   Changelog: https://github.com/npm/cli/releases/tag/v9.6.6
+    │               Run npm install -g npm to update!
+    │
+    ╰───────────────────────────────────────────────────────────────╯
                 </pre>
-                <li><span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express/node$</span><span class="code-input"> </span></li>
-            </ul>
+                <span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express/node$</span><span class="code-input">npm install express</span>
+                <span class="code-higlith">rychy@popped:~/Documents/webProgress/Session 24 Express/node$</span><span class="code-input">node server.js</span>
+                <pre>
+    Example app listening on port 3000
+                </pre>
+        </div>
 
+        <p>The code for the first hello world, is:</p>
+        <div class="code-container border">
+<br>
+const express = require('express');<br>
+<br>
+const app = express();<br>
+const port = 3000;<br>
+<br>
+<span class="code-input">Get is a method for hadle the request from the browser, and the response is for respond or resolv the requested</span> <br>
+app.get('/', (req, res) => {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;res.send("&#60;h1&#62;Hello World!&#60;/h1&#62;&#60;h1&#62;I'm Rychy&#60;/h1&#62;");<br>
+});<br>
+<br>
+app.listen(port, () => {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;console.log(`Example app listening on port ${port}`);<br>
+});<br>
+        </div>
+    </div>
 
+    <br>
+    <div class="content">
+        <p>
+            At this point, i'm going work in the backend, so for see the fields
+            and run the code, go to the <a href="https://github.com/Rychy248/webProgress" target="_blank">Github Repositorie</a>, for this especifíc folder look at the <a href="https://github.com/Rychy248/webProgress/tree/main/Session%2024%20Express" target="_blank">Session 24</a>
+        </p>
+
+        <h1><a href="https://www.npmjs.com/package/nodemon" target="_blank">Nodemon</a></h1>
+        <p>
+            Nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected. <br><br>
+            Nodemon does not require any additional changes to your code or method of development. nodemon is a replacement wrapper for node. To use nodemon, replace the word node on the command line when executing your script.
+            <br><br>
+            Either through cloning with git or by using npm (the recommended way): 
+            <ol>
+                <li>npm install -g nodemon # or using yarn: yarn global add nodemon</li>
+                <li>And nodemon will be installed globally to your system path.</li>
+                <li>You can also install nodemon as a development dependency:</li>
+                <li>npm install --save-dev nodemon # or using yarn: yarn add nodemon -D</li>
+            </ol>
         </p>
     </div>
+
+    <br>
 </body>
 </html>

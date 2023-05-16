@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <h1>USING GET METHOD</h1>
+    <h1>USING <span>GET</span> METHOD</h1>
 
     <form action="calculate" method="get">
         <label for="a">a</label>
@@ -30,6 +30,32 @@
         
         <input type="radio" name="operation" value="rest" id="rest">
         <label for="rest">rest</label>
+        
+        <br>
+        <button type="submit" name="submit">Calculate</button>
+    </form>
+
+    <br><br>
+    <h1>USING <span>POST</span> METHOD</h1>
+
+    <form action="calculate" method="POST">
+        <label for="a2">a</label>
+        <input type="number" name="a2">
+        <label for="a2">b</label>
+        <input type="number" name="b2"s>
+        <br>
+        
+        <input type="radio" name="operation2" value="multiply2" id="multiply2" >
+        <label for="multiply2">multiply</label>
+        
+        <input type="radio" name="operation2" value="sum2" id="sum2">
+        <label for="sum2">sum</label>
+        
+        <input type="radio" name="operation2" value="divition2" id="divition2">
+        <label for="divition2">divition</label>
+        
+        <input type="radio" name="operation2" value="rest2" id="rest2">
+        <label for="rest2">rest</label>
         
         <br>
         <button type="submit" name="submit">Calculate</button>
@@ -83,6 +109,7 @@
     h1 > span, h2 > span, h3 > span, h4 > span, h5 > span, h6 > span{
     font-family: var(--ubuntu);
     font-size: var(--font-size-m);
+    color: var(--forth-color);
     }
     h1, h2{
     font-size: var(--font-size-l);

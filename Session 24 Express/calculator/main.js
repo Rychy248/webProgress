@@ -1,8 +1,26 @@
 
+// required packeges
 const express = require("express");
-const path = require("path");
+const bodyParser = require("body-parser");
+
+// instances of requerieds pakages
 const myApp = express();
+
+// internal constants
 const port = 8080;
+
+// internal configurations with express
+myApp.use(bodyParser.urlencoded({extended:true})) //extented:true, allows us to post nested objects
+
+/*
+    bodyParser, have some modos to read, somo of the are
+    urlencoded() -> for html files
+    json() -> for json elements
+    text() -> for plain text
+    raw()  -> parse some custom thing into a Buffer
+
+*/
+
 
 let style = `
     <style>
@@ -132,36 +150,38 @@ myApp.get("/",(req,res)=>{
 });
 
 function makeOperation(operationName, a, b) {
-    let result=0;
+    let result="";
     switch (operationName) {
         case "multiply":
-            result = a * b;
+            result = `${a * b} (${a} * ${b})`; 
             break;
         case "sum":
-            result = a + b;
+            result = `${a + b} (${a} + ${b})`; 
             break;
         case "divition":
-            result = a / b;
+            result = `${a / b} (${a} / ${b})`; 
             break;
         case "rest":
-            result = a - b;
+            result = `${a - b} (${a} - ${b})`; 
             break;
-    
+
         default:
-            result = a + b;
+            result = `${a + b} (${a} + ${b})`; 
             break;
     };
 
     return result;
 };
 
-function calculateResponse(operationName, a, b){
+function calculateResponse(operationName, a, b, method){
     return (
         `
         ${style}
+        <h1>${method} METHOD USED</h1>
 
         <h1>Result</h1>
         <br>
+
         <p>The ${(operationName !== undefined)? operationName : "sum"} result is: ${makeOperation(operationName,a,b)}</p>
         <button><a href="/">Return</a></button>
         `
@@ -173,19 +193,91 @@ myApp.get("/calculate",(req,res)=>{
     let b = Number(req.query.b);
     let operation = req.query.operation;
 
-    res.send(calculateResponse(operation,a,b));
+    res.send(calculateResponse(operation,a,b,"GET"));
 
 });
 
 myApp.post("/calculate",(req,res)=>{
-    console.log(req.post);
-    let a = Number(req.query.a);
-    let b = Number(req.query.b);
-    let operation = (req.query.operation2).replace("2","");
+    // console.log(req.body);
+    // .body comes from, bodyParser <body-parser>
 
-    console.log("OPERATION: ",operation)
-    res.send(calculateResponse(operation,a,b));
+    let a = Number(req.body.a2);
+    let b = Number(req.body.b2);
+    let operation = (req.body.operation2).replace("2","");
+    
+    res.send(calculateResponse(operation,a,b,"POST"));
 });
+
+myApp.get("/bmiCalculator",(req,res)=>{
+    let options = {
+        root: __dirname,
+        dotfiles: 'deny',
+        headers: {
+            'x-timestamp': Date.now(),
+            'x-sent': true
+        }
+    };
+
+    res.sendFile("bmiCalculator.html", options, function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('Sent:', "bmiCalculator.html");
+        };
+    });
+});
+
+myApp.post("/bmiCalculator",(req,res)=>{
+    console.log("BMI CALCULATOR, POST: ", req.body);
+
+    let getIbm = function () {
+        let weightType = req.body["weight-dimention"];
+        //let heightType = req.body["height-dimention"];
+        let weight = Number(req.body["weight-human"]);
+        let height = Number(req.body["height-human"]);
+        
+        // console.log(`weightType =  ${weightType}, heightType =  ${heightType},  weight =  ${weight}, height =  ${height}, `);
+        
+        if (weightType == "lbrs"){
+            weight /= 2.20462;
+        };
+        
+        // BMI = (weight / heigth ^ 2)
+        let BMI = weight /  height ** 2;                        
+        let result = "";
+
+        if (BMI > 24.9) {
+            result = "Your IBM is: <b>" + BMI + "</b>." + "<br>You're overweight";
+        } else if (BMI < 24.9 && BMI >=18.5 ){
+            result = "Your IBM is: <b>" + BMI + "</b>." + "<br>You have a normal weight";
+        } else{ // under 18.5
+            result = "Your IBM is: <b>" + BMI + "</b>." + "<br>You're underweight";
+        };
+        return result;
+    };
+    /* BMI CALCULATOR, POST: 
+        {
+            'weight-human': '12', 
+            'height-human': '1212',
+            'weight-dimention': 'kg',
+            'height-dimention': 'meters',
+            submit: ''
+        }
+
+    */
+    res.send(
+        `
+        ${style}
+        <br>
+        <h1>YOUR IBM, Result:</h1>
+        <br>
+
+        <p>${getIbm()}</p>
+        <button><a href="/bmiCalculator">Return</a></button>
+        `
+    );
+});
+
 
 
 myApp.listen(port,()=>{

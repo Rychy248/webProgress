@@ -4,18 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="./style.css">
+    <title>BMI Calculator</title>
 </head>
 <body>
 
-    <h1>RESULT</h1>
-    <h1>Result</h1>
-    <br>
-    <p>The ${(operation !== undefined)? operation : "sum"} result is: ${result}</p>
-    <button><a href="/">Return</a></button>
+    <h1><span>B</span>ody <span>M</span>ass <span>I</span>ndex (BMI)</h1>
 
+    <p>
+        <span>B</span>ody <span>M</span>ass <span>I</span>ndex Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.
+        <br>
+        Formula used: <br> BMI = (weight / heigth ^ 2).
+    </p><br>
+
+    <form name="bmiForm" action="/bmiCalculator" method="post" onsubmit="return validateBmi()">
+        <div class="form-content">
+            <select id="weight" name="weight-dimention">
+                <option value="kg" selected>Kg</option>
+                <option value="lbrs">Lbr</option>
+            </select> &nbsp;&nbsp;&nbsp;
+            
+            <input name="weight-human" type="number" id="weightHuman" placeholder="your weight">
+        </div>
+        <div class="form-content">
+            <select id="height" name="height-dimention">
+                <option value="meters" selected>mtrs</option>
+            </select>
+            
+            <input name="height-human" type="number" id="heightHuman" placeholder="your height">
+        </div>
+
+        <br>
+        <button type="submit" name="submit">Calculate</button>
+    </form>
+    <h1><a href="/">Return to Home</a></h1>
+    <br>
+
+    <script>
+    function validateBmi() {
+        let weightHuman = document.forms["bmiForm"]["weight-human"].value;
+        let heightHuman = document.forms["bmiForm"]["height-human"].value;
+
+        console.log("weight: ",weightHuman," height: ",heightHuman);
+        
+        if (weightHuman == "") {
+            alert("weight must be filled out");
+            return false;
+        }else if (heightHuman == "") {
+            alert("height must be filled out");
+            return false;
+        };
+    };
+    </script>
 
     <style>
         /* ---------------------GENERAL--------------------- */
@@ -64,6 +103,7 @@
     h1 > span, h2 > span, h3 > span, h4 > span, h5 > span, h6 > span{
     font-family: var(--ubuntu);
     font-size: var(--font-size-m);
+    color: var(--forth-color);
     }
     h1, h2{
     font-size: var(--font-size-l);

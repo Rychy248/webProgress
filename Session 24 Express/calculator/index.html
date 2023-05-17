@@ -12,14 +12,14 @@
 
     <h1>USING <span>GET</span> METHOD</h1>
 
-    <form action="calculate" method="get">
+    <form name="FormGet" action="calculate" method="GET" onsubmit="return calculateFormGet()">
         <label for="a">a</label>
         <input type="number" name="a">
         <label for="a">b</label>
-        <input type="number" name="b"s>
+        <input type="number" name="b">
         <br>
         
-        <input type="radio" name="operation" value="multiply" id="multiply" >
+        <input type="radio" name="operation" value="multiply" id="multiply" checked>
         <label for="multiply">multiply</label>
         
         <input type="radio" name="operation" value="sum" id="sum">
@@ -38,14 +38,14 @@
     <br><br>
     <h1>USING <span>POST</span> METHOD</h1>
 
-    <form action="calculate" method="POST">
+    <form name="FormPost" action="calculate" method="POST" onsubmit="return calculateFormPost()">
         <label for="a2">a</label>
         <input type="number" name="a2">
         <label for="a2">b</label>
         <input type="number" name="b2"s>
         <br>
         
-        <input type="radio" name="operation2" value="multiply2" id="multiply2" >
+        <input type="radio" name="operation2" value="multiply2" id="multiply2" checked>
         <label for="multiply2">multiply</label>
         
         <input type="radio" name="operation2" value="sum2" id="sum2">
@@ -61,6 +61,38 @@
         <button type="submit" name="submit">Calculate</button>
     </form>
 
+    <script>
+        function calculateFormGet() {
+            let a = document.forms["FormGet"]["a"].value;
+            let b = document.forms["FormGet"]["b"].value;
+    
+            console.log("a: ",a," b: ",b);
+            
+            if (a == "") {
+                alert("'a' must be filled out");
+                return false;
+            }else if (b == "") {
+                alert("'b' must be filled out");
+                return false;
+            };
+        };
+
+        function calculateFormPost() {
+            let a = document.forms["FormPost"]["a2"].value;
+            let b = document.forms["FormPost"]["b2"].value;
+    
+            console.log("a2: ",a," b2: ",b);
+            
+            if (a == "") {
+                alert("'a' must be filled out");
+                return false;
+            }else if (b == "") {
+                alert("'b' must be filled out");
+                return false;
+            };
+        };
+        </script>
+    <h1><a href="/bmiCalculator">BMI CALCULATOR</a></h1>
 
     <style>
         /* ---------------------GENERAL--------------------- */

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=M+PLUS+1+Code&family=Montserrat:wght@400;900&family=Pacifico&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="content title">
+        <h1>Sesion 25 | A P I s</h1>
+    
+        <button><a href="./../index.html">Back to Home</a></button>
+    </div>
+
+    <div class="content">
+        <h2>Note...</h2>
+        <p>
+            At this point, i'm going work in the backend, so for see the fields
+            and run the code, go to the <a href="https://github.com/Rychy248/webProgress" target="_blank">Github Repositorie</a>, for this especifíc folder look at the <a href="https://github.com/Rychy248/webProgress/" target="_blank">Session 25 APIs</a>
+        </p>
+
+
+        <h1>A P I s</h1>
+        <p>APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols. For example, the weather bureau's software system contains daily weather data. The weather app on your phone “talks” to this system via APIs and shows you daily weather updates on your phone.</p>
+
+        <p>PRINCIPAL ELEMENTS OF AN APY CONSUMER</p>
+        <ol>
+            <li>endpoint</li>
+            <li>path</li>
+            <li>parameters</li>
+            <li>autentication</li>
+        </ol>
+
+        <p>Some APIs</p>
+        <ol>
+            <li><a target="_blank" href="https://kanye.rest/">kanye.rest/</a></li>
+            <li><a target="_blank" href="https://openweathermap.org/api">Open Weather MAP</a></li>
+            <li><a target="_blank" href="https://sv443.net/jokeapi/v2/">Joke API</a></li>
+        </ol>
+
+        <div class="code-container border">
+                <span class="code-higlith">Happy</span><span class="code-input"> C O D E</span>
+        </div>
+
+        <h1>Consuming Key rest API</h1>
+        <h2 id="api-response" class="api-text">""</h2>
+        <p id="keny">-Keny</p>
+
+        <br>
+        <button id="api-btn">Refresh</button>
+
+        <h3>Code implementation</h3>
+        <div class="code-container border">
+        
+        <pre>
+<span class="code-higlith">function</span> refresh(params) {
+    let endpoint = "https://api.kanye.rest/";
+
+    <span class="code-higlith">fetch</span>(endpoint)
+        <span class="code-higlith">.then</span>((response)=>response.json())
+        <span class="code-higlith">.then</span>((json)=>{
+            <span class="code-input">document.querySelector</span>("#api-response").innerHTML = `"${json.quote}"`;
+        });
+};
+
+        </pre>
+        </div>
+
+        <!-- JOKE API --------------- -->
+        <h1>Consuming J O K E A P I</h1>
+        <h2 id="api-joke-response" class="api-text">""</h2>
+        <br>
+        <button id="api-btn-joke">Refresh</button>
+
+        <h3>Code implementation</h3>
+        <div class="code-container border">
+        
+        <pre>
+function jokeAPI() {
+    let endpoint = "https://v2.jokeapi.dev/joke/"
+    let category = "Programming?";
+    let paramteters = "blacklistFlags=sexist,explicit";
+
+    let urlToGET = endpoint + category + paramteters;
+
+    fetch(urlToGET)
+        .then((response)=>response.json())
+        .then((json)=>{
+            document.querySelector("#api-joke-response").innerHTML = `"${json.joke}"`;
+        });
+
+};            
+        </pre>
+
+        </div>
+
+
+    </div>
+
+    <br>
+    <script src="./main.js"></script>
+</body>
+</html>

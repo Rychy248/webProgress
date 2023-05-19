@@ -2,6 +2,10 @@
 .github
 .git
 
-*/node/node_modules
 Session 17 & 18 Back-end & NodeJs/node/node_modules
+
 Session 24 Express/calculator/node_modules
+Session 24 Express/node/node_modules
+
+Session 25 APIs/openweather/node_modules
+Session 25 APIs/openweather/apiKeys.js

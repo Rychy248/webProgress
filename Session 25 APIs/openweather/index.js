@@ -134,7 +134,16 @@ function getCountries(){
                     });
                 });
     
-                resolve(reestruct);
+                let html = `
+                <form action="/" method="post">
+                <select name="countries" id="countries">`;
+                
+                reestruct.forEach((item,index)=>{
+                    html += "<option value='" + JSON.stringify(item) + "'>"+item.name +"</option>"
+                });
+                html+= "</select> <button type='submit'>Consult</button> </form> <br> <h5>Created by Rychy, <a>jorgeajrha@gmail.com</a></h5>";
+
+                resolve(html);
             });
             
         }).on("error", (err) => {
@@ -210,19 +219,9 @@ myApp.get("/",(req,res)=>{
         myHtml += html;
         return getCountries();
     })
-    .then(function(data){
-        myHtml += "</div> </div>"
-        myHtml += `
-        <form action="/" method="post">
-        <select name="countries" id="countries">`;
-        
-        data.forEach((item,index)=>{
-            myHtml += "<option value='" + JSON.stringify(item) + "'>"+item.name +"</option>"
-        });
-        myHtml+= "</select> <button type='submit'>Consult</button> </form>";
-    
-        //res.sendFile(__dirname + "/index.html")
-
+    .then(function(html){
+        myHtml += "</div> </div>" // closing the weather divs
+        myHtml+= html
         res.send(myHtml);
             
     })
@@ -232,9 +231,8 @@ myApp.get("/",(req,res)=>{
 
 myApp.post("/",(req,res)=>{
 
+    let myHtml="";
     let contryData = JSON.parse(req.body.countries)
-    console.log(contryData);
-
     let extraCountryData = `
             <h3>Countrie: ${contryData.name} | Capital: ${contryData.capital}</h3>
             <p>Languague: ${contryData.languages}</p>
@@ -243,28 +241,16 @@ myApp.post("/",(req,res)=>{
     </div>
     `;
         
-    let myHtml="";
     getWheater(contryData.latitude,contryData.longitude)
     .then(function(html){
         myHtml += html;
         return getCountries();
     })
-    .then(function(data){
+    .then(function(html){
         myHtml += extraCountryData;
-        myHtml += `
-        <form action="/" method="post">
-        <select name="countries" id="countries">`;
-        
-        data.forEach((item,index)=>{
-            myHtml += "<option value='" + JSON.stringify(item) + "'>"+item.name +"</option>"
-        });
-        myHtml+= "</select> <button type='submit'>Consult</button> </form>";
-        myHtml+= "<br> <h5>Created by Rychy, <a>jorgeajrha@gmail.com</a></h5>";
+        myHtml+= html;
 
-        //res.sendFile(__dirname + "/index.html")
-
-        res.send(myHtml);
-            
+        res.send(myHtml);            
     })
     .catch(err=>console.log(err));
 

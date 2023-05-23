@@ -4,6 +4,7 @@ const https = require("https");
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const { send } = require("process");
 
 const port = 3000;
 let app = express();
@@ -33,7 +34,30 @@ app.post("/",(req,res)=>{
     res.send();
 });
 
+app.get("/test",(req,res)=>{
+
+
+    const mailchimp = require("@mailchimp/mailchimp_marketing");
+    const mailApiKeys = require("./apiKeys");
+
+    let response;
+
+    mailchimp.setConfig({
+        apiKey: mailApiKeys.apiKey,
+        server: mailApiKeys.server,
+    });
+    
+    async function run() {
+        response = await mailchimp.ping.get();
+        console.log(response);
+    }
+    
+    run();
+    send(response);
+
+});
 
 app.listen(port,()=>{
     console.log("App served port: http://127.0.0.1:"+port)
 });
+

@@ -2,12 +2,17 @@
 .github
 .git
 
-Session 17 & 18 Back-end & NodeJs/node/node_modules
+# Session 17 & 18 Back-end & NodeJs/node/node_modules
 
-Session 24 Express/calculator/node_modules
-Session 24 Express/node/node_modules
+# Session 24 Express/calculator/node_modules
+# Session 24 Express/node/node_modules
 
-Session 25 APIs/openweather/node_modules
-Session 25 APIs/openweather/apiKeys.js
-Session 25 APIs/Newsletter/node_modules
-Session 25 APIs/Newsletter/apiKeys.js
+# Session 25 APIs/openweather/node_modules
+# Session 25 APIs/openweather/apiKeys.js
+# Session 25 APIs/Newsletter/node_modules
+############# reduce the before paths, into one line *node_modules && apiKeys.js
+*node_modules
+*apiKeys.js
+
+Session 26 git/repo1
+

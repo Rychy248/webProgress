@@ -1,11 +1,8 @@
 
 
-const https = require("https");
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const { send } = require("process");
-const { stringify } = require("querystring");
 
 const port = 3000;
 let app = express();

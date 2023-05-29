@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="title">
+        <h1>Todo List App</h1>
+    </div>
+    
+    <div class="container">
+        <h1><%= todayData.dayName %> Todo List</h1>
+        <h3><%= todayData.date %></h3>
+        <h2><%= dayMsg %></h2>
+    
+        <div class="todoList">
+            <% todoList.forEach((element,index) => { %>
+                <div class="todoItem">
+                    <h3 index="<%= index + 1 %>"><%= index + 1 %> <%= element %></h3>
+                </div>
+            <%}); %>
+        </div>
+        
+        <div class="container-flex">
+            <form action="/" method="post" name="form-todoLIst" onsubmit="return addItem()">
+                <div class="box-flex-row">
+                    <input class="flex-item" type="text" name="todo" placeholder="add another todo">
+                    <button class="flex-item" >Add a task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/todoItemAdd.js"></script>
+
+</body>
+</html>
+
+
+<!--
+Tags
+    < % 'Scriptlet' tag, for control-flow, no output
+    < %_ ‘Whitespace Slurping’ Scriptlet tag, strips all whitespace before it
+    < %= Outputs the value into the template (HTML escaped)
+    < %- Outputs the unescaped value into the template
+    < %# Comment tag, no execution, no output
+    < %% Outputs a literal '< %'
+    % > Plain ending tag
+    -% > Trim-mode ('newline slurp') tag, trims following newline
+    _% > ‘Whitespace Slurping’ ending tag, removes all whitespace after it
+-->     

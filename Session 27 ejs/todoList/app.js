@@ -69,7 +69,12 @@ app.post("/",jsonParser,((req,res)=>{
     res.json({
         statusCode:200,
         msg:"task adedd",
-    })
+    });
+    
+}));
+
+app.get("/work",urlencodedParser,((req,res)=>{
+    res.render("work");
 }));
 
 app.listen(port,(()=>{

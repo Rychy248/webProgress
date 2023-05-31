@@ -105,11 +105,16 @@ li span{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 0.5rem;
     background-color: var(--color5);
+    display: inline;
 }
 .todoItem h3{
+    display: inline;
     text-align: left;
     text-transform: uppercase;
 }
+.todoItem input[type="checkbox"] {
+    display: inline;
+  }
 
 
 #title{
@@ -268,6 +273,11 @@ input:focus {
     background-color: var(--color3);
 }
 
+
+input:checked + h3 {
+    text-decoration: line-through;
+    text-decoration-color: #A683E3;
+}
 
 @media (max-width: 700px) { 
     .top button{

@@ -39,13 +39,16 @@ function addItem() {
         let newIndex = lastIndex + 1;
     
         let newItem = document.createElement("div");
-        
+    
+        let newCheck = document.createElement("input");
+        newCheck.type = "checkbox";
         let newH3 = document.createElement("h3");
         newH3.innerText = `${newIndex} ${text}`;
         newH3.setAttribute("index",lastIndex+1);
     
         newItem.classList.add("todoItem");
     
+        newItem.appendChild(newCheck);
         newItem.appendChild(newH3);
         
         todoList.appendChild(newItem);

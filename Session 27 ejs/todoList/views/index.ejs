@@ -25,7 +25,8 @@
                 <div class="box-flex-row">
                     <% todoList.forEach((element,index) => { %>
                         <div class="todoItem">
-                            <h3 index="<%= index + 1 %>"><%= index + 1 %> <%= element %></h3>
+                            <input type="checkbox">
+                            <h3 index="<%= index + 1 %>"> <%= index + 1 %> <%= element %></h3>
                         </div>
                     <%}); %>
                 </div>

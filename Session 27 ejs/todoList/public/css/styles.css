@@ -34,7 +34,7 @@ h1 {
   border-bottom: 0;
 }
 
-input:checked+p {
+input:checked+h3 {
   text-decoration: line-through;
   text-decoration-color: #A683E3;
 }
@@ -43,7 +43,7 @@ input[type="checkbox"] {
   margin: 20px;
 }
 
-p {
+h3 {
   margin: 0;
   padding: 20px;
   font-size: 20px;
@@ -93,4 +93,79 @@ footer {
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+}
+
+
+
+.top{
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  padding-top:1rem;
+}
+
+.top button{
+  margin-top: 0.8rem;
+}
+
+.top h1{
+  letter-spacing: 1rem;
+  line-height: 3rem;
+  font-size: var(--font-pc-size-xl);
+  color: var(--color2);
+  text-align: center;
+
+  text-shadow: 0.4rem 0rem var(--color4);
+  -webkit-text-stroke: 0.05rem var(--color4);
+}
+#title{
+  text-transform: uppercase;
+  text-decoration: underline solid 5px var(--color4);
+  color: var(--color5);
+}
+
+
+
+.container-flex{
+  display: flex;
+  margin: 0 auto;
+  gap: 0.6rem;
+
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-flex-row{
+  margin: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+}
+
+.flex-item{
+  flex-grow: 2;
+  display: inline;
+  margin: 0;
+}
+
+.flex-item a{
+
+  border-radius: var(--border-radius-less);
+  text-decoration: none;
+  display: inline;
+
+  padding: 0.4rem;
+  margin: 0;
+
+  background-color: var(--color5);
+  border: var(--border-weight) var(--color3) solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

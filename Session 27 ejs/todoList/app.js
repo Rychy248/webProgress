@@ -45,7 +45,7 @@ app.get("/", urlencodedParser,((req,res)=>{
 
     let todoList = ["Buy Food","Cook Food","Eat Food"];
 
-    res.render("index",{dayMsg:dayMsg, todayData:todayData, todoList:todoList})
+    res.render("index",{dayMsg:dayMsg, todayData:todayData, todoList:todoList});
     /*
     res.render("index",{dayMsg:dayMsg, people:people},((err,html)=>{
         if (err) {
@@ -74,7 +74,23 @@ app.post("/",jsonParser,((req,res)=>{
 }));
 
 app.get("/work",urlencodedParser,((req,res)=>{
-    res.render("work");
+    let todoList = ["Hello"];
+
+    res.render("work",{todoList:todoList});
+
+}));
+
+
+app.post("/work",jsonParser,((req,res)=>{
+    console.log("Data Catched, FROM WORK;")
+    console.log(req.body);
+
+    res.statusCode = 200;
+    res.json({
+        statusCode:200,
+        msg:"task adedd",
+    });
+    
 }));
 
 app.listen(port,(()=>{

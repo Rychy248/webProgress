@@ -1,4 +1,30 @@
+
 <%- include("layout/header") %>
 
-    <h1>Under construction</h1>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <div class="box" id="heading">
+        <h1>Work List</h1>
+    </div>
+
+    
+    <div class="box">
+        <% todoList.forEach((element,index) => { %>
+            <div class="item">
+                <input type="checkbox">
+                <h3 index="<%= index + 1 %>"> <%= index + 1 %> <%= element %></h3>
+            </div>
+        <%}); %>
+
+    </div>
+
+    <div class="box">
+        <form action="/work" class="item" method="post" name="form-workList" onsubmit="return workItem()">
+            <input type="text" name="todo" placeholder="add another todo">
+            <button>+</button>
+        </form>
+    </div>
+    
+    <script src="js/workItemAdd.js"></script>
+
 <%- include("layout/footer") %>

@@ -7,6 +7,7 @@
     <title>Todo List App</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     
@@ -20,11 +21,15 @@
         <h2><%= dayMsg %></h2>
     
         <div class="todoList">
-            <% todoList.forEach((element,index) => { %>
-                <div class="todoItem">
-                    <h3 index="<%= index + 1 %>"><%= index + 1 %> <%= element %></h3>
+            <div class="container-flex">
+                <div class="box-flex-row">
+                    <% todoList.forEach((element,index) => { %>
+                        <div class="todoItem">
+                            <h3 index="<%= index + 1 %>"><%= index + 1 %> <%= element %></h3>
+                        </div>
+                    <%}); %>
                 </div>
-            <%}); %>
+            </div>
         </div>
         
         <div class="container-flex">

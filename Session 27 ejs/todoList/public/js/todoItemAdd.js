@@ -1,14 +1,33 @@
 
 
+async function asyncFetch(object) {
+    console.log("Fetch call started...");
+    console.log("DATA SEND: "+JSON.stringify(object));
+    fetch('/', {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(object),
+    })
+    .then(response => response.json())
+    .then((response) => {
+        console.log(JSON.stringify(response));
+        console.log("Fetch call finished...");
+        }
+    );
+
+};  
+
 function addItem() {
     
-    let x = document.forms["form-todoLIst"]["todo"].value;
+    let text = document.forms["form-todoLIst"]["todo"].value;
 
-    if (x == "") {
+    if (text == "") {
         alert("Set a todo item")
     }else{
         document.forms["form-todoLIst"]["todo"].value = "";
-        let todoList = document.querySelector(".todoList");
+        let todoList = document.querySelector(".todoList").firstElementChild.firstElementChild;
         let lastIndex = 0;
 
         try {
@@ -22,7 +41,7 @@ function addItem() {
         let newItem = document.createElement("div");
         
         let newH3 = document.createElement("h3");
-        newH3.innerText = `${newIndex} ${x}`;
+        newH3.innerText = `${newIndex} ${text}`;
         newH3.setAttribute("index",lastIndex+1);
     
         newItem.classList.add("todoItem");
@@ -30,6 +49,12 @@ function addItem() {
         newItem.appendChild(newH3);
         
         todoList.appendChild(newItem);
+
+        asyncFetch({
+            index:newIndex,
+            task:text
+        });
+
     };
 
     return false;

@@ -13,15 +13,19 @@ const app = express();
 const port = 3000;
 
 // setting Middle ware
-app.use(bodyParser.urlencoded({extended:true}));
+// app.use(bodyParser.urlencoded({extended:true}));
+// app.use(bodyParser.json());
+const jsonParser = bodyParser.json(); // create application/json parser
+const urlencodedParser = bodyParser.urlencoded({ extended: false }); // create application/x-www-form-urlencoded parser
 app.use(express.static(path.join(__dirname,"public")));
+
 
 // PREPARING THE VIEWS
 app.set("views",path.join(__dirname,"views"));
 app.set('view engine', 'ejs');
 
 
-app.get("/",((req,res)=>{
+app.get("/", urlencodedParser,((req,res)=>{
     let today = new Date();
     let options = {
         weekday:"long",
@@ -54,6 +58,18 @@ app.get("/",((req,res)=>{
     }));
     */
     
+}));
+
+//app.use(bodyParser.json())
+app.post("/",jsonParser,((req,res)=>{
+    console.log("Data Catched;")
+    console.log(req.body);
+
+    res.statusCode = 200;
+    res.json({
+        statusCode:200,
+        msg:"task adedd",
+    })
 }));
 
 app.listen(port,(()=>{

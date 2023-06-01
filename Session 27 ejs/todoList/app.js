@@ -8,6 +8,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 
+//LOCAL MODULES
+const { getDate } = require("./controllers/getDate")
+
 // setting the express ap
 const app = express();
 const port = 3000;
@@ -26,26 +29,16 @@ app.set('view engine', 'ejs');
 
 
 app.get("/", urlencodedParser,((req,res)=>{
-    let today = new Date();
-    let options = {
-        weekday:"long",
-        month:"short",
-        day:"numeric",
-        year:"numeric"
-    }
-    
-    let splitedData = today.toLocaleDateString("en-US", options).replace(/,/g,"").split(" "); //[ 'Sunday', 'May', '28,', '2023' ]
-    let dayMsg =  splitedData[0] == "Sunday" || splitedData[0] == "Saturday" ? "Its a weekend day" : "Its a work day";
-    
+    let today = getDate();
 
     let todayData = {
-        dayName: splitedData[0],
-        date: `${splitedData[2]}/${splitedData[1]}/${splitedData[3]}`
+        dayName: today.dayName,
+        date: today.date
     };
 
     let todoList = ["Buy Food","Cook Food","Eat Food"];
 
-    res.render("index",{dayMsg:dayMsg, todayData:todayData, todoList:todoList});
+    res.render("index",{dayMsg:today.dayMsg, todayData:todayData, todoList:todoList});
     /*
     res.render("index",{dayMsg:dayMsg, people:people},((err,html)=>{
         if (err) {

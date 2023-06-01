@@ -31,7 +31,7 @@ function workItem() {
         let lastIndex = 0;
 
         try {
-            lastIndex = Number(workList.lastElementChild.getAttribute("index"));
+            lastIndex = Number(workList.lastElementChild.lastElementChild.getAttribute("index"));
         } catch (error) {
             lastIndex = 0;
         }

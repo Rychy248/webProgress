@@ -7,6 +7,7 @@ INSTALATION
 Import the public key used by the package management system. From a terminal, install gnupg if it is not already available:
 
 INSTALL MONDGODB 4.4 ON UBUNTU 20.0 LTSC
+SEGUIR MUY BIEN LOS PASOS PARA QUE FUNCIONE (DESPUES DE 2 DIAS DE INTENTAR)
 https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-ubuntu/
 
     sudo apt-get install gnupg
@@ -105,4 +106,9 @@ sudo mongod --fork --logpath /var/lib/mongodb/mongodb.log --dbpath /var/lib/mong
 
 CONFIGURATION FILE
 /etc/mongod.conf
+
+OTTHER CONFIG FILE
+sudo nvim /etc/mongodb.conf
+
+
 

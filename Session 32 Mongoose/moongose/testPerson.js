@@ -6,19 +6,19 @@
 const mongoose = require(`mongoose`);
 
 // local modules
-const { fruit } = require("./model")
+const { person, fruit } = require("./model")
 const { input } = require("./tools");
 
 /**
  * Subfunction to use for select a item
  */
 async function elementSelect(operation="Delete") {
-    console.log("\nSELECT ONE FRUIT TO "+operation);
-    let fruits = await read(print=true);
-    let option = Number(await input(`Type the fruit you want to ${operation}: `));
+    console.log("\nSELECT ONE person TO "+operation);
+    let persons = await read(print=true);
+    let option = Number(await input(`Type the person you want to ${operation}: `));
     let validOption = false
 
-    if( 0 <= --option && option< fruits.length){
+    if( 0 <= --option && option< persons.length){
         validOption = true;
     }else{
         console.log("Option it's in outrange: "+ ++option);
@@ -26,7 +26,7 @@ async function elementSelect(operation="Delete") {
     };
     
     return {
-        fruits:fruits,
+        persons:persons,
         option:option,
         validOption:validOption
     };
@@ -34,15 +34,14 @@ async function elementSelect(operation="Delete") {
 
 
 /**
- * @param {Object} fruitElement
- * Just create a fruit element
+ * @param {Object} personElement
+ * Just create a person element
 */
 async function create() {
     
-    fruit.create({
+    person.create({
         name:await input("Set the name: "),
-        rating:Number( await input("Put the rating: ")),
-        review:await input("Set the a review: ")
+        age:Number( await input("Set the age: "))
     })
     .then((register)=>{
         console.log(register);
@@ -52,49 +51,49 @@ async function create() {
 };
 
 /**
- * read the values of fruits collections
+ * read the values of persons collections
  * @returns string
  */
 async function read(print=true) {
-    let fruits = await fruit.find()
-    
+    let persons = await person.find();
+
+    let s = await person.findOne();
+    s.favoriteFruit = await fruit.findOne();
+    await s.save();
+
     if (print) {
-        fruits.forEach((element, index)=>{
-            console.log(`Fruit ${++index}) Name: ${element.name}, Rating: ${element.rating}, review: ${element.review}.`);
+        persons.forEach((element, index)=>{
+            console.log(`person ${++index}) Name: ${element.name}, Age: ${element.age}, fruit: ${element.favoriteFruit}.`);
         });
-    };
+    };    
     
-    
-    return fruits;
+    return persons;
 };
 
 /**
- * update a specific fruit element
+ * update a specific person element
  */
 async function update() {
-    let {fruits, option, validOption} = await elementSelect(operation="Update");
+    let {persons, option, validOption} = await elementSelect(operation="Update");
 
     if(validOption){
-        let [name, rating, review, toUpdate] = ["", -1, "", {}];
+        let [name, age, toUpdate] = ["", -1, {}];
         
-        console.log(`ITEM TO UPDATE: name ${fruits[option].name}`)
+        console.log(`ITEM TO UPDATE: name ${persons[option].name}`)
         console.log("Just pres enter for keep the value, or type the new value for change\n")
+        
         name = await input("New name?: ")
-        rating = Number(await input("New rating?: "));
-        review = await input("New review?: ");
+        age = Number(await input("New rating?: "));
 
         if (name.length > 2) {
             toUpdate.name = name;
         };
-        if (rating >= 0 && rating <= 5) {
+        if (name >= 0 && rating <= 5) {
             toUpdate.rating = rating;
         };
-        if (review.length > 2) {
-            toUpdate.review = review;
-        };
 
-        console.log(await fruit.updateOne(
-                { _id: `${fruits[option]._id}` },toUpdate
+        console.log(await person.updateOne(
+                { _id: `${persons[option]._id}` },toUpdate
             )
         );
     };
@@ -106,11 +105,11 @@ async function update() {
  * Delete a specific element
  */
 async function del() {
-    let {fruits, option, validOption} = await elementSelect(operation="Delete");
+    let {persons, option, validOption} = await elementSelect(operation="Delete");
     
     if(validOption){
-        console.log(`ITEM TO DELETE: name ${fruits[option].name}`)
-        console.log(await fruit.deleteOne({ _id: `${fruits[option]._id}` }));
+        console.log(`ITEM TO DELETE: name ${persons[option].name}`)
+        console.log(await person.deleteOne({ _id: `${persons[option]._id}` }));
     };
     
     return "delete option. Closed.\n";
@@ -130,10 +129,10 @@ async function main() {
         Play: ${play} Last Option: ${option}
 
         Select an option:
-        1) Create a fruit
-        2) Read the fruits
-        3) Update a fruit
-        4) Delete a fruit
+        1) Create a person
+        2) Read the persons
+        3) Update a person
+        4) Delete a person
         5) Break the system
         `);
 

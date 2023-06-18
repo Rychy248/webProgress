@@ -56,7 +56,6 @@ async function elementSelect(operation="Delete") {
  * Just create a fruit element
 */
 async function create() {
-    // await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
     
     fruit.create({
         name:await input("Set the name: "),
@@ -75,7 +74,6 @@ async function create() {
  * @returns string
  */
 async function read(print=true) {
-    // await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
     let fruits = await fruit.find()
     
     if (print) {
@@ -97,8 +95,6 @@ async function update() {
     if(validOption){
         let [name, rating, review, toUpdate] = ["", -1, "", {}];
         
-        // await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
-
         console.log(`ITEM TO UPDATE: name ${fruits[option].name}`)
         console.log("Just pres enter for keep the value, or type the new value for change\n")
         name = await input("New name?: ")
@@ -131,7 +127,6 @@ async function del() {
     let {fruits, option, validOption} = await elementSelect(operation="Delete");
     
     if(validOption){
-        // await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
         console.log(`ITEM TO DELETE: name ${fruits[option].name}`)
         console.log(await fruit.deleteOne({ _id: `${fruits[option]._id}` }));
     };

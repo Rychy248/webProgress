@@ -10,6 +10,8 @@ const mongoose = require(`mongoose`);
 // local modules
 const { fruitSchema, fruit } = require("./model")
 
+// open the mongodbContection
+
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -25,15 +27,13 @@ async function input(msg="Type someting: ") {
     return await question(`${msg}`);
 };
 
-
-
 /**
  * Subfunction to use for select a item
  */
 async function elementSelect(operation="Delete") {
     console.log("\nSELECT ONE FRUIT TO "+operation);
     let fruits = await read(print=true);
-    let option = Number(await input("Type the fruit you want to delete: "));
+    let option = Number(await input(`Type the fruit you want to ${operation}: `));
     let validOption = false
 
     if( 0 <= --option && option< fruits.length){
@@ -56,7 +56,7 @@ async function elementSelect(operation="Delete") {
  * Just create a fruit element
 */
 async function create() {
-    await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
+    // await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
     
     fruit.create({
         name:await input("Set the name: "),
@@ -75,7 +75,7 @@ async function create() {
  * @returns string
  */
 async function read(print=true) {
-    await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
+    // await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
     let fruits = await fruit.find()
     
     if (print) {
@@ -97,7 +97,7 @@ async function update() {
     if(validOption){
         let [name, rating, review, toUpdate] = ["", -1, "", {}];
         
-        await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
+        // await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
 
         console.log(`ITEM TO UPDATE: name ${fruits[option].name}`)
         console.log("Just pres enter for keep the value, or type the new value for change\n")
@@ -131,7 +131,7 @@ async function del() {
     let {fruits, option, validOption} = await elementSelect(operation="Delete");
     
     if(validOption){
-        await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
+        // await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
         console.log(`ITEM TO DELETE: name ${fruits[option].name}`)
         console.log(await fruit.deleteOne({ _id: `${fruits[option]._id}` }));
     };
@@ -140,8 +140,9 @@ async function del() {
 };
 
 async function main() {
-    let [option, play] = [0,true];
+    await mongoose.connect(`mongodb://127.0.0.1:27017/fruitsDB`);
 
+    let [option, play] = [0,true];
     let finalCase = async function () {
         await input("Continue...");
         console.clear();
@@ -180,6 +181,8 @@ async function main() {
                 break;
             case 5:
                 console.log("See you soon");
+                await mongoose.connection.close();
+                // await mongoose.disconnect()
                 process.exit(0);
                 break;
         

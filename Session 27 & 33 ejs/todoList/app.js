@@ -8,9 +8,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 
-//LOCAL MODULES
-const { getDate } = require("./controllers/getDate")
-
 // setting the express ap
 const app = express();
 const port = 3000;
@@ -18,73 +15,23 @@ const port = 3000;
 // setting Middle ware
 // app.use(bodyParser.urlencoded({extended:true}));
 // app.use(bodyParser.json());
-const jsonParser = bodyParser.json(); // create application/json parser
-const urlencodedParser = bodyParser.urlencoded({ extended: false }); // create application/x-www-form-urlencoded parser
-app.use(express.static(path.join(__dirname,"public")));
+// const jsonParser = bodyParser.json(); // create application/json parser
+// const urlencodedParser = bodyParser.urlencoded({ extended: false }); // create application/x-www-form-urlencoded parser
 
+app.use(express.static(path.join(__dirname,"public")));
 
 // PREPARING THE VIEWS
 app.set("views",path.join(__dirname,"views"));
 app.set('view engine', 'ejs');
 
+// IMPORT ROUNTING
+const { dailyRoute } = require('./routers/daily');
+const { workRoute } = require('./routers/work');
 
-app.get("/", urlencodedParser,((req,res)=>{
-    let today = getDate();
+// USING ROUTES
+app.use("/", dailyRoute);
+app.use("/work", workRoute);
 
-    let todayData = {
-        dayName: today.dayName,
-        date: today.date
-    };
-
-    let todoList = ["Buy Food","Cook Food","Eat Food"];
-
-    res.render("index",{dayMsg:today.dayMsg, todayData:todayData, todoList:todoList});
-    /*
-    res.render("index",{dayMsg:dayMsg, people:people},((err,html)=>{
-        if (err) {
-            console.log("Error at: ")
-            console.log(err)
-        } else {
-            res.send(html);
-            console.log("Index served")
-        }
-    }));
-    */
-    
-}));
-
-//app.use(bodyParser.json())
-app.post("/",jsonParser,((req,res)=>{
-    console.log("Data Catched;")
-    console.log(req.body);
-
-    res.statusCode = 200;
-    res.json({
-        statusCode:200,
-        msg:"task adedd",
-    });
-    
-}));
-
-app.get("/work",urlencodedParser,((req,res)=>{
-    let todoList = ["Hello"];
-
-    res.render("work",{todoList:todoList});
-
-}));
-
-
-app.post("/work",jsonParser,((req,res)=>{
-    console.log("Data Catched, FROM WORK;")
-    console.log(req.body);
-
-    res.statusCode = 200;
-    res.json({
-        statusCode:200,
-        msg:"task adedd",
-    });
-    
-}));
 
 app.listen(port,(()=>{
     console.log(`App serverd at port ${port}`);

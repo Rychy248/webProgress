@@ -1,23 +1,30 @@
+//Add initialization function in utils/middleware.js
+function workFRoute(express, jsonParser, urlencodedParser){
+    /*
+    * THIS FUNCTION IT'S BUILT IT FOR RENDER THIS ROUTE
+    */
 
-// third modules
-// const express = require("express");
-const bodyParser = require("body-parser");
+    //CONTROLLERS MODULE
+    const { workGet, workPost } = require("../controller/workController")
 
-//CONTROLLERS MODULE
-const { workGet, workPost } = require("../controller/workController")
+    // setting route
+    const workRoute = express.Router();
 
-//MIDLEWARE USED
-const jsonParser = bodyParser.json(); // create application/json parser
-const urlencodedParser = bodyParser.urlencoded({ extended: false }); // create application/x-www-form-urlencoded parser
+    workRoute.use((req,res,next)=>{
+        next();
+    });
 
-// setting route
-const workRoute = require("express").Router();
+    workRoute.get("/", urlencodedParser, workGet);
+    workRoute.post("/", jsonParser, workPost);
 
-workRoute.use((req,res,next)=>{
-    next();
-});
+    return workRoute;
+};
 
-workRoute.get("/", urlencodedParser, workGet);
-workRoute.post("/", jsonParser, workPost);
+// some theory https://www.freecodecamp.org/news/module-exports-how-to-export-in-node-js-and-javascript/
 
-module.exports = { workRoute };
+///At this, i replace the object export, with a single function as the value instance of the object
+module.exports = workFRoute;
+// DEFAULT IS: module.exports = { workFRoute };
+
+//How to use the new middleware in server.js
+// require('./utils/middleware')(express, app);

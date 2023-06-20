@@ -1,19 +1,15 @@
 
+// MODEL IMPORT
+const { workGetTodoList, workPostTodoList } = require("../models/workModel");
+
 function workGet(req, res, next){
-    let todoList = ["Hello"];
+    let todoList = workGetTodoList();
     res.render("work",{todoList:todoList});
 };
 
 function workPost(req, res, next){
-    console.log("Data Catched, FROM WORK;")
-    console.log(req.body);
-
     res.statusCode = 200;
-    res.json({
-        statusCode:200,
-        msg:"task adedd",
-    });
+    res.json(workPostTodoList(req));
 };
-
 
 module.exports = { workGet, workPost };

@@ -1,23 +1,27 @@
+//Add initialization function in utils/middleware.js
+function dailyFRoute(express, jsonParser, urlencodedParser){
+    /*
+    * THIS FUNCTION IT'S BUILT IT FOR RENDER THIS ROUTE
+    */
 
-// third modules
-// const express = require("express");
-const bodyParser = require("body-parser");
+    //CONTROLLERS MODULE
+    const { dailyGet, dailyPost } = require("../controller/dailyController")
 
-//CONTROLLERS MODULE
-const { dailyGet, dailyPost } = require("../controller/dailyController")
+    // setting route
+    const dailyRoute = express.Router();
 
-//MIDLEWARE USED
-const jsonParser = bodyParser.json(); // create application/json parser
-const urlencodedParser = bodyParser.urlencoded({ extended: false }); // create application/x-www-form-urlencoded parser
+    dailyRoute.use((req,res,next)=>{
+        next();
+    });
 
-// setting route
-const dailyRoute = require("express").Router();
+    dailyRoute.get("/", urlencodedParser, dailyGet);
+    dailyRoute.post("/",jsonParser, dailyPost);
 
-dailyRoute.use((req,res,next)=>{
-    next();
-});
+    return dailyRoute;
+};
 
-dailyRoute.get("/", urlencodedParser, dailyGet);
-dailyRoute.post("/",jsonParser, dailyPost);
+module.exports = dailyFRoute;
+// DEFAULT IS: module.exports = { dailyFRoute };
 
-module.exports = { dailyRoute };
+//How to use the new middleware in server.js
+// require('./utils/middleware')(express, app);

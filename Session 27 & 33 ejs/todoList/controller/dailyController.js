@@ -6,6 +6,10 @@
 //     });
 // };
 
+// MODEL IMPORT
+const { dailyGetTodoList, dailyPostTodoList } = require("../models/dailyModel");
+
+// UTILS IMPORT
 const { getDate } = require("../utils/getDate")
 
 function dailyGet(req, res, next){
@@ -16,7 +20,7 @@ function dailyGet(req, res, next){
         date: today.date
     };
 
-    let todoList = ["Buy Food","Cook Food","Eat Food"];
+    let todoList = dailyGetTodoList();
 
     // THE CALLBACK FUNCTION IT'S OPTIONAL
     res.render("index",{dayMsg:today.dayMsg, todayData:todayData, todoList:todoList},((err,html)=>{
@@ -25,21 +29,14 @@ function dailyGet(req, res, next){
             console.log(err)
         } else {
             res.send(html);
-            console.log("Index served")
         }
     }));
     
 };
 
 function dailyPost(req, res, next){
-    console.log("Data Catched;")
-    console.log(req.body);
-
     res.statusCode = 200;
-    res.json({
-        statusCode:200,
-        msg:"task adedd",
-    });
+    res.json(dailyPostTodoList(req));
 };
 
 

@@ -15,8 +15,8 @@ const port = 3000;
 // setting Middle ware
 // app.use(bodyParser.urlencoded({extended:true}));
 // app.use(bodyParser.json());
-// const jsonParser = bodyParser.json(); // create application/json parser
-// const urlencodedParser = bodyParser.urlencoded({ extended: false }); // create application/x-www-form-urlencoded parser
+const jsonParser = bodyParser.json(); // create application/json parser
+const urlencodedParser = bodyParser.urlencoded({ extended: false }); // create application/x-www-form-urlencoded parser
 
 app.use(express.static(path.join(__dirname,"public")));
 
@@ -24,13 +24,13 @@ app.use(express.static(path.join(__dirname,"public")));
 app.set("views",path.join(__dirname,"views"));
 app.set('view engine', 'ejs');
 
-// IMPORT ROUNTING
-const { dailyRoute } = require('./routers/daily');
-const { workRoute } = require('./routers/work');
+// IMPORT ROUNTING, jumping to a direct way to use it
+// const { dailyRoute } = require('./routers/daily');
+// const { workRoute } = require('./routers/work')(express, jsonParser, urlencodedParser);
 
 // USING ROUTES
-app.use("/", dailyRoute);
-app.use("/work", workRoute);
+app.use("/", require('./routers/daily')(express, jsonParser, urlencodedParser));
+app.use("/work", require('./routers/work')(express, jsonParser, urlencodedParser));
 
 
 app.listen(port,(()=>{

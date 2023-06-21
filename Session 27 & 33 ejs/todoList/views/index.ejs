@@ -16,7 +16,7 @@
                     <% todoList.forEach((element,index) => { %>
                         <div class="todoItem">
                             <input type="checkbox">
-                            <h3 index="<%= index + 1 %>"> <%= index + 1 %> <%= element %></h3>
+                            <h3 index="<%= index + 1 %>"> <%= index + 1 %> <%= element.item %></h3>
                         </div>
                     <%}); %>
                 </div>

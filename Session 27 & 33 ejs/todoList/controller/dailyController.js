@@ -1,8 +1,8 @@
 
 // function getUsersById(req, res, next){
 //     User.findById(req.params.id, function(error, user){
-//     if(error) return next(error);
-//     return res.status(200).json(user);
+//       if(error) return next(error);
+//       return res.status(200).json(user);
 //     });
 // };
 
@@ -21,16 +21,21 @@ function dailyGet(req, res, next){
     };
 
     let todoList = dailyGetTodoList();
-    console.log("TODO GETTED: "+ JSON.stringify(todoList) + "  ;"+todoList);
-    // THE CALLBACK FUNCTION IT'S OPTIONAL
-    res.render("index",{dayMsg:today.dayMsg, todayData:todayData, todoList:[{item:"work"},{item:"day"}]},((err,html)=>{
-        if (err) {
-            console.log("Error at render: ")
-            console.log(err)
-        } else {
-            res.send(html);
-        }
-    }));
+    // console.log("TODO GETTED: "+ JSON.stringify(todoList) + "  ;"+todoList);
+    // THE CALLBACK FUNCTION IT'S OPTIONAL INSIDE THE RENDER IT'S OPTIONAL
+    // MADE WITH AN SYNCRNOUS FUNCTION
+    todoList
+    .then((result)=>{
+        // console.log("RES: "+result)
+        res.render("index",{dayMsg:today.dayMsg, todayData:todayData, todoList:result},((err,html)=>{
+            if (err) {
+                console.log("Error at render: ")
+                console.log(err)
+            } else {
+                res.send(html);
+            }
+        }));
+    });
     
 };
 

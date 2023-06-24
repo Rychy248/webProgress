@@ -4,28 +4,15 @@ const { dayItem } = require("./mongoose/itemModel");
 const { create, read } = require("./mongoose/mongooseController")
 
 
-function dailyGetTodoList(){
+async function dailyGetTodoList(){
     //dayItem is model
-    // let data = read(dayItem).then((result)=>{
-    //     console.log("MODEL: "+ JSON.stringify(result)+" type of: "+typeof(result))
-    //     return result
-    // });
-    // return data;
-    let data = () =>{
-        return new Promise((res,rej)=>{
-            read(dayItem)
-            .then((response)=>{
-                res(response);
-                // console.log("RESPOINSE: "+response)
-                }
-            );
-        });
-    };
-    console.log(data())
-    return data();
+    let data = await read(dayItem);
+    console.log("DATA GETT FROM MODEL:");
+    console.log(data);
+    return data;
 };
 
-function dailyPostTodoList(req){
+async function dailyPostTodoList(req){
     console.log("Data Catched;")
     console.log(req.body);
 

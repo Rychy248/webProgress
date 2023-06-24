@@ -87,7 +87,7 @@ function goodFetchProducts() {
 // CALLS 
 // fetchProducts();
 // BADfetchProducts();
-goodFetchProducts();
+// goodFetchProducts();
 
 
 console.log(`You'll probably use async functions a lot where you might otherwise use promise chains, and they make working with promises much more intuitive.

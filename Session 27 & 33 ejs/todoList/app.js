@@ -36,9 +36,9 @@ app.use("/", require('./routers/daily')(express, jsonParser, urlencodedParser));
 app.use("/work", require('./routers/work')(express, jsonParser, urlencodedParser));
 
 // Conecting to DB
-mongoose.connect(`mongodb://127.0.0.1:27017/itemsDB`)
+mongoose.connect(`mongodb://127.0.0.1:27017/todoApp`)
 .then((msg)=>{
-    console.log("MongoDB connected with MOngoose at port 27027 to the itemsDB");
+    console.log("MongoDB connected with MOngoose at port 27027 to the todoApp");
 
     app.listen(port,(()=>{
         console.log(`App serverd at port ${port}`);

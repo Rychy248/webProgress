@@ -21,9 +21,9 @@ function dailyGet(req, res, next){
     };
 
     let todoList = dailyGetTodoList();
-    console.log("TODO GETTED: "+todoList)
+    console.log("TODO GETTED: "+ JSON.stringify(todoList) + "  ;"+todoList);
     // THE CALLBACK FUNCTION IT'S OPTIONAL
-    res.render("index",{dayMsg:today.dayMsg, todayData:todayData, todoList:["work","day"]},((err,html)=>{
+    res.render("index",{dayMsg:today.dayMsg, todayData:todayData, todoList:[{item:"work"},{item:"day"}]},((err,html)=>{
         if (err) {
             console.log("Error at render: ")
             console.log(err)

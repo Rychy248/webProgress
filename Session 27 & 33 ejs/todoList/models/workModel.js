@@ -6,6 +6,8 @@ async function workGetTodoList(){
     let data = await read(workItem);
     console.log("DATA GETT FROM MODEL:");
     console.log(data);
+
+    
     return data;
 };
 

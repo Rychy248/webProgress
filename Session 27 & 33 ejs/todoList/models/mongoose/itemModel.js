@@ -4,8 +4,8 @@ const mongoose = require(`mongoose`);
 const dayItemSchema = new mongoose.Schema({
     item:{
         type:String,
-        minLength:4,
-        maxLength:20,
+        minLength:3,
+        maxLength:60,
         require:[true,"Please give the name"]
     },
 });
@@ -13,7 +13,7 @@ const workItemSchema = new mongoose.Schema({
     item:{
         type:String,
         minLength:3,
-        maxLength:20,
+        maxLength:60,
         require:[true,"Please give the name"]
     },
 });

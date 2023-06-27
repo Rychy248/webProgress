@@ -1,15 +1,29 @@
 
 // MODEL IMPORT
-const { workGetTodoList, workPostTodoList } = require("../models/workModel");
+const { workGetTodoList, workPostTodoList, workDeleteTodoList, insertDefaults } = require("../models/workModel");
 
 async function workGet(req, res, next){
     let todoList = await workGetTodoList();
-    res.render("work",{todoList:todoList});
+    if (todoList.length == 0){
+        await insertDefaults();
+        res.redirect("/work");
+    }else{
+        res.render("work",{todoList:todoList});
+    };
 };
 
 async function workPost(req, res, next){
-    res.statusCode = 200;
-    res.json(workPostTodoList(req));
+    let result = await workPostTodoList(req);
+    res.json(result);
 };
 
-module.exports = { workGet, workPost };
+async function workDelete(req,res,next){
+    workDeleteTodoList(req)
+    .then((data)=>{
+        console.log("CONTROLLER");
+        console.log(data);
+        res.json(data);
+    });
+}
+
+module.exports = { workGet, workPost, workDelete };

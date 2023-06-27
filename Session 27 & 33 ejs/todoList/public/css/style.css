@@ -270,6 +270,14 @@ input:checked + h3 {
     text-decoration-color: #A683E3;
 }
 
+
+.toDelete{
+    opacity: 40%;
+    transition-duration: 1s;
+}
+
+
+
 @media (max-width: 700px) { 
     .top button{
         margin-top: 0.2rem;

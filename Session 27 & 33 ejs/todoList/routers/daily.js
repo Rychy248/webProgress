@@ -6,7 +6,7 @@ function dailyFRoute(express, jsonParser, urlencodedParser){
     */
 
     //CONTROLLERS MODULE
-    const { dailyGet, dailyPost } = require("../controller/dailyController")
+    const { dailyGet, dailyPost, dailyDelete} = require("../controller/dailyController")
 
     // setting route
     const dailyRoute = express.Router();
@@ -17,6 +17,7 @@ function dailyFRoute(express, jsonParser, urlencodedParser){
 
     dailyRoute.get("/", urlencodedParser, dailyGet);
     dailyRoute.post("/",jsonParser, dailyPost);
+    dailyRoute.delete("/",jsonParser,dailyDelete);
 
     return dailyRoute;
 };

@@ -1,37 +1,45 @@
 // const mongoose = require(`mongoose`);
 
 const { dayItem } = require("./mongoose/itemModel");
-const { create, read } = require("./mongoose/mongooseController")
+const { create, read, del, defaultItems } = require("./mongoose/mongooseController")
 
+async function insertDefaults(){
+    return await defaultItems(dayItem);
+};
 
-async function dailyGetTodoList(){
+async function dailyGetTodoList(req){
     //dayItem is model
-    let data = await read(dayItem);
-    console.log("DATA GETT FROM MODEL:");
-    console.log(data);
-    return data;
+    return await read(dayItem);
 };
 
 async function dailyPostTodoList(req){
-    console.log("Data Catched;")
+    console.log("Data Catched, FROM WORK;")
     console.log(req.body);
-    try {
-        let data = await create(dayItem,{item:req.body.task});
-        return {
-            error:0,
-            statusCode:200,
-            item:[data],
-        };
 
-    } catch (error) {
-        return {
-            statusCode:300,
-            error:error
-        };
+    let [error, statusCode, item] = [0,200,undefined];
+
+    try {
+        item = await create(dayItem,{item:req.body.task});
+    } catch (err) {
+        statusCode = 400;
+        error = err;
         // throw error;
 
     };
 
+    return {
+        error:error,
+        statusCode:statusCode,
+        item:item
+    };
+
+};
+async function dailyDeleteTodoList(req){
+    console.log("Data Catched DELETE;")
+    console.log(req.body);
+    return await del(dayItem,{_id:req.body.id})
 };
 
-module.exports = { dailyGetTodoList, dailyPostTodoList };
+module.exports = { dailyGetTodoList, dailyPostTodoList, dailyDeleteTodoList, insertDefaults };
+
+

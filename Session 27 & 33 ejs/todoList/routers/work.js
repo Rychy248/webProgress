@@ -5,7 +5,7 @@ function workFRoute(express, jsonParser, urlencodedParser){
     */
 
     //CONTROLLERS MODULE
-    const { workGet, workPost } = require("../controller/workController")
+    const { workGet, workPost, workDelete } = require("../controller/workController")
 
     // setting route
     const workRoute = express.Router();
@@ -16,6 +16,7 @@ function workFRoute(express, jsonParser, urlencodedParser){
 
     workRoute.get("/", urlencodedParser, workGet);
     workRoute.post("/", jsonParser, workPost);
+    workRoute.delete("/", jsonParser, workDelete);
 
     return workRoute;
 };

@@ -15,7 +15,7 @@
                 <div class="box-flex-row">
                     <% todoList.forEach((element,index) => { %>
                         <div class="todoItem">
-                            <input type="checkbox">
+                            <input type="checkbox" id="<%= element._id %>" onclick="deleteItem(this)">
                             <h3 index="<%= index + 1 %>"> <%= index + 1 %> <%= element.item %></h3>
                         </div>
                     <%}); %>

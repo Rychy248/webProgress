@@ -7,7 +7,7 @@
 // };
 
 // MODEL IMPORT
-const { dailyGetTodoList, dailyPostTodoList } = require("../models/dailyModel");
+const { dailyGetTodoList, dailyPostTodoList, dailyDeleteTodoList, insertDefaults } = require("../models/dailyModel");
 
 // UTILS IMPORT
 const { getDate } = require("../utils/getDate")
@@ -27,14 +27,22 @@ function dailyGet(req, res, next){
     todoList
     .then((result)=>{
         // console.log("RES: "+result)
-        res.render("index",{dayMsg:today.dayMsg, todayData:todayData, todoList:result},((err,html)=>{
-            if (err) {
-                console.log("Error at render: ")
-                console.log(err)
-            } else {
-                res.send(html);
-            }
-        }));
+        if (result.length == 0){
+            insertDefaults()
+            .then(()=>{
+                res.redirect("/");
+            });
+        }else{
+
+            res.render("index",{dayMsg:today.dayMsg, todayData:todayData, todoList:result},((err,html)=>{
+                if (err) {
+                    console.log("Error at render: ")
+                    console.log(err)
+                } else {
+                    res.send(html);
+                }
+            }));
+        };
     });
     
 };
@@ -46,5 +54,13 @@ function dailyPost(req, res, next){
     });
 };
 
+function dailyDelete(req,res,next) {
+    dailyDeleteTodoList(req)
+    .then((data)=>{
+        console.log("CONTROLLER");
+        console.log(data);
+        res.json(data);
+    });
+};
 
-module.exports = { dailyGet, dailyPost };
+module.exports = { dailyGet, dailyPost, dailyDelete };

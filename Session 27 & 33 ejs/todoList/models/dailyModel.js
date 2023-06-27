@@ -15,10 +15,21 @@ async function dailyGetTodoList(){
 async function dailyPostTodoList(req){
     console.log("Data Catched;")
     console.log(req.body);
+    try {
+        let data = await create(dayItem,{item:req.body.task});
+        return {
+            error:0,
+            statusCode:200,
+            item:[data],
+        };
 
-    return {
-        statusCode:200,
-        msg:"task adedd",
+    } catch (error) {
+        return {
+            statusCode:300,
+            error:error
+        };
+        // throw error;
+
     };
 
 };

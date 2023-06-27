@@ -12,7 +12,7 @@ const dayItemSchema = new mongoose.Schema({
 const workItemSchema = new mongoose.Schema({
     item:{
         type:String,
-        minLength:4,
+        minLength:3,
         maxLength:20,
         require:[true,"Please give the name"]
     },

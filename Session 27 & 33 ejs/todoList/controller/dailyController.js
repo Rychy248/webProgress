@@ -40,8 +40,10 @@ function dailyGet(req, res, next){
 };
 
 function dailyPost(req, res, next){
-    res.statusCode = 200;
-    res.json(dailyPostTodoList(req));
+    dailyPostTodoList(req)
+    .then((data)=>{
+        res.json(data);
+    });
 };
 
 

@@ -7,6 +7,7 @@ async function workGet(req, res, next){
     if (todoList.length == 0){
         await insertDefaults();
         res.redirect("/work");
+        
     }else{
         res.render("work",{todoList:todoList});
     };

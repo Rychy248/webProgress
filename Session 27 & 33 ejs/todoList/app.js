@@ -22,11 +22,11 @@ const port = 3000;
 const jsonParser = bodyParser.json(); // create application/json parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false }); // create application/x-www-form-urlencoded parser
 
-app.use(express.static(path.join(__dirname,"public")));
-
 // PREPARING THE VIEWS
-app.set("views",path.join(__dirname,"views"));
 app.set('view engine', 'ejs');
+app.set("views",path.join(__dirname,"views"));
+
+app.use(express.static(path.join(__dirname,"public")));
 
 // IMPORT ROUNTING, jumping to a direct way to use it
 // const { dailyRoute } = require('./routers/daily');
@@ -35,6 +35,7 @@ app.set('view engine', 'ejs');
 // USING ROUTES
 app.use("/", require('./routers/daily')(express, jsonParser, urlencodedParser));
 app.use("/work", require('./routers/work')(express, jsonParser, urlencodedParser));
+app.use("/custom", require('./routers/custom')(express, jsonParser, urlencodedParser));
 
 // Conecting to DB
 mongoose.connect(`mongodb://127.0.0.1:27017/todoApp`)

@@ -1,8 +1,8 @@
 # Modules and Titles
 |No.|Done|Time h & m |title|
 |---|---|---|---|
-|33|false|1h 34mins| Putting Everithin together|
-|34|false|0h 33mins| Deploying your Web Aplicatin|
+|33|True|1h 34mins| Putting Everithin together|
+|34|True|0h 33mins| Deploying your Web Aplicatin|
 |35|false|0h 10mins| Boss Level Challenge 4 - Blog Website Upgrade|
 |36|false|1h 46mins| Build your Own RESTful API From Scratch|
 |37|false|3h 33mins| Authenticacion & Security|
@@ -14,7 +14,7 @@
 |Week|Date| module Expect| status | Goal Reached|
 |---|---|---|---|--|
 |--|__JUNE__|--|--|--|
-|01| 19 jun to 25 jun| 33  & 34| unstarted|undefined|
+|01| 19 jun to 25 jun| 33  & 34| Finished|Yes|
 |02| 26 jun to 02 july| 35 | unstarted|undefined|
 |--|__JULY__|--|--|--|
 |03| 03 july 09 july| 36 | unstarted|undefined|

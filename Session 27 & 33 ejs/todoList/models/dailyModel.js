@@ -1,6 +1,6 @@
 // const mongoose = require(`mongoose`);
 
-const { dayItem } = require("./mongoose/itemModel");
+const { dayItem } = require("./mongoose/models");
 const { create, read, del, defaultItems } = require("./mongoose/mongooseController")
 
 async function insertDefaults(){

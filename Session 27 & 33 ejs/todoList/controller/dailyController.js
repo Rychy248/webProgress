@@ -39,7 +39,7 @@ function dailyGet(req, res, next){
                     console.log("Error at render: ")
                     console.log(err)
                 } else {
-                    res.send(html);
+                    res.send("ERROR!");
                 }
             }));
         };

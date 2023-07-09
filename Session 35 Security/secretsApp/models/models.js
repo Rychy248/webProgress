@@ -3,7 +3,7 @@ const mongoose = require(`mongoose`);
 const encrypt = require('mongoose-encryption');
 
 // importing the secret key into the .env
-const secret = process.env.SECRETMongoCryptKey;
+const secret = process.env.SECRET_MONGO_CRYPT_KEY;
 
 // defining Schemas 
 const userSchema = new mongoose.Schema({

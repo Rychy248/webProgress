@@ -27,11 +27,23 @@
             At this point, i'm working at the backend, so for see the Session 35 Security <a href="https://github.com/Rychy248/webProgress" target="_blank">go to the repo</a>
         </p>
 
-        <h1 id="level-1">Level 1, Email and password</h1>
+        <h1 id="level-1">Level 1 - Email & password, plain text</h1>
         <p>The most basic Security level for a webSite is a user and a password, maybe bassed on a email or an alias.</p>
-        <h1 id="level-2">Level 2</h1>
-        <p>.....</p>
-        <h1 id="level-3">Level 3</h1>
+        <p>And the user, and the password, are saved as plain text, thats is not good.</p>
+
+        <h1 id="level-2">Level 2 - Email & password, Encryption</h1>
+        <p>
+        For encryption, we can use the follow package
+        <a href="https://www.npmjs.com/package/mongoose-encryption" target="_blank">Mongoose encryption</a>
+        </p>
+        <p>
+        When we use encryption and desencryption, we'll need keys, it's represent a vulnerabilty to cover, for that we can 
+        use, Enviroment variables to keep our secret keys safely, for manage that we can use the dotenv package.
+        <a href="https://www.npmjs.com/package/dotenv" target="_blank">dotenv</a>
+        </p>
+
+
+        <h1 id="level-3">Level 3 - Email & password, Hashing Passwords</h1>
         <p>.....</p>
         <h1 id="level-4">Level 4</h1>
         <p>.....</p>

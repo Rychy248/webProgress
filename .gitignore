@@ -2,6 +2,14 @@
 .github
 .git
 
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+
 # Session 17 & 18 Back-end & NodeJs/node/node_modules
 
 # Session 24 Express/calculator/node_modules

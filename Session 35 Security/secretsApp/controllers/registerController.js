@@ -1,6 +1,8 @@
 
 const { user } = require("../models/userModel");
 const { MyError, defaultError } = require("../utils/customErrors");
+// has function
+const md5 = require("md5");
 
 function registerGet(req,res,next) {
     res.render("register");
@@ -9,10 +11,10 @@ function registerGet(req,res,next) {
 function registerPost(req,res,next){
     user.create({
         email: req.body.username,
-        password: req.body.password
-    }).then(response=>{
+        password: md5(req.body.password) //HASHING THE PASSWORD
+    }).then(data=>{
         console.log("User created");
-        console.log(response);
+        console.log(JSON.stringify(data));
         res.render("secrets");
     }).catch(err=>{
         console.log(err)

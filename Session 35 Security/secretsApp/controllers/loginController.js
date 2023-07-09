@@ -1,6 +1,8 @@
 
 const { user } = require("../models/userModel");
 const { MyError, defaultError } = require("../utils/customErrors");
+// has function
+const md5 = require("md5");
 
 function loginGet(req,res,next) {
 
@@ -10,7 +12,7 @@ function loginGet(req,res,next) {
 function loginPost(req,res, next){
     user.read({email:req.body.username})
     .then(userSearched=>{
-        if(userSearched[0].password === req.body.password){
+        if(userSearched[0].password === md5(req.body.password)){
             res.render("secrets");
         }else{
             res.redirect("/login");

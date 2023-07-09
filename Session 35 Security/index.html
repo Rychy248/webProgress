@@ -44,8 +44,40 @@
 
 
         <h1 id="level-3">Level 3 - Email & password, Hashing Passwords</h1>
-        <p>.....</p>
-        <h1 id="level-4">Level 4</h1>
+        <p> Hash the data, it's a most secury way to save the integrity of our data, 
+            for do that we can use, md5 (a hash function, among lots of other hash functions)
+            
+            <a href="https://www.npmjs.com/package/md5" target="_blank">md5</a>
+        
+            <br>
+            Hash function, don't save the input value, save or return the hash produced,
+            it's mean in the database we don't have the password of the user, we have the
+            hash function.
+        </p>
+
+        <h3>A bit hack</h3>
+        <p>
+
+            The md5 or sha1, are hash function fast to be hacked with 
+            <br><br>
+
+            <i>6. OK, you’ve convinced me, I’ll hash the passwords into the database. I’ll use MD5. Or SHA1.</i>
+            <br>
+
+            <b>What? No! Both algorithms are ridiculously fast to brute-force, along with many other simple algorithms.</b>
+            <br><br>
+
+            <i>7. Gah, will nothing I do ever be enough?! What are you, my dad?!</i>
+            <br>
+        
+            <b>We haven’t even gone through the steps of you asking about salting to avoid your passwords being cracked using rainbow tables, but you know what - let’s just skip to the point. Use scrypt or, if you can’t, PBKDF2 or bcrypt, which are algorithms suitable for the task (because they’re impossibly slow to break).</b>
+        
+            <br><br>
+            <a href="https://plaintextoffenders.com/faq/devs" target="_blank">Developers FAQ, about hacking passwords</a>
+        </p>
+
+        <h1 id="level-4">Level 4 - Email & password, Salting and Hashing Passwords</h1>
+        bcrypt
         <p>.....</p>
         <h1 id="level-5">Level 5</h1>
         <p>.....</p>

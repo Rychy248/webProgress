@@ -10,12 +10,13 @@ function routerFunction(express, urlEncoded, jsonParser) {
 
     // controller import
     const { 
-        loginGet
+        loginGet, loginPost
     } = require("./../controllers/loginController");
 
     // HTTP METHODS, AND REPONSE
     loginRouter.route("/")
         .get(urlEncoded, loginGet)
+        .post(urlEncoded, loginPost)
     ;
 
     return loginRouter;

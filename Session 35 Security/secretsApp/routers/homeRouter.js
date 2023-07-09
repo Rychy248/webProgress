@@ -11,7 +11,6 @@ function routerFunction(express, urlEncoded, jsonParser) {
     // controller import
     const { 
         homeGet
-    
     } = require("./../controllers/homeController");
 
     // HTTP METHODS, AND REPONSE

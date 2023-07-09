@@ -10,12 +10,13 @@ function routerFunction(express, urlEncoded, jsonParser) {
 
     // controller import
     const { 
-        registerGet
+        registerGet, registerPost
     } = require("./../controllers/registerController");
 
     // HTTP METHODS, AND REPONSE
     registerRouter.route("/")
         .get(urlEncoded, registerGet)
+        .post(urlEncoded, registerPost)
     ;
 
     return registerRouter;

@@ -1,24 +1,24 @@
 
 function routerFunction(express, urlEncoded, jsonParser) {
     // router define
-    const secretRouter = express.Router();
+    const registerRouter = express.Router();
 
     // Espace to add a midleware
-    secretRouter.use((req,res,next)=>{
+    registerRouter.use((req,res,next)=>{
         next();
     });
 
     // controller import
     const { 
-        secretGet
-    } = require("./../controllers/secretController");
+        logoutGet
+    } = require("./../controllers/logoutController");
 
     // HTTP METHODS, AND REPONSE
-    secretRouter.route("/")
-        .get(urlEncoded, secretGet)
+    registerRouter.route("/")
+        .get(urlEncoded, logoutGet)
     ;
 
-    return secretRouter;
+    return registerRouter;
 };
 
 module.exports = routerFunction;

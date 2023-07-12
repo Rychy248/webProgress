@@ -15,11 +15,8 @@ const userSchema = new mongoose.Schema({
         maxLength:60,
         require:[true,"Please give a valid email"]
     },
-    password:{
-        type:String,
-        minLength:6,
-        maxLength:260,
-        require:[true,"Please give a secure password"]
+    passHash:{
+        type:String
     }
 });
 

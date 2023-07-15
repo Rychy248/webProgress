@@ -18,7 +18,8 @@ const
         port:3000
     },
 // create app
-    app = express(),
+    app = express()
+;
 // -------- MIDLEWARE
 app.set('view engine', 'ejs');
 app.set("views",path.join(__dirname,"views"));

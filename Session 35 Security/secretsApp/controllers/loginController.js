@@ -3,11 +3,18 @@ const { user } = require("../models/userModel");
 const { MyError, defaultError } = require("../utils/customErrors");
 
 // has function 
-// const md5 = require("md5"); //replaced by salting and hash bycrypt
-const 
-    bcrypt = require('bcrypt'),
-    saltRounds = Number(process.env.SALT_ROUNDS)
-;
+/*
+    // const md5 = require("md5"); //replaced by salting and hash bycrypt
+    const 
+        bcrypt = require('bcrypt'),
+        saltRounds = Number(process.env.SALT_ROUNDS)
+    ;
+*/
+//-----Replace of bcrypt with PASSPORT
+// const session = require("express-session"); 
+// const passport = require("passport");
+// const passportLocal = require("passport-local"); // Used in models
+// const passportLocalMongoose = require("passport-local-mongoose"); //Used in models
 
 function loginGet(req,res,next) {
 
@@ -15,13 +22,14 @@ function loginGet(req,res,next) {
 };
 
 function loginPost(req,res, next){
-
+    /**
+     *  SOLUTION WITH BCRYPT
     user.read({email:req.body.username})
     .then(userSearched=>{
         if(userSearched[0]){ // user exist
-            //infact "userSearched[o].passHash" it's hash
-            // bcrypt.compare("plainText", "Hash")
-            return bcrypt.compare(req.body.password, userSearched[0].passHash)
+            // infact "userSearched[o].passHash" it's hash
+            bcrypt.compare("plainText", "Hash")
+            return bcrypt.compare(req.body.password, userSearched[0].passHash) //replace by passport
         }else{
             throw new MyError("No valid user inserted","InvalidUser");
         };
@@ -37,6 +45,7 @@ function loginPost(req,res, next){
         console.log(err);
         res.redirect("/login");
     });
+    */
 
 };
 

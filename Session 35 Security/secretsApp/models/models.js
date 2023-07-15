@@ -9,7 +9,7 @@ const mongoose = require(`mongoose`);
 
 // To simplfy the use for passportlocal
 const passportLocalMongoose = require("passport-local-mongoose");
-const passportLocal = require("passport-local");
+// const passportLocal = require("passport-local");
 // defining Schemas 
 const userSchema = new mongoose.Schema({
     email:{

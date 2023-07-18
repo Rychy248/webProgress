@@ -13,7 +13,7 @@ const { MyError, defaultError } = require("../utils/customErrors");
 //-----Replace of bcrypt with PASSPORT
 // const session = require("express-session"); 
 // const passport = require("passport");
-// const passportLocal = require("passport-local"); // Used in models
+// const passportLocal = require("passport-local");
 // const passportLocalMongoose = require("passport-local-mongoose"); //Used in models
 
 function loginGet(req,res,next) {

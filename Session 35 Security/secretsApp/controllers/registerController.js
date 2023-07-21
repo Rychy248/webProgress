@@ -1,5 +1,4 @@
 
-const { userModel } = require("../models/models");
 const { user } = require("../models/userModel");
 const { MyError, defaultError } = require("../utils/customErrors");
 
@@ -13,7 +12,7 @@ const { MyError, defaultError } = require("../utils/customErrors");
 */
 //-----Replace of bcrypt with PASSPORT
 // const session = require("express-session"); 
-// const passport = require("passport");
+const passport = require("passport");
 // const passportLocal = require("passport-local");
 // const passportLocalMongoose = require("passport-local-mongoose"); //Used in models
 
@@ -23,7 +22,6 @@ function registerGet(req,res,next) {
 
 function registerPost(req,res,next){
     /**
-
     bcrypt.hash(req.body.password, saltRounds)
     .then(function(hash) {
         return user.create({
@@ -41,7 +39,22 @@ function registerPost(req,res,next){
         res.redirect("/register/")
     });
     */
-    
+
+    user.create({
+        email: req.body.username,
+        password: req.body.password
+    }).then(userRegistered=>{
+        console.log(userRegistered);
+        return user.authenticate(req.body.username, req.body.password);
+    }).then(cb=>{
+        console.log(cb);
+        console.log(JSON.stringify(cb));
+        // res.redirect("/secrets");
+    })
+    .catch((err)=>{
+        console.log(err);
+        res.redirect("/register");
+    });
 };
 
 module.exports =  {

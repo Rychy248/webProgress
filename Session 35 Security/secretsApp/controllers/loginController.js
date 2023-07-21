@@ -12,7 +12,7 @@ const { MyError, defaultError } = require("../utils/customErrors");
 */
 //-----Replace of bcrypt with PASSPORT
 // const session = require("express-session"); 
-// const passport = require("passport");
+const passport = require("passport");
 // const passportLocal = require("passport-local");
 // const passportLocalMongoose = require("passport-local-mongoose"); //Used in models
 
@@ -46,7 +46,9 @@ function loginPost(req,res, next){
         res.redirect("/login");
     });
     */
-
+    passport.authenticate("local",{failureRedirect:"/login"})(req,res,function(){
+        res.redirect("/secrets")
+    });
 };
 
 module.exports =  {

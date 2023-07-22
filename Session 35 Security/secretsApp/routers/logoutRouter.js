@@ -10,12 +10,12 @@ function routerFunction(express, urlEncoded, jsonParser) {
 
     // controller import
     const { 
-        logoutGet
+        logoutPost
     } = require("./../controllers/logoutController");
 
     // HTTP METHODS, AND REPONSE
     registerRouter.route("/")
-        .get(urlEncoded, logoutGet)
+        .post(urlEncoded, logoutPost)
     ;
 
     return registerRouter;

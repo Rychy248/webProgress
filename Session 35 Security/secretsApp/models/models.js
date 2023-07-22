@@ -9,7 +9,6 @@ const mongoose = require(`mongoose`);
 
 // To simplfy the use for passportlocal
 const passportLocalMongoose = require("passport-local-mongoose");
-const passport = require("passport");
 
 // defining Schemas 
 const userSchema = new mongoose.Schema({
@@ -26,7 +25,8 @@ const userSchema = new mongoose.Schema({
         type:String
     }
 });
-// PASSPORT MONGOOSE
+
+// Hashing the password with the passport-local-mongoose
 userSchema.plugin(passportLocalMongoose,{iterations:2, usernameField:"email"});
 
     // select the encripte with the last field, encryptedFields: , in the options object
@@ -36,10 +36,5 @@ userSchema.plugin(passportLocalMongoose,{iterations:2, usernameField:"email"});
 
 // Models
 const userModel = new mongoose.model("user",userSchema);
-
-// simplify the use of passport-local, with passport-local-mongoose
-passport.use(userModel.createStrategy());
-passport.serializeUser(userModel.serializeUser());
-passport.deserializeUser(userModel.deserializeUser());
 
 module.exports = { userModel };

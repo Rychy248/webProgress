@@ -1,3 +1,4 @@
+// model from models
 
 function routerFunction(express, urlEncoded, jsonParser) {
     // router define
@@ -10,7 +11,7 @@ function routerFunction(express, urlEncoded, jsonParser) {
 
     // controller import
     const { 
-        loginGet, loginPost
+        loginGet, loginPost, 
     } = require("./../controllers/loginController");
 
     // HTTP METHODS, AND REPONSE

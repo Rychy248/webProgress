@@ -1,5 +1,7 @@
 
 const { user } = require("../models/userModel");
+const { userModel } = require("../models/models");
+
 const { MyError, defaultError } = require("../utils/customErrors");
 
 // has function
@@ -15,6 +17,19 @@ const { MyError, defaultError } = require("../utils/customErrors");
 const passport = require("passport");
 // const passportLocal = require("passport-local");
 // const passportLocalMongoose = require("passport-local-mongoose"); //Used in models
+
+// Serialize ande deserialize
+// passport.serializeUser(userModel.serializeUser());
+passport.use(userModel.createStrategy());
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+// passport.deserializeUser(userModel.deserializeUser());
+passport.deserializeUser(function(id, done) {
+    userModel.findById(id, function(err, user) {
+        done(err, user);
+    });
+});
 
 function registerGet(req,res,next) {
     res.render("register");
@@ -39,17 +54,18 @@ function registerPost(req,res,next){
         res.redirect("/register/")
     });
     */
-
     user.create({
         email: req.body.username,
         password: req.body.password
     }).then(userRegistered=>{
         console.log(userRegistered);
-        return user.authenticate(req.body.username, req.body.password);
-    }).then(cb=>{
-        console.log(cb);
-        console.log(JSON.stringify(cb));
-        // res.redirect("/secrets");
+        if(userRegistered){
+            passport.authenticate("local")(req,res, function(err, user) {
+                redirect("/secrets");
+            });
+        }else{
+            redirect("/register");
+        };
     })
     .catch((err)=>{
         console.log(err);

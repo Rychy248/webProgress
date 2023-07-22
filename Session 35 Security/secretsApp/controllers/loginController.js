@@ -1,4 +1,5 @@
 
+const { userModel } = require("../models/models");
 const { user } = require("../models/userModel");
 const { MyError, defaultError } = require("../utils/customErrors");
 
@@ -15,6 +16,18 @@ const { MyError, defaultError } = require("../utils/customErrors");
 const passport = require("passport");
 // const passportLocal = require("passport-local");
 // const passportLocalMongoose = require("passport-local-mongoose"); //Used in models
+
+// Serialize ande deserialize, used in register too, but it's repetitive, in the futere redising it as "auth"
+passport.use(userModel.createStrategy());
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+passport.deserializeUser(function(id, done) {
+    userModel.findById(id, function(err, user) {
+        done(err, user);
+    });
+});
+
 
 function loginGet(req,res,next) {
 
@@ -46,11 +59,28 @@ function loginPost(req,res, next){
         res.redirect("/login");
     });
     */
-    passport.authenticate("local",{failureRedirect:"/login"})(req,res,function(){
-        res.redirect("/secrets")
+    
+    const localUser = new user.model({
+        email: req.body.username,
+        password: req.body.password
     });
+
+    req.login(user, (err)=>{
+        if(err){
+            console.log(err);
+        }else{
+            passport.authenticate("local")(req,res,function() {
+                res.redirect("/secrets");
+            });
+        };
+    });
+
+    // passport.authenticate("local",{failureRedirect:"/login"})(req,res,function(){
+    //     res.redirect("/secrets")
+    // });
 };
 
 module.exports =  {
     loginGet, loginPost
 };
+

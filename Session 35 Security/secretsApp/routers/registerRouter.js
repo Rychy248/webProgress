@@ -1,4 +1,4 @@
-
+// model from models
 function routerFunction(express, urlEncoded, jsonParser) {
     // router define
     const registerRouter = express.Router();
@@ -7,7 +7,7 @@ function routerFunction(express, urlEncoded, jsonParser) {
     registerRouter.use((req,res,next)=>{
         next();
     });
-
+    
     // controller import
     const { 
         registerGet, registerPost

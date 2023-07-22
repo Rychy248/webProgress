@@ -1,25 +1,24 @@
-// model from models
 
 function routerFunction(express, urlEncoded, jsonParser) {
     // router define
-    const logoutRouter = express.Router();
+    const registerRouter = express.Router();
 
     // Espace to add a midleware
-    logoutRouter.use((req,res,next)=>{
+    registerRouter.use((req,res,next)=>{
         next();
     });
 
     // controller import
     const { 
         logoutGet
-    } = require("../controllers/logoutController");
+    } = require("./../controllers/logoutController");
 
     // HTTP METHODS, AND REPONSE
-    logoutRouter.route("/")
+    registerRouter.route("/")
         .get(urlEncoded, logoutGet)
     ;
 
-    return logoutRouter;
+    return registerRouter;
 };
 
 module.exports = routerFunction;

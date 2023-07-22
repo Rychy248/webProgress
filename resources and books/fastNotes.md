@@ -18,8 +18,8 @@
 |02| 26 jun to 02 july| 35 | Finished|Yes|
 |--|__JULY__|--|--|--|
 |03| 03 july 09 july| 36 | Finished |Yes|
-|04| 10 july 16 july| 36 & 37 | unstarted|undefined|
-|05| 17 july 23 july| 37 | unstarted|undefined|
+|04| 10 july 16 july| 36 & 37 | Finished|Yes|
+|05| 17 july 23 july| 37 | started|in half|
 |06| 24 july 30 july| 38 | unstarted|undefined|
 |--|__AUGUSTH__|--|--|--|
 |07| 31 july 06 Aug| 38 | unstarted|undefined|

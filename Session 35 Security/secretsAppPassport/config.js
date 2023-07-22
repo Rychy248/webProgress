@@ -13,6 +13,9 @@ const
     urlEncoded = bodyParser.urlencoded({extended:true}),
     // create app
     app = express()
+    //SESSION and Passport
+    session = require("express-session"),
+    passport = require("passport")
 ;
 // ---const vars
 const 
@@ -31,6 +34,17 @@ const
 app.set('view engine', 'ejs');
 app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
+
+// session config
+app.use(session({
+    secret:process.env.SECRET_SESSION_ID,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+}));
+
+app.use(passport.initialize());
+app.use(passport.session())
 
 // cors midleware
 // app.use(cors({origin: allowedOrigins}));

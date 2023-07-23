@@ -1,13 +1,9 @@
 /**
  * 
- * @param { express.app } app 
  */
-function dbConnect(app) {
+function dbConnect() {
     // IMPORT settings
     const { 
-        appSettings:{
-            port:appPort
-        },
         dbSettings : {
             dbName,
             dbPort
@@ -22,11 +18,6 @@ function dbConnect(app) {
     .then((msg)=>{
         // CONNECTED MESSAGE
         console.log(`MongoDB connected with Mongoose at port ${dbPort} to the ${dbName}`);
-    
-        // SET UP THE APP
-        app.listen(appPort,(()=>{
-            console.log(`App serverd at port ${appPort}`);
-        }));
     })
     .catch((err)=>{
         console.log(err);

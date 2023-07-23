@@ -1,13 +1,5 @@
 
 const mongoose = require(`mongoose`);
-// Encryption replaced by hashing
-// const encrypt = require('mongoose-encryption');
-
-// importing the secret key into the .env
-// Encryption replaced by hashing
-// const secret = process.env.SECRET_MONGO_CRYPT_KEY;
-
-// To simplfy the use for passportlocal
 const passportLocalMongoose = require("passport-local-mongoose");
 
 // defining Schemas 
@@ -27,12 +19,7 @@ const userSchema = new mongoose.Schema({
 });
 
 // Hashing the password with the passport-local-mongoose
-userSchema.plugin(passportLocalMongoose,{iterations:2, usernameField:"email"});
-
-    // select the encripte with the last field, encryptedFields: , in the options object
-    // documentation https://www.npmjs.com/package/mongoose-encryption
-    // Encryption replaced by hashing
-    // userSchema.plugin(encrypt,{secret:secret, encryptedFields: ["password"]});
+userSchema.plugin(passportLocalMongoose,{iterations:Number(process.env.SALT_ROUNDS), usernameField:"email"});
 
 // Models
 const userModel = new mongoose.model("user",userSchema);

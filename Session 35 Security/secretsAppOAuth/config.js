@@ -3,11 +3,11 @@
 const 
     // general config
     dbSettings = {
-        dbName :"secretPassportDB",
+        dbName :"secretAouthDB",
         dbPort :"27017"
     },
     appSettings = {
-        port:8080
+        port:3000
     }
     // Allowed origin for cors util
     // allowedOrigins = ["http://127.0.0.1:5500", "http://localhost:8080/"];
@@ -35,7 +35,7 @@ const LocalStrategy = require('passport-local').Strategy;
 // -------- MIDLEWARE
 app.set('view engine', 'ejs');
 app.set("views",path.join(__dirname,"views"));
-app.use(express.static(path.join(__dirname,"public")));
+app.use(express.static(path.join(__dirname,"/public")));
 
 // session config
 app.use(session({
@@ -52,6 +52,23 @@ const { userModel } = require("./models/models");
 passport.use(new LocalStrategy(userModel.authenticate()));
 passport.serializeUser(userModel.serializeUser());
 passport.deserializeUser(userModel.deserializeUser());
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
+
+passport.use(new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: "http://localhost:3000/auth/google/secrets",
+}, async function(accessToken, refreshToken, profile, cb) {
+    try {
+        let user = await userModel.findOrCreate({ googleId: profile.id, email:profile._json.email });
+        console.log(profile)
+        return cb(undefined, user);
+    } catch (err) {
+        return cb (err);
+    }
+}));
+
+
 
 // cors midleware
 // app.use(cors({origin: allowedOrigins}));
@@ -63,7 +80,7 @@ module.exports = { express, app, dbSettings, appSettings, urlEncoded, jsonParser
 
 /**
  * 
- 
+    
 ├── app.js
 ├── config.js
 ├── controllers

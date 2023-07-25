@@ -8,7 +8,7 @@
  */
 function urlFunction(app,express, urlEncoded, jsonParser) {
     app.use("/", require("./homeRouter")(express, urlEncoded, jsonParser));
-    app.use("/", require("./authRouter")(express, urlEncoded, jsonParser));
+    app.use("/auth", require("./authRouter")(express, urlEncoded, jsonParser));
     app.use("/secrets", require("./secretRouter")(express, urlEncoded, jsonParser));
 };
 

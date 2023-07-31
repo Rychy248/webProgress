@@ -75,4 +75,8 @@ A web that Peaople love
 
 ## **Sesion 25:** ----
 
+## **Sesion 26:** ----
+
+## **Sesion 27:** ----
+
 ### **Contact Me at: _jorgeajrha@gmail.com_**

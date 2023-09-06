@@ -1,18 +1,19 @@
 import Button from "./Button";
 import Input from "./Input";
 
-function Login() {
+function Register() {
 
 return (
     <>
-        <h1>Login</h1>
+        <h1>Register</h1>
         <form className="form">
             <Input type="text" placeholder="Username" />
             <Input type="password" placeholder="Password" />
-            <Button type="submit" onClick={()=>{}} innerHtml="Login"/>
+            <Input type="password" placeholder="Confirm Password" />
+            <Button type="submit" onClick={()=>{}} innerHtml="Register"/>
         </form>
     </>
 );
 };
 
-export default Login
+export default Register

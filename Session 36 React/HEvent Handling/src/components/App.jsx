@@ -61,7 +61,7 @@ function App() {
     e.currentTarget.classList.add("btn-over");
   };
   // ------------------FORMS PRACTICE
-  const [fullName, setFullName] = useState({name:"", lastName:""});
+  const [contact, setContact] = useState({name:"", lastName:"", mail:""});
 
   function inputHanddler(e){
     const 
@@ -75,10 +75,18 @@ function App() {
     //   lastName:(inputName === "lastName")? newValue : previewValue.lastName
     // }));
     // ----------option 2
-    setFullName(previewValue => (inputName === "name") ?
-      { name : newValue , lastName:previewValue.lastName} :
-      { name: previewValue.name , lastName:newValue}
-    );
+    // setContact(previewValue => (inputName === "name") ?
+    //   { name : newValue , lastName:previewValue.lastName} :
+    //   { name: previewValue.name , lastName:newValue}
+    // );
+    // ----------option 3
+    // setContact(previewValue => (function(previewValue) {
+    //   let data = {...previewValue};
+    //   data[`${inputName}`] = newValue;
+    //   return data;
+    // })(previewValue));
+    // ----------option 4
+    setContact(previewValue => ({...previewValue, [inputName]:newValue}));
 
   };
   function onSubmitForm(e) {
@@ -88,20 +96,28 @@ function App() {
   return (
   <div className="container">
     <form onSubmit={onSubmitForm}>
-      <h1>{(headingText === "Hello")? (`${headingText} ${fullName.name} ${fullName.lastName}`) : headingText }</h1>
+      <h1>{(headingText === "Hello")? (`${headingText} ${contact.name} ${contact.lastName}`) : headingText }</h1>
+      <p>{ contact.mail }</p>
       <input 
         name="name"
         onChange={inputHanddler}
         type="text"
         placeholder="What's your name?"
-        value={fullName.name}
+        value={contact.name}
       />
       <input 
         name="lastName"
         onChange={ inputHanddler }
         type="text"
-        placeholder="What's your name?"
-        value={fullName.lastName}
+        placeholder="What's your last name?"
+        value={contact.lastName}
+      />
+      <input 
+        name="mail"
+        onChange={ inputHanddler }
+        type="email"
+        placeholder="example@mail.com"
+        value={contact.mail}
       />
       <button
         onClick={handleClick}

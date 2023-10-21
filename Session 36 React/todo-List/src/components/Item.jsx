@@ -1,6 +1,6 @@
 
 export default function Item(props) {
     return(
-          <li>{props.content}</li>
+          <li onClick={ props.onClick } >{props.content}</li>
     );
   };

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import FormTask from "./FormTask";
 import ListItems from "./ListItems";
+import FormTask from "./formTask";
 
 function App() {
   let [list, setList] = useState(["hello","world"]);
@@ -10,6 +10,14 @@ function App() {
     setList( prevList => [...prevList,input])
   };
 
+  function deleteItem(index) {
+    setList( prevList => {
+      const updatedList = [...prevList];
+      updatedList.splice(index, 1);
+      return updatedList;
+    });
+  };
+  
   return (
     <>
       <div className="container">
@@ -20,7 +28,7 @@ function App() {
         <FormTask 
           onClick={ inputForm }
         />
-        <ListItems listItems={list} />
+        <ListItems listItems={list} deleteItem={deleteItem} />
 
       </div>
     </>

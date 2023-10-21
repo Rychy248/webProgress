@@ -12,9 +12,7 @@ export default function ListItems(props) {
         {
           props.listItems.map((item,index) => <Item
             key={index}
-            itemindex={index}
             content={item}
-            // onClick={ e => props.deleteItem( e.currentTarget.getAttribute("itemindex") ) }
             onClick={() => props.deleteItem(index)}
           />)
         }

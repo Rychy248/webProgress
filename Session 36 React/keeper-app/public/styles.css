@@ -4,6 +4,7 @@
   --color3: #fff;
   --color4: #9e9d9d;
   --color5: #ccc;
+  --color6: #000;
 }
 
 * {
@@ -66,4 +67,65 @@ footer p {
   margin-bottom: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: var(--color2);
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--color3);
+}
+
+form {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: var(--color3);
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px var(--color4);
+}
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form input{
+  font-weight: bolder;
+}
+form button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: var(--color2);
+  color: var(--color3);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px var(--color6);
+  cursor: pointer;
+  outline: none;
+}
+
+hr {
+  border-width: 0.1rem;
+  border-style: none none solid none;
+  border-radius: 80%;
+  width: 100%;
+  height: 0.1rem;
+  border-color: var(--color5);
+  box-shadow: 0 0.05rem 0.1rem var(--color5);
+  display: block;
 }

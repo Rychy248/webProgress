@@ -24,3 +24,7 @@ root.render(
 
 //This is the end result you're aiming for:
 //https://pogqj.csb.app/
+
+
+
+// https://www.transparenttextures.com/
